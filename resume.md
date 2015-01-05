@@ -7,7 +7,7 @@ permalink: /resume/
 Howon Lee
 ===
 
-(mailing address, phone, etc available on request)
+(mailing address, phone, or a pdf copy of this resume available on request)
 
 Work Experience
 ---
