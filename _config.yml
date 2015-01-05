@@ -1,6 +1,6 @@
 # Site settings
 title: Ferns
-email: howonlee@stanford.edu
+email: howonlee <at> stanford.edu
 description: > # this means to ignore newlines until "baseurl:"
   Site.
 baseurl: "" # the subpath of your site, e.g. /blog/
