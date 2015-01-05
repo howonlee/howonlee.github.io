@@ -8,6 +8,7 @@ Howon Lee
 ===
 
 (mailing address, phone, etc available on request)
+[pdf format](/cv.pdf)
 
 Work Experience
 ---
