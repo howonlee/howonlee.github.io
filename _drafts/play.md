@@ -1,9 +1,9 @@
 Definitional questions of play and work
 ====
 
-It's often heard that work _should_ be like play (http://bigthink.com/in-their-own-words/how-i-make-work-like-play), (http://www.nbcnews.com/tech/tech-news/microsoft-exec-why-work-email-should-be-playing-halo-n267336), (http://www.paulgraham.com/love.html), (http://positivesharing.com/2013/02/top-5-reasons-we-should-play-more-at-work/). It's a beautiful goal to strive for. Usually, this statement is presented in an informal manner, because people don't associate formalism with fun.
+It's often heard that work _should_ be like play: [1](http://bigthink.com/in-their-own-words/how-i-make-work-like-play), [2](http://www.nbcnews.com/tech/tech-news/microsoft-exec-why-work-email-should-be-playing-halo-n267336), [3](http://www.paulgraham.com/love.html), [4](http://positivesharing.com/2013/02/top-5-reasons-we-should-play-more-at-work/). It seems a beautiful goal to strive for. Usually, this statement is presented in an informal manner, because people don't associate formalism with fun.
 
-As a programmer and dude who likes reading the early Wittgenstein for fun, of course, this is not the case for me. Or, rather, I saw a systematic unclarity in the sentiment borne of very bad conflicts of interest for the kinds of people who write these things. It might be possible for the sentiment to be laudable, but the people who express the sentiment have such large conflicts of interest that we shouldn't listen to them. That, too, is an often-expressed sentiment. %%%%%%%%% links
+As a dude who likes programming and reading the early Wittgenstein for fun, of course, this is not the case for me. Or, rather, I saw a systematic unclarity in the sentiment borne of very bad conflicts of interest for the kinds of people who write these things. It might be possible for the sentiment to be laudable, but the people who express the sentiment have such large conflicts of interest that we shouldn't listen to them. That, too, is an often-expressed sentiment. %%%%%%%%% links
 
 One possible solution to such a situation is to try to go back to definitions. What is play? There is a literature on this, so we should look to it. From S. Brown's _Play, How It Shapes The Brain, Opens The Imagination, and Invigorates the Soul_:
 
