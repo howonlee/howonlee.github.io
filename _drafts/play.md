@@ -3,7 +3,9 @@ layout: page
 title: Play and Work
 ---
 
-It is often heard that work should [be like play.](http://www.paulgraham.com/love.html). It seems a beautiful normative goal to strive for. I picked a fairly introspective example, but usually, this statement is presented in an informal and unintrospective and non-academic manner, for pretty obvious reasons. There's usually a sort of Rosseau noble-savage tint to the goal as presented. This is probably because it's been a fairly common observation that life in hunter-gatherer society is more fun than in settled society, Thomas Hobbes's non-empirical claims about nasty brutish shortness notwithstanding.
+It is often heard that work should [be like play.](http://www.paulgraham.com/love.html). It seems a noble normative goal to strive for. I picked a fairly introspective example, but usually, this statement is presented in an informal and unintrospective and non-academic manner, for pretty obvious reasons.
+
+There's a Rosseau noble-savage whiff to the goal as presented. This is probably because it's been a fairly common observation that life in hunter-gatherer society is more fun than in settled society, Thomas Hobbes's non-empirical claims about nasty brutish shortness notwithstanding. For example, Ben Franklin in [_Remarks concerning the Savages of North America_](http://www.wampumchronicles.com/benfranklin.html) says:
 
 > (ben franklin quote here)
 >
@@ -25,12 +27,10 @@ PROPERTIES OF PLAY
 
 By _apparently purposeless_, Brown means that play is not teleological in nature, and does not have practical value: Play is "done for its own sake". This is really not a definition that a mathematician would accept, but it does some of the job of a definition: that is, it is _fundamentally incompatible_ with the statement that work should have a meaning and a purpose beyond the work itself, unless you would like to torture the meaning of _meaning_ quite a bit.
 
-When we hear that play is _voluntary_, this statement delves into the question of the freedom of the will - an eternal argument of the philosophers - but all would agree a _work_ that would be voluntary is incompatible with the hoary old verse,
+When we hear that play is _voluntary_, this statement delves into the question of the freedom of the will - an eternal argument of the philosophers, and one which will not be solved or really poked at here. It also seems compatible with the definition and the intuition that Paul Graham has. However, everyone would agree a _work_ that would be voluntary is incompatible with something like the verse,
 
 _For even when we were with you, this we commanded you, that if any would not work, neither should he eat._ (2 Thess 3:10)
 
-The other parts of the definition seem more compatible with the envisionment we've seen above, so I'll leave it to you all to think about how they might actually be compatible or not.
-
 And once we hit upon a little depth in the thought that people have had about _play_, it is a natural progression to _games_. There is a neat little literature about play and games, and if you want to progress the metaphor further there are good books out there, by Huizinga, Sutton-Smith and many others. Much of the educated video game criticism draws occasionally upon these sources. %%%% links to those
 
-I'm actually quite ambivalent about the nature of the normative connection between play and work myself. I think more of the variance in the enjoyment of the work is in the duration and conditions of it, than of the play nature (another normative claim from primitive society: according to _Stone Age Economics_, the normal pattern of working in hunter-gatherer society is about 7 hours in a stretch on working days, with every other day a working day.). But it must be conceded that if you hold the definitions a little bit rigid, then it clarifies many claims. And because Stuart Brown and people like him are a little less riven by conflicts of interest, you can lend his definition a little more credence. %%% stone age economics graph
+I'm actually quite ambivalent about the nature of the normative connection between play and work myself. But it must be conceded that if you hold the definitions a little bit rigid, then it clarifies many claims. And because Stuart Brown and people like him are a little less riven by conflicts of interest, you can lend his definition a little more credence.
