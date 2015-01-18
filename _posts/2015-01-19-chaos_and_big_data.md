@@ -1,3 +1,8 @@
+---
+layout: page
+title: Chaos and Big Data
+---
+
 I want to quote from Chaos: A Short Introduction. I feel that it has a lot to do with the current state of modern high-dimensionality algorithms, keeping in mind that one of the intellectual roots of the neural network (or at least the Boltzmann machine) was the Ising model, another physical system of very many degrees of freedom. But before that quote, a poet by a turbulence man:
 
 >Big whorls have little whirls,
