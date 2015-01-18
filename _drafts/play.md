@@ -1,9 +1,13 @@
-Definitional questions of play and work
-====
+---
+layout: page
+title: Play and Work
+---
 
-It's often heard that work _should_ be like play: [1](http://bigthink.com/in-their-own-words/how-i-make-work-like-play), [2](http://www.nbcnews.com/tech/tech-news/microsoft-exec-why-work-email-should-be-playing-halo-n267336), [3](http://www.paulgraham.com/love.html), [4](http://positivesharing.com/2013/02/top-5-reasons-we-should-play-more-at-work/). It seems a beautiful goal to strive for. Usually, this statement is presented in an informal manner, because people don't associate formalism with fun.
+It is often heard that work should [be like play.](http://www.paulgraham.com/love.html). It seems a beautiful normative goal to strive for. I picked a fairly introspective example, but usually, this statement is presented in an informal and unintrospective and non-academic manner, for pretty obvious reasons. There's usually a sort of Rosseau noble-savage tint to the goal as presented, because it's been a 
 
-As a dude who likes programming and reading the early Wittgenstein for fun, of course, this is not the case for me. Or, rather, I saw a systematic unclarity in the sentiment borne of very bad conflicts of interest for the kinds of people who write these things. It might be possible for the sentiment to be laudable, but the people who express the sentiment have such large conflicts of interest that we shouldn't listen to them. That, too, is an often-expressed sentiment. %%%%%%%%% links
+Play is one of the fields of human endeavor where the academic study of it diverges most from the lived experience of it, which is probably where it should be, because lots of it is pretty unilluminating. I don't mean the mathematical game theory, which is more about nuclear weapons than about play, but play theory itself: inaugurated by J. Huizinga in _Homo Ludens_, and poked about by people like B. Sutton-Smith.
+
+However, despite the unilluminating nature of the study of play, the definitions that it creates (it's an academic field, of course it has definitions) may clarify what seems to be a systematic unclarity in the sentiment borne of very bad conflicts of interest for the kinds of people who write these things. It might be possible for the sentiment to be laudable, but it seems that the people who express the sentiment have such large conflicts of interest that we shouldn't listen to them.
 
 One possible solution to such a situation is to try to go back to definitions. What is play? There is a literature on this, so we should look to it. From S. Brown's _Play, How It Shapes The Brain, Opens The Imagination, and Invigorates the Soul_:
 
