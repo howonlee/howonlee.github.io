@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Thinking about Work
+title: Primitive Work
 ---
 
 It is often heard that work should [be more like a primitive method of working](http://www.paulgraham.com/love.html). It seems an interesting normative goal to strive for, and probably better than the normative goal of working always to get more money.
@@ -21,7 +21,7 @@ Sahlins has long been a critic of _homo economicus_, but as he's an anthropologi
 
 Now, you can't just look at one source with regards to these things, so we should look at D. Kaplan's _The Darker Side of the "Original Affluent Society"_
 
-If you have no patience, here is a summary.
+If you have no patience, here is a (biased) summary of both of them at once.
 
 Most economists think of life as uniformly hard in the paleolithic, and starvation as a constant companion of the hunter-gatherer, because they had no wealth and no leisure. This is wrong, because there's two ways to become affluent: to get more material things or to want fewer material things. We aim to take the first path, hunter-gatherers took the second path.
 
