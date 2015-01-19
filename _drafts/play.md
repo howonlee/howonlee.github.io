@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Play and Work
+title: Thinking about Work
 ---
 
-It is often heard that work should [be like play.](http://www.paulgraham.com/love.html). It seems a noble normative goal to strive for. I picked a fairly introspective example, but usually, this statement is presented in an informal and unintrospective and non-academic manner, for pretty obvious reasons.
+It is often heard that work should [be more like a primitive method of working](http://www.paulgraham.com/love.html). It seems an interesting normative goal to strive for, and probably better than the normative goal of working always to get more money.
 
 There's a Rosseau noble-savage whiff to the goal as presented, especially with Graham. This is probably because it's been a fairly common observation that life in hunter-gatherer society is more fun and surprisingly easier (for the hunter-gatherers) than in settled society, T. Hobbes's non-empirical claims about nasty brutish shortness notwithstanding. For example, B. Franklin in a letter to P. Collinson (from [_The Papers of Benjamin Franklin_](http://franklinpapers.org/franklin//)):
 
@@ -13,27 +13,16 @@ Or RB. Lee in [_What Hunters Do for a Living, or, How to Make Out on Scarce Reso
 
 > A diet based on mongongo nuts _[a nut that the !Kung of the Kalahari gather]_ is in fact more reliable than one based on cultivated foods, and it is not surprising, therefore, that when a Bushman was asked why he hadn't taken to agriculture he replied: "Why should we plant, when there are so many mongongo nuts in the world?"
 
-Play is one of the fields of human endeavor where the academic study of it diverges most from the lived experience of it. This is probably as it should be, because lots of that study is pretty unilluminating. I don't mean the mathematical game theory, which is more about nuclear weapons than about play, but play theory itself: inaugurated by J. Huizinga in [_Homo Ludens_](http://www.amazon.com/Homo-Ludens-Study-Play-Element-Culture/dp/0807046817), and poked about by people like B. Sutton-Smith in [_The Ambiguity of Play_](http://www.amazon.com/The-Ambiguity-Play-Brian-Sutton-Smith/dp/0674005813).
+Some of this is like the [Paleo diet movement](http://magazine.good.is/articles/good-asks-the-experts-is-the-paleolithic-diet-really-better?utm_source=supr), in that it's really quite ahistorical, it's more influenced by a very modern image of what the prehistoric was like. What was the structure of work with primitive people like?
 
-However, despite the unilluminating nature of the study of play, the definitions that it creates (it's an academic field, of course it has definitions) may clarify what seems to be a systematic unclarity in the sentiment borne of very bad conflicts of interest for the kinds of people who write these things. It might be possible for the sentiment to be laudable, but it seems that the people who express the sentiment have such large conflicts of interest that we shouldn't listen to them. [This is a sentiment also often heard.](http://www.lindsredding.com/2012/03/11/a-overdue-lesson-in-perspective/)
+Well, I'm no anthropologist, but I get journal access, so I can read anthropologists. It seems that the place to start with regards to this top is a remarkable and important essay from M. Sahlins called [_The Original Affluent Society_](http://www.primitivism.com/original-affluent.htm). There's also some data in the book in which the essay was also printed, [Stone Age Economics](http://www.amazon.com/Stone-Age-Economics-Marshall-Sahlins/dp/0202010996) (if you know what you're doing, you can also get the book free).
 
-One possible solution to such a situation is to try to go back to definitions. What is play? There is a literature on this, so we should look to it. From S. Brown's _Play, How It Shapes The Brain, Opens The Imagination, and Invigorates the Soul_:
+Sahlins has long been a critic of _homo economicus_, but as he's an anthropologist few of the economists have ever really listened to him (unlike, say, D. Kahneman).
 
-PROPERTIES OF PLAY
-- Apparently purposeless (done for its own sake)
-- Voluntary
-- Inherent attraction
-- Diminished consciousness of time
-- Diminished consciousness of self
-- Improvisational potential
-- Continuation desire
+Now, you can't just look at one source with regards to these things, so we should look at D. Kaplan's _The Darker Side of the "Original Affluent Society"_
 
-By _apparently purposeless_, Brown means that play is not teleological in nature, and does not have practical value: Play is "done for its own sake". This is really not a definition that a mathematician would accept, but it does some of the job of a definition: that is, it is _fundamentally incompatible_ with the statement that work should have a meaning and a purpose beyond the work itself, unless you would like to torture the meaning of _meaning_ quite a bit.
+If you have no patience, here is a summary.
 
-When we hear that play is _voluntary_, this statement delves into the question of the freedom of the will - an eternal argument of the philosophers, and one which will not be solved or really poked at here. It also seems compatible with the definition and the intuition that Paul Graham has. However, everyone would agree a _work_ that would be voluntary is incompatible with something like the verse,
+Most economists think of life as uniformly hard in the paleolithic, and starvation as a constant companion of the hunter-gatherer, because they had no wealth and no leisure. This is wrong, because there's two ways to become affluent: to get more material things or to want fewer material things. We aim to take the first path, hunter-gatherers took the second path.
 
-_For even when we were with you, this we commanded you, that if any would not work, neither should he eat._ (2 Thess 3:10)
-
-And once we hit upon a little depth in the thought that people have had about _play_, it is a natural progression to _games_. There is a neat little literature about play and games, and if you want to progress the metaphor further there are good books out there, by Huizinga, Sutton-Smith and many others. Much of the educated video game criticism draws occasionally upon these sources. %%%% links to those
-
-I'm actually quite ambivalent about the nature of the normative connection between play and work myself. But it must be conceded that if you hold the definitions a little bit rigid, then it clarifies many claims. And because Stuart Brown and people like him are a little less riven by conflicts of interest, you can lend his definition a little more credence.
+Because they reduce their wants, instead of making more things to satisfy unlimited wants, the thing that dominates their economics is not scarcity but diminishing returns. It's not some harmony of nature that makes hunter-gatherers produce less than they can, it's that they can't keep any of it. This, not some benevokk
