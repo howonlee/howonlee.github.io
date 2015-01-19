@@ -20,9 +20,3 @@ Well, I'm no anthropologist, but I get journal access, so I can read anthropolog
 Sahlins has long been a critic of _homo economicus_, but as he's an anthropologist few of the economists have ever really listened to him (unlike, say, D. Kahneman).
 
 Now, you can't just look at one source with regards to these things, so we should look at D. Kaplan's _The Darker Side of the "Original Affluent Society"_
-
-If you have no patience, here is a (biased) summary of both of them at once.
-
-Most economists think of life as uniformly hard in the paleolithic, and starvation as a constant companion of the hunter-gatherer, because they had no wealth and no leisure. This is wrong, because there's two ways to become affluent: to get more material things or to want fewer material things. We aim to take the first path, hunter-gatherers took the second path.
-
-Because they reduce their wants, instead of making more things to satisfy unlimited wants, the thing that dominates their economics is not scarcity but diminishing returns. It's not some harmony of nature that makes hunter-gatherers produce less than they can, it's that they can't keep any of it. This, not some benevokk
