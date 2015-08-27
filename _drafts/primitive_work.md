@@ -3,7 +3,7 @@ layout: page
 title: Primitive Work
 ---
 
-It is often heard that work should [be more like a primitive method of working](http://www.paulgraham.com/love.html). It seems an interesting normative goal to strive for, and probably better than the normative goal of working always to get more money.
+It is often heard that work should [be more like a primitive method of working](http://www.paulgraham.com/love.html). This is held to be a counter-normative goal, meaning that it goes against a current status of the working world but is itself a norm, it says that we should work in a certain way. I want to look at seeing the norm, and seeing if it is a coherent one.
 
 There's a Rosseau noble-savage whiff to the goal as presented, especially with Graham. This is probably because it's been a fairly common observation that life in hunter-gatherer society is more fun and surprisingly easier (for the hunter-gatherers) than in settled society, T. Hobbes's non-empirical claims about nasty brutish shortness notwithstanding. For example, B. Franklin in a letter to P. Collinson (from [_The Papers of Benjamin Franklin_](http://franklinpapers.org/franklin//)):
 
