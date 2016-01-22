@@ -12,11 +12,19 @@ Howon Lee
 Work Experience
 ---
 
+***Data Engineer***
+
+**[constructor.io](constructor.io)**
+
+**July 2015-December 2015**
+
+First technical employee. Worked on the full stack. This included handling logging on 50 request per second system and maintaining a 99.99% SLA for that system, being on call 24/7, significant work on a Javascript client to be directly displayed on customer websites (including design and styling). Created a search analytics portal for the data gathered from providing autocompletion. Made introductions to venture capitalists and angel investors.
+
 ***Research Assistant***
 
 **Stanford Virtual Human Interaction Lab**
 
-**Current, from September 2012**
+**September 2012-June 2015**
 
 Aided the development of research projects by Ph.D students in the lab under the supervision of Professor Jeremy Bailenson. Specifically, aided in the development of virtual worlds that would be the settings of experiments and demos, created a custom playback system for Kinect recordings of human movements, assisted with various machine learning tasks, and helped develop a Unity application which would allow Android phones to be used as head-mounted devices for virtual reality.
 
