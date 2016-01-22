@@ -148,19 +148,17 @@ If you look at the adjacency matrix of real complex networks, they are sort of p
 
 Fractals are very beautiful and covered [in exhaustive detail](http://www.amazon.com/Fractal-Geometry-Mathematical-Foundations-Applications/dp/0470848618) in other places. However, I think the most important thing about fractals here in this case is that many of them have extraordinarily low [Kolmogorov-Chaitlin-Solomonoff complexity](https://en.wikipedia.org/wiki/Kolmogorov_complexity) (more specifically, our upper bounds for their KCS complexity are very low, given that you cannot actually compute this complexity), because you can write them down as programs very, very concisely. For example, the Mandelbrot set can be compressed into:
 
-```
-def mandelbrot(a):
-    return reduce(lambda z, _: z * z + a, range(50), 0)
- 
-def step(start, step, iterations):
-    return (start + (i * step) for i in range(iterations))
- 
-rows = (("*" if abs(mandelbrot(complex(x, y))) < 2 else " "
-        for x in step(-2.0, .0315, 80))
-        for y in step(1, -.05, 41))
- 
-print("\n".join("".join(row) for row in rows))
-```
+>def mandelbrot(a):
+>    return reduce(lambda z, _: z * z + a, range(50), 0)
+> 
+>def step(start, step, iterations):
+>    return (start + (i * step) for i in range(iterations))
+> 
+>rows = (("*" if abs(mandelbrot(complex(x, y))) < 2 else " "
+>        for x in step(-2.0, .0315, 80))
+>        for y in step(1, -.05, 41))
+> 
+>print("\n".join("".join(row) for row in rows))
 
 Or something much shorter in APL or a code golfing language. And that code will mostly stay nearly the same length even as the resolution you want becomes huge. That code, in other words, will be a generally good compression of the Mandelbrot set despite being extremely parsimonious: that is what KCS complexity measures, the compressibility of a series of symbols. At the same time, the [Grassberger-Crutchfield-Young complexity](http://www.scholarpedia.org/article/Complexity#Complexity_as_Structure_and_Information) might be comparatively high, taken with the intuition that GCY complexity is highest at the boundary between randomness and determinism, whereas KCS complexity is highest at randomness, because randomness is incompressible. So it seems important to investigate if these plaid fractals also have extraordinarily low KCS complexity while having high GCY complexity. This is important for machine learning because compression is a [hop, skip and a jump](https://en.wikipedia.org/wiki/Data_compression#Machine_learning) from statistical inference.
 
