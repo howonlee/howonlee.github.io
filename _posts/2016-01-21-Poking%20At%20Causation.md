@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Poking At Causation 1 / 3: Some Unevidenced Claims on the Plaidness of Causation
+title: Poking At Causation 1 / 3
 ---
 
 Note
