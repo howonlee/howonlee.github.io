@@ -3,10 +3,10 @@ layout: page
 title: Poking At Causation 1 / 3
 ---
 
+TL;DR: I claim without real evidence that the internal nature of causation is fractal. I point out that, if that is true and if a cascade of other things are true, we might be able to speed up backpropagation and similar algorithms a lot.
+
 Note
 ---
-
-TL;DR: I claim without real evidence that the internal nature of causation is fractal. I point out that, if that is true and if a cascade of other things are true, we might be able to speed up backpropagation and similar algorithms a lot.
 
 This is a fictional prelude before two blog posts with code in. I call it fictional because, whereas the other two blog posts will be immediately reproducible with attached code, to my knowledge there is no empirical evidence for many of the contentions I will make in this blog post about networks of causation. However, there is plenty of empirical evidence for most of the claims that others have made about complex networks, so I will cite them. It also seems that some of my claims can be in some places buttressed with code, so I link to the code I have written. I apologize for the terrible quality of the pictures.
 
