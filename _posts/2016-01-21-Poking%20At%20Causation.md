@@ -12,10 +12,6 @@ This is a fictional prelude before two blog posts with code in. I call it fictio
 
 I present only some arguments and not empirical evidence for my claims because finding data has not been possible. That is, finding causal networks which were created just to _be causal networks_, and which were big enough to do the analyses typically done on complex networks, has not been possible. Most causal networks locatable on the Internet of the required size are designed for doing actual statistical inference with. This means that, because of the computational limits of Bayes net inference, they are limited in various ways in their connectivity and usually not intended to directly be causal networks. [Cyc](https://en.wikipedia.org/wiki/Cyc) is closer but, unfortunately, no cigar (same with [WordNet](https://wordnet.princeton.edu/) and such). So I must merely hope the contentions I argue are interesting, at least for now.
 
-![example causal network](http://i.imgur.com/OWUXS4V.png)
-
-(mercilessly stolen from [Berkeley CS194 notes](http://www.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/CS194%20Fall%202011%20Lecture%2021.pdf))
-
 This blog post is one instance of a proliferation of works which look at radical inequality and say "Power law! Criticality! Nonlinearity! Complexity! Hooray!!!!" (see [this](http://www2.econ.iastate.edu/tesfatsi/hogan.complexperplex.htm)). It is definitely subject to many of the faults of that mini-genre. Hopefully, one particular fault of that mini-genre is avoided, in that I have some clear engineering suggestions to make.
 
 I am sure that what is mine in this is not new and what is new in this is not mine. I would like to hear about any thoughts you have about the arguments anyhow, and any citations that I missed. If you wish to talk to me or if you find data you should contact me at hlee . howon at the big search engine's webmail. If someone has good, clean, and big data, I will be able to quickly de-fictionalize this article, and see what was wrong and what was correct.
@@ -26,6 +22,11 @@ Introduction
 I have only seldom heard anyone question why the world was _interesting_ and that certain things in the world are _important_. It seems an extremely general phenomenon, that there exist parts of the world which are interesting and important. Although two people might disagree on _what_ things are interesting, the _fact_ that there exist more and less interesting and more and less important things is not be in dispute.
 
 Given the question, "Why is the world (sometimes, in different places) interesting?", I think the answer to this question lies in the way in which causation can be described. That is, I talk of the networks of causation that a causal networks person studies, or the Platonic ideal thereof. I say causal networks and not [Bayesian networks](https://en.wikipedia.org/wiki/Bayesian_network) because the Bayesian interpretation of them I do not deal with for the duration of this blog post, and because I am ascribing causal semantics to these networks wheras this is not necessary for a Bayesian network.
+
+![example causal network](http://i.imgur.com/OWUXS4V.png)
+
+(an example causal network, mercilessly stolen from [Berkeley CS194 notes](http://www.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/CS194%20Fall%202011%20Lecture%2021.pdf))
+
 
 I am agnostic about whether causation actually exists or determines the world or is compatible with the freedom of the will or other such questions, but _in practice_ one must use causation and say causal things, and of course we do not really have to be talking about any fundamental nature of causation to be able to talk about how minds _ordinarily_ deal with causation. I just think that point of view, thinking about the sort of Platonic ideal of what a causal networks person studies, is a productive [operationalization](https://en.wikipedia.org/wiki/Operationalization). You must look in such an extremely general and abstract ensemble of models for thinking about interestingness because the phenomenon of interestingness is so extremely general and abstract.
 
