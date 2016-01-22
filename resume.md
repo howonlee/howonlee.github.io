@@ -38,18 +38,18 @@ Aided the development of research projects by Ph.D students in the lab under the
 Created the predictive analytics system incorporating a Mahout and MapReduce system, which predicted the user retention rate of a website with 20,000 active users, and created a custom AB split testing solution for their AB testing needs. Presented the architecture of this system to coworkers.
 
 
-***Research Assistant***
+***Advising Fellow***
 
-**Stanford Parallel Distributed Processing Lab**
+**Stanford Symbolic Systems Program**
 
-**June-September 2012**
+**September 2013-June 2015**
 
-Aided the postdoctorate researcher Juan Gao under the direction of the PI Professor Jay McClelland with human-computer interaction research. Specifically, we investigated the differential reaction times that people have on mobile phones and PC's, making an Android app that 100 subjects used as part of this research.
+Advised students about research, classes, and life. Inducted over two dozen new students into the Symbolic Systems program. Planned field trip to places like Palantir and Facebook. Helped with preparations for the departmental Distinguished Fellow award for 2014 to Douglas Hofstadter. Led student preparations for Distinguished Fellow award for 2015 to Edward Snowden, including making arrangements to contact the awardee.
 
 Education
 ---
 
-2014 - present
+2014 - 2015
 
 **Master of Science**
 
@@ -58,7 +58,7 @@ Symbolic Systems
 Stanford University
 
 
-2011 - present
+2011 - 2015
 
 **Bachelor of Science**
 
@@ -94,11 +94,11 @@ Computer Skills
 
 ***I have been paid to use***
 
-Python, Java(Android), Javascript, PHP, MATLAB, MySQL, MongoDB, Redis, Hadoop, Pig, Hive
+Python, Java(Android), Javascript, Ruby (+ Rails), Julia, C#, PHP, MATLAB, MySQL, MongoDB, Redis, Hadoop, Pig, Hive
 
 ***I also know***
 
-C, C++, C#, Scala, Ruby, Erlang, Clojure, Haskell, Mathematica, Scheme, Julia
+C, C++, Scala, Erlang, Mathematica, Scheme
 
 ***I know***
 
