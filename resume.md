@@ -14,7 +14,7 @@ Work Experience
 
 ***Data Engineer***
 
-**[constructor.io](constructor.io)**
+**[constructor.io](http://constructor.io)**
 
 **July 2015-December 2015**
 
