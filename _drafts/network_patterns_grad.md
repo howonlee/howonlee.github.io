@@ -13,8 +13,12 @@ and then sample it as if the gradient was a distribution over matrices.
 
 Construe the resulting matrix as an adjacency matrix.
 
-I do not pretend to have a justification for too much of this. But you get from this process a network which looks very much like a social network, meaning that it shows a series of network patterns common to social networks among other complex networks. The phenomenon is durable to different datasets,
+I do not pretend to have a justification for too much of this. But you get from this process a network which looks very much like a social network, meaning that it shows a series of network patterns common to social networks among other complex networks, including the degree distribution,
+
+diameter and clustering coefficient. The phenomenon is durable to different datasets.
 
 ### different learning speeds?
 ### different hidden layer sizes
 ### other stuff
+
+I don't really have too many possible explanations except possible universality.
