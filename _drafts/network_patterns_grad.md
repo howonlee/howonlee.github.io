@@ -27,8 +27,10 @@ I do not pretend to have a justification for too much of this. But you get from 
 
 diameter and clustering coefficient. The phenomenon is durable to different datasets.
 
-### different learning speeds?
-### different hidden layer sizes
-### other stuff
+### try MNIST and CIFAR
+
+### different learning speeds: try 0.01, 0.1, 1
+
+### different hidden layer sizes: try 100, 500, 1000
 
 I don't really have too many possible explanations except possible universality.
