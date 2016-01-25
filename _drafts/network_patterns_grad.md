@@ -29,12 +29,12 @@ You get from this process a network which looks very much like a social network,
 
 [diameter](http://mathworld.wolfram.com/GraphDiameter.html) and [clustering coefficient](https://networkx.github.io/documentation/latest/reference/algorithms.clustering.html). The phenomenon is durable to different datasets.
 
-### try MNIST and CIFAR
+### try MNIST and CIFAR, check
 
-### different learning speeds: try 0.01, 0.1, 1
+### different learning speeds: try 0.01, 0.1, 1, check
 
 ### different hidden layer sizes: try 100, 500, 1000
 
-I don't really have too many possible explanations except possible [universality](https://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-distribution/). I don't really have too many conclusions except that I suspect that the space of possible gradients is radically smaller than is assumed by most folks, and that optimizations may be possible based upon this fact.
+I don't really have too many possible explanations except possible [universality](https://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-distribution/). I don't really have too many conclusions except that I suspect that the space of possible gradients is radically smaller than is assumed by most folks, and that optimizations may be possible based upon this fact. Convolution may be one such operation, but there may be others.
 
 This is excerpted from this [other blog post](http://howonlee.github.io/2016/01/21/Poking%2520At%2520Causation1.html), because I highly suspect all the other claims in it may be a tad bullcrap, but this one is actually empirical.
