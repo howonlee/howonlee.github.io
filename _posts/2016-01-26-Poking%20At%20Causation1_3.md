@@ -7,7 +7,7 @@ All the code that I used is on [github](https://github.com/howonlee/mlp_gradient
 
 I wish to note a strange phenomenon which appears when one does a strange thing to a neural network gradient. I do not pretend to have a justification for doing this, except that it was fun.
 
-Take a gradient for a SGD step on a "plain" multilayer perceptron,
+Take a gradient for a SGD step on a "plain" multilayer perceptron, the gradient for the weights between the input and hidden layers,
 
 ![gradient](http://i.imgur.com/TrMcG46.png)
 
@@ -27,7 +27,7 @@ Construe the resulting matrix as an adjacency matrix, so you get a network out o
 
 This network shows a [degree distribution](http://users.phys.psu.edu/~ralbert/phys597_09/c03_netw_prop.pdf) with high skew and kurtosis on the outdegree. The indegrees depend solely on the data only, unfortunately, because we are looking at the input-hidden weights.
 
-You could argue that this whole thing boils down to "hey, the histogram of cached deltas in backprop have high skew and kurtosis" and that could also be a worthwhile thing to say, I think. It would be stay a coherent statement when the number of hidden variables is not equal to the number of inputs, too, but this network theory business is funner.
+You could argue that this whole thing boils down to "hey, the histogram of cached deltas in backprop have high skew and kurtosis" and that could also be a worthwhile thing to say, I think. It would _stay_ a coherent statement when the number of hidden variables is not equal to the number of inputs, too, but this network theory business is funner.
 
 ![deg distribution](http://i.imgur.com/wdMh8a8.png)
 
