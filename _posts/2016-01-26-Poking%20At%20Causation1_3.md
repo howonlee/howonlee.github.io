@@ -1,5 +1,7 @@
-Poking at Causation 1.3 / 3 : Social Network Patterns in Neural Network (Multilayer Perceptron) Gradients
-----
+---
+layout: page
+title: Poking At Causation 1.3 / 3 : Social Network Patterns in Neural Network (Multilayer Perceptron) Gradients
+---
 
 All the code that I used is on [github](https://github.com/howonlee/mlp_gradient_networks).
 
