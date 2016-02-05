@@ -1,5 +1,7 @@
-Fractal Structure in Word2vec Word Embeddings
-===
+---
+layout: page
+title: Fractal Structure in Word2Vec Word Embeddings
+---
 
 I like fractals. After long experience with them, I have come to the conclusion that I do not like to see them. I am completely indifferent to their beauty, although of course they are beautiful. I like them for their [statistical](http://arxiv.org/abs/cond-mat/0412004) [omnipresence](http://physics.stackexchange.com/questions/55269/why-do-fractal-systems-show-power-law-behavior), as most statisticians like the Gaussian.
 
