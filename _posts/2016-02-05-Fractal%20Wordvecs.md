@@ -3,11 +3,11 @@ layout: page
 title: Fractal Structure in Word2Vec Word Embeddings
 ---
 
-I like fractals. After long experience with them, I have come to the conclusion that I do not like to see them. I am completely indifferent to their beauty, although of course they are beautiful. I like them for their [statistical](http://arxiv.org/abs/cond-mat/0412004) [omnipresence](http://physics.stackexchange.com/questions/55269/why-do-fractal-systems-show-power-law-behavior), as most statisticians like the Gaussian.
+I like fractals. After long experience with them, I have come to the conclusion that I do not like looking at them. I am completely indifferent to their beauty, although of course they are beautiful. I like them for their [statistical](http://arxiv.org/abs/cond-mat/0412004) [omnipresence](http://physics.stackexchange.com/questions/55269/why-do-fractal-systems-show-power-law-behavior), just like statisticians like the Gaussian.
 
-I will claim that the global structure of the set of points created by word2vec in a high-dimensional vector space might have an empirical [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) far lower than the ordinary, everyday dimension, and buttress this claim with evidence.
+I will claim that the global structure of the set of points created by word2vec in a high-dimensional vector space might have an empirical [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) lower than the ordinary, everyday dimension, and buttress this claim with evidence.
 
-I am not really satisfied with nearly any definition of fractal, but I will note that by some definitions, that set of points is a fractal set.
+I am not really satisfied with nearly any definition of fractal, but I will note that by some definitions, that set of points would then be a fractal set.
 
 I will have one chart and _no other pictures_.
 
@@ -31,7 +31,7 @@ The corpus is the [Brown corpus](http://www.nltk.org/book/ch02.html#brown-corpus
 
 ![chart](http://i.imgur.com/Q93bjtd.png)
 
-As you can see, the calculated slope (which we interpret as the embedding dimension) is about 5.7, which is a lot less than the number of dimensions that the points are situated in, and indeed greater than the topological dimension of the points.
+As you can see, the calculated slope (which we interpret as the correlation dimension) is about 5.7, which is a lot less than the number of dimensions that the points are situated in, and indeed greater than the topological dimension of the points.
 
 So it is a fractal by the Mandelbrot 1983 definition, but remember that this definition is unsatisfying (I haven't really found any satisfying ones). You might think that it's a fractal because of its noninteger dimension, but remember the numerical problems with correlation dimension.
 
@@ -39,7 +39,7 @@ This scaling is not really an incredibly durable phenomenon: outside of the rang
 
 But it _is_ a self-similarity, and _that_ is an empirical statement.
 
-I won't give any explanations for the phenomenon. Perhaps chaos is involved, given that this phenomenon could be construed as a sort of view of an attractor. I note that many dynamical analyses of neural network phenomena leave out chaotic analyses, like [Pascanu Mikolov Bengio 2013](http://www.jmlr.org/proceedings/papers/v28/pascanu13.pdf) (although Pascanu Mikolov Bengio 2013 is for recursive neural networks). But if these systems have fractal (strange) attractors, the possibility of chaos __must__ be investigated.
+I won't give any explanations for the phenomenon. Perhaps chaos is involved, given that this phenomenon could be construed as a sort of view of an attractor. I note that many dynamical analyses of neural network phenomena leave out chaotic analyses, like [Pascanu Mikolov Bengio 2013](http://www.jmlr.org/proceedings/papers/v28/pascanu13.pdf) (although Pascanu Mikolov Bengio 2013 is for recursive neural networks). But if these systems have fractal (strange) attractors, the possibility of chaos should definitely be investigated.
 
 I would hypothesize that this is not an extraordinarily particular phenomenon with respect to neural representations, limited to word2vec. Fractal structures and power-law distributions seem to be surprisingly common in neural networks. Try training a simple backpropagation multilayer perceptron on MNIST and then [take the histograms](https://github.com/howonlee/mlp_gradient_histograms) of the absolute values of the weights - you will get a very heavy tail on that histogram (and that __is__ a pretty durable phenomenon, in a variety of ways). I am currently implementing the [Clauset Shalizi Newman 2007](http://arxiv.org/abs/0706.1062) steps to find if it's a proper power law.
  
