@@ -5,7 +5,7 @@ title: Fractal Structure in Word2Vec Word Embeddings
 
 I like fractals. After long experience with them, I have come to the conclusion that I do not like looking at them. I am completely indifferent to their beauty, although of course they are beautiful. I like them for their [statistical](http://arxiv.org/abs/cond-mat/0412004) [omnipresence](http://physics.stackexchange.com/questions/55269/why-do-fractal-systems-show-power-law-behavior), just like statisticians like the Gaussian.
 
-I will claim that the global structure of the set of points created by [word2vec](https://en.wikipedia.org/wiki/Word2vec) in a high-dimensional vector space might have an empirical [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) lower than the ordinary, everyday dimension, and buttress this claim with evidence.
+I will claim that the global structure of the set of points created by [word2vec](https://en.wikipedia.org/wiki/Word2vec) in a high-dimensional vector space might have an empirical [fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) (defined on Euclidean distance, as opposed to cosine distance) lower than the ordinary, everyday dimension, and buttress this claim with evidence.
 
 I am not really satisfied with nearly any definition of fractal, but I will note that by some definitions, that set of points would then be a fractal set.
 
