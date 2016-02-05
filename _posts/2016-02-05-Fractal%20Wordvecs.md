@@ -21,7 +21,7 @@ Topological dimension is more difficult. One has the intuition that a set of poi
 
 Anyhow, by the strict Mandelbrot 1983 definition, because the topological dimension of a set of points is zero, if we find any self-similarity at all in this set of points, this is a fractal self-similarity. (Non-fractal self-similarities are quite ordinary: lines, spheres, and other such geometric objects).
 
-Upon inspection, you may note that the procedure for finding correlation dimension is subject to the [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality). To ameliorate that curse, I take a comparatively low-dimensionality word2vec: only 10 dimensions.The other existing measures of dimension used for this kind of analysis ([Minkowski-Bouligand dimension](http://mathworld.wolfram.com/InformationDimension.html) and [information dimension](http://mathworld.wolfram.com/InformationDimension.html)) get it worse, though.
+Upon inspection, you may note that the procedure for finding correlation dimension is subject to the [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality). To ameliorate that curse, I take a comparatively low-dimensionality word2vec: only 10 dimensions.The other existing measures of dimension used for this kind of analysis ([Minkowski-Bouligand dimension](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension) and [information dimension](http://mathworld.wolfram.com/InformationDimension.html)) get it worse, though.
 
 The algorithm to get correlation dimension is also O(n^2) with n being the number of points, so I take a 10,000 point sample of the vectors only.
 
