@@ -35,9 +35,9 @@ As you can see, the calculated slope (which we interpret as the correlation dime
 
 So it is a fractal by the Mandelbrot 1983 definition, but remember that this definition is unsatisfying (I haven't really found any satisfying ones). You might think that it's a fractal because of its noninteger dimension, but remember the numerical problems with correlation dimension.
 
-This scaling is not really an incredibly durable phenomenon: outside of the range of these epsilons, the global structure of the whole range looks far more like a logistic function (because at tiny epsilons, there are no neighbors, and at huge epsilons, all points are neighbors). So this is not like the really impressive demonstrations of self-similar structure, because there are so few orders of magnitude.
+This scaling is not really an incredibly durable phenomenon: outside of the range of these epsilons, the global structure of the whole range looks far more like a logistic function (because at tiny epsilons, there are no neighbors, and at huge epsilons, all points are neighbors). So this is not like the really impressive demonstrations of self-similar structure, because there are so few orders of magnitude. On the other hand, saying that this statement of fractal geometry is not useful because it fails at these edges of the scale is like saying normal geometry is useless because circles and squares and such do not exist in nature.
 
-But it _is_ a self-similarity, and _that_ is an empirical statement.
+It _is_ a self-similarity, is what I am saying, and it does at least obtain there.
 
 I won't give any explanations for the phenomenon. Perhaps chaos is involved, given that this phenomenon could be construed as a sort of view of an attractor. I note that many dynamical analyses of neural network phenomena leave out chaotic analyses, like [Pascanu Mikolov Bengio 2013](http://www.jmlr.org/proceedings/papers/v28/pascanu13.pdf) (although Pascanu Mikolov Bengio 2013 is for recursive neural networks). But if these systems have fractal (strange) attractors, the possibility of chaos should definitely be investigated.
 
