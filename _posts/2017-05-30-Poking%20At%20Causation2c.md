@@ -3,9 +3,6 @@ layout: page
 title: Poking At Causation 2c / 3
 ---
 
-Poking at Causation 2c / 3: Backpropagation for Literal Credit Assignment, in the Firm
---
-
 There is much talk about the economic aspects of neural nets. There is also little talk about the economic aspects of neural nets. That is, this little section of artificial intelligence is often a philosophical object when talking about economics but scarcely ever a philosophical subject. What I mean by that is that we mostly think that AI in general will change the state of the economic world as we already envision it, but we do not expect it to change the vision itself. I believe that that will change. There will be significant contributions from the AI literature to economics. I do not have the hubris to claim that this is such a contribution. However, a thought came to me one day about backpropagation neural networks that I thought worth sharing.
 
 People use neural networks to simulate the market and make trades based upon the simulation. They have done so for decades without thinking too hard about the reasons why neural networks simulate the market and other economic quantities so well. I will not think too hard about the market either, even though I believe that there are important claims to be made. This post exists to note something that is less noted but just as notable: that backpropagation could be a powerful attack on a class of problems dealing with the firm.

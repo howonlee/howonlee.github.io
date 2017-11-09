@@ -3,9 +3,6 @@ layout: page
 title: The Hard Problem of Consciousness, The Consciousness of Hard Problems
 ---
 
-The Hard Problem of Consciousness, The Consciousness of Hard Problems
-====
-
 Summary: We might already have had that solution for a theory of consciousness lying around under our noses.
 
 NB: I intended this essay to be light reading. I failed miserably in that intention. Given that, instead of editing too much the content of the essay, I will instead invite anyone who reads this and has any questions whatsoever to email me at hleehowon at the Google email service, and I will explain whatever they do not understand.
