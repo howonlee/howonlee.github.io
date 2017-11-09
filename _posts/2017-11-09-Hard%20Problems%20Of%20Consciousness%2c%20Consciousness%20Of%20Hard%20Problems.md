@@ -80,31 +80,31 @@ Machine investigation is easier. A Procrustean summary of the connectionist prog
 
 If you want to ship a production system, most people do that nowadays with neural nets. This is because, in practice, the construction of a complicated bayes net or markov net is not at all a solved task (see: Clippy). But there are fundamental connections between belief propagation and the straightforward way to create and ship neural networks. Backpropagation net representations can also be used for graphical model inference <sup>[26](#foot26)</sup>. It is also the case that backpropagation itself can be used as a replacement for the Baum-Welch algorithm in hidden Markov models, with a simple generalization to the rest of belief propagation, as outlined in the same paper. This is a strange way to look at it, given the knowledge that the backpropagation representation is indeed exponentially smaller in parameter size than the factor graph (HMM in this case) representation <sup>[27](#foot27)</sup>, but it is a way to look at it. Interestingly, Dauwels notes <sup>[28](#foot28)</sup> that gradient descent, including neural backpropagation, fits quite well in the message passing regime. He probably intended this to hybridize EM methods with backpropagation, but you could also use this as justification to try to find a dual that would be analogous to the dual applied to belief propagation to create survey propagation, in the regime of neural backpropagation. Unlike the suggested medical experiment, I can easily give this a try, so this will occupy most of my next few months' worth of weekends and evenings.
 
-<a name=foot1>1</a>: https://people.kth.se/~tjtkoski/factorgraphs.pdf
-<a name=foot2>2</a>: http://ieeexplore.ieee.org/document/825794/
-<a name=foot3>3</a>: https://web.stanford.edu/~montanar/RESEARCH/book.html
-<a name=foot4>4</a>: http://cse.unl.edu/~choueiry/Documents/Cheeseman91.pdf
-<a name=foot5>5</a>: Achlioptas, D. notes http://michaelnielsen.org/polymath1/index.php?title=Random_k-SAT
-<a name=foot6>6</a>: Percus et al, Computational Complexity and Statistical Physics
-<a name=foot7>7</a>: https://arxiv.org/pdf/cs/0212002.pdf
-<a name=foot8>8</a>: https://arxiv.org/pdf/cond-mat/0312483.pdf
-<a name=foot9>9</a>: Kroc Sabharwal Selman "Survey Propagation Revisited" https://arxiv.org/abs/1206.5273
-<a name=foot10>10</a>: Maneva et al, A New Look at Survey Propagation and Its Generalizations, https://arxiv.org/abs/cs/0409012
-<a name=foot11>11</a>: Marino et al, The Backtracking Survey Propagation Algorithm for Solving Random K-SAT Problems
-<a name=foot12>12</a>: Block, Evidence Against Epiphenomenalism http://www.nyu.edu/gsas/dept/philo/faculty/block/papers/1991.epiphenomenalism.pdf
-<a name=foot13>13</a>: Moore, http://tuvalu.santafe.edu/~moore/AMS.pdf
-<a name=foot14>14</a>: Aaronson, Why Philosophers Should Care About Computational Complexity, https://www.scottaaronson.com/papers/philos.pdf
-<a name=foot15>15</a>: Searle, "Minds, Brains and Programs."
-<a name=foot16>16</a>: Block, "Troubles with Functionalism" http://mcps.umn.edu/philosophy/9_12Block.pdf
-<a name=foot17>17</a>: Chalmers, "The Conscious Mind"
-<a name=foot18>18</a>: Mezard et al, "Spin Glass Theory and Beyond"
-<a name=foot19>19</a>: Hofstadter, "Analogy as the Core of Cognition", https://prelectur.stanford.edu/lecturers/hofstadter/analogy.html
-<a name=foot20>20</a>: Gomes et al, "Heavy-Tailed Phenomena in Satisfiability and Constraint Satisfaction Problems", https://www.cs.rochester.edu/u/kautz/papers/jar.pdf
-<a name=foot21>21</a>: Mandelbrot, Multifractals and 1/f Noise
-<a name=foot22>22</a>: Macgregor, Ormerod, "Human performance on the traveling salesman problem"
-<a name=foot23>23</a>: Gent, Walsh, "The TSP Phase Transition"
-<a name=foot24>24</a>: Rumelhart, DE., The Architecture of Mind: A Connectionist Approach
-<a name=foot25>25</a>: Judd, JS., Neural Net Design and the Complexity of Learning
-<a name=foot26>26</a>: Baldi and Chauvin, "Smooth On-Line Learning Algorithms for Hidden Markov Models"
-<a name=foot27>27</a>: Sutskever et al, The Recurrent Temporal Restricted Boltzmann Machine, http://www.cs.utoronto.ca/~ilya/pubs/2008/rtrbm.pdf
-<a name=foot28>28</a>: Dauwels et al, "Steepest Descent as Message Passing", http://www.isiweb.ee.ethz.ch/papers/docu/jdau-skor-aloe-2005ITW.pdf
+<div><a id="foot1">1</a>: https://people.kth.se/~tjtkoski/factorgraphs.pdf</div>
+<div><a id="foot2">2</a>: http://ieeexplore.ieee.org/document/825794/</div>
+<div><a id="foot3">3</a>: https://web.stanford.edu/~montanar/RESEARCH/book.html</div>
+<div><a id="foot4">4</a>: http://cse.unl.edu/~choueiry/Documents/Cheeseman91.pdf</div>
+<div><a id="foot5">5</a>: Achlioptas, D. notes http://michaelnielsen.org/polymath1/index.php?title=Random_k-SAT</div>
+<div><a id="foot6">6</a>: Percus et al, Computational Complexity and Statistical Physics</div>
+<div><a id="foot7">7</a>: https://arxiv.org/pdf/cs/0212002.pdf</div>
+<div><a id="foot8">8</a>: https://arxiv.org/pdf/cond-mat/0312483.pdf</div>
+<div><a id="foot9">9</a>: Kroc Sabharwal Selman "Survey Propagation Revisited" https://arxiv.org/abs/1206.5273</div>
+<div><a id="foot10">10</a>: Maneva et al, A New Look at Survey Propagation and Its Generalizations, https://arxiv.org/abs/cs/0409012</div>
+<div><a id="foot11">11</a>: Marino et al, The Backtracking Survey Propagation Algorithm for Solving Random K-SAT Problems</div>
+<div><a id="foot12">12</a>: Block, Evidence Against Epiphenomenalism http://www.nyu.edu/gsas/dept/philo/faculty/block/papers/1991.epiphenomenalism.pdf</div>
+<div><a id="foot13">13</a>: Moore, http://tuvalu.santafe.edu/~moore/AMS.pdf</div>
+<div><a id="foot14">14</a>: Aaronson, Why Philosophers Should Care About Computational Complexity, https://www.scottaaronson.com/papers/philos.pdf</div>
+<div><a id="foot15">15</a>: Searle, "Minds, Brains and Programs."</div>
+<div><a id="foot16">16</a>: Block, "Troubles with Functionalism" http://mcps.umn.edu/philosophy/9_12Block.pdf</div>
+<div><a id="foot17">17</a>: Chalmers, "The Conscious Mind"</div>
+<div><a id="foot18">18</a>: Mezard et al, "Spin Glass Theory and Beyond"</div>
+<div><a id="foot19">19</a>: Hofstadter, "Analogy as the Core of Cognition", https://prelectur.stanford.edu/lecturers/hofstadter/analogy.html</div>
+<div><a id="foot20">20</a>: Gomes et al, "Heavy-Tailed Phenomena in Satisfiability and Constraint Satisfaction Problems", https://www.cs.rochester.edu/u/kautz/papers/jar.pdf</div>
+<div><a id="foot21">21</a>: Mandelbrot, Multifractals and 1/f Noise</div>
+<div><a id="foot22">22</a>: Macgregor, Ormerod, "Human performance on the traveling salesman problem"</div>
+<div><a id="foot23">23</a>: Gent, Walsh, "The TSP Phase Transition"</div>
+<div><a id="foot24">24</a>: Rumelhart, DE., The Architecture of Mind: A Connectionist Approach</div>
+<div><a id="foot25">25</a>: Judd, JS., Neural Net Design and the Complexity of Learning</div>
+<div><a id="foot26">26</a>: Baldi and Chauvin, "Smooth On-Line Learning Algorithms for Hidden Markov Models"</div>
+<div><a id="foot27">27</a>: Sutskever et al, The Recurrent Temporal Restricted Boltzmann Machine, http://www.cs.utoronto.ca/~ilya/pubs/2008/rtrbm.pdf</div>
+<div><a id="foot28">28</a>: Dauwels et al, "Steepest Descent as Message Passing", http://www.isiweb.ee.ethz.ch/papers/docu/jdau-skor-aloe-2005ITW.pdf</div>
