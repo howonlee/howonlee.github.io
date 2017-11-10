@@ -5,9 +5,9 @@ title: The Hard Problem of Consciousness, The Consciousness of Hard Problems
 
 Summary: We might already have had that solution for a theory of consciousness, or at least a hypothesis for it, lying around under our noses.
 
-NB: I intended this essay to be light reading. I failed miserably in that intention. Given that, instead of editing too much the content of the essay, I will instead invite anyone who reads this and has any questions whatsoever to email me at hleehowon at the Google email service, and I will explain whatever they do not understand.
+NB: I intended this essay to be light reading. I failed miserably in that intention. Given that, instead of editing too much the content of the essay, I will instead invite anyone who reads this and has any questions whatsoever to email me at hleehowon at the Google email service, and I will answer them to the best of my ability.
 
-This is a fundamentally speculative essay about an idea which is speculative to its core. Many of the previous statements made already are not actually supported by rigorous proof but by empiricism, as is common in disordered systems physics. This is not because of any deficit in the physicists but because of the difficulty of the problems encountered. Therefore this entire contention is hypothesis only, and more akin to the attacks that philosophers make on problems than the attacks that mathematicians make. However, the problem of consciousness remains extraordinarily difficult and it seemed to me that even a statistical-physicist attack on the problem would perhaps be a contribution.
+This is a fundamentally speculative essay about an idea which is speculative to its core. Many of the statements I will make are not actually supported by rigorous proof but by empiricism, as is common in disordered systems physics. Therefore this entire contention is hypothesis only, and more akin to the attacks that philosophers make on problems than the attacks that mathematicians make. However, the problem of consciousness remains extraordinarily difficult and it seemed to me that any angle of attack might still be a contribution.
 
 Survey Propagation, introduced much too quickly
 ----
@@ -18,7 +18,7 @@ There is a phenomenon where one idea participates in very many disciplines at on
 
 and the statistical physics of disordered systems, where it is a
 
-> cavity method to find magnetizations and related quantities for single instances of complicated dilute mean field spin glasses in the zero temperature limit, taking advantage of the structure of the interaction graph, using the Bethe-Peierls ansatz.
+> cavity method to find magnetizations and related quantities for single instances of dilute mean field spin glasses in the zero temperature limit, taking advantage of the structure of the interaction graph, using the Bethe-Peierls ansatz.
 
 The canny reader may have realized that those two sentences are only a little different from each other.
 
@@ -31,7 +31,7 @@ The nature of the dual is that survey propagation works by obtaining marginals o
 Consciousness of Hard Problems
 ----
 
-I noted the other day with great surprise that that this survey propagation algorithm and the replica symmetry breaking formalism that goes along with it, has some properties that correspond with some of those properties that are claimed to be important for systems that are conscious, throughout the literature of the philosophy of mind. I allege that thinking about consciousness as a method in vivo to take advantage of some properties of the phase space of constraint satisfaction problems allows a powerful functionalist attack on some fundamental philosophical problems of consciousness.
+I noted the other day with great surprise that that this survey propagation algorithm and the replica symmetry breaking formalism that goes along with it, has some properties that correspond with some of those properties that are claimed to be important for systems that are conscious, throughout the literature of the philosophy of mind. I allege that thinking about consciousness as a method _in vivo_ to take advantage of some properties of the phase space of constraint satisfaction problems allows a powerful functionalist attack on some fundamental philosophical problems of consciousness.
 
 If you are not an epiphenomenalist, then you probably believe that consciousness is relevant in some way to cognition <sup>[12](#foot12)</sup>. Of course there are exceptions. The phenomenon of frozen variables is absolutely and certainly computationally relevant to problems which seem to be basically similar to perceptual ones. That is, survey propagation convincingly dominates similar methods when used for decimation in k-SAT, CSP and other related problems <sup>[7](#foot7)</sup>.
 
