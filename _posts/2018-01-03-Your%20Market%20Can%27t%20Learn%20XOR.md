@@ -3,6 +3,8 @@ layout: page
 title: Your Market Can't Learn XOR
 ---
 
+Summary: The mathematics we use for neural nets and the mathematics we use for simulation of markets is very often the same maths, but due to the feedback loop being hours in neural nets and years in markets and the many orders of magnitude more money in neural networks, the neural network mathematic and algorithms are much more advanced. The advancements in neural networks should be, therefore, be subject to wholesale adoption in simulated economies. The progression of the field in neural networks has gotten to the point where wide acceptance of shipping products is possible: perhaps the same could be true of simulated planned economies. An example of a possible low-hanging fruit is given.
+
 I noticed one day that there was a surprisingly close mapping possible between Walrasian auctions and perceptrons.
 
 A perceptron is a purported model of neural networks. Extremely complicated versions of them are among the forums for the best models of neurons which we have, not because they are particularly realistic, but because they have the remarkable ability to simulate a wide range of tasks previously purported to be solely the domain of humans. However, perceptrons are subject to a comparatively easy and comparatively straightforward reduction. We will mostly talk about linear perceptrons, a remarkably simple form.
@@ -19,10 +21,43 @@ So if you buy that this remarkable correspondence exists, what does that give yo
 
 Unlike the Arrow-Debreu exchange economy, people actually use perceptrons and actually have practical experience with the whole perceptrons, although not the linear perceptrons that people actually have proofs for. People actually use these things for systems of credit assignment: Google Search, Facebook recommendations. In large part, this is because the empirical testing cycle of model neural networks is usually on the order of a few days, and the empirical testing cycle, if there is anything that could be called that, for simulated economies tends to be in the decades. People also saw the engineering and capitalistic opportunities in neural networks very soon after inventing them, but there are few corresponding opportunities for simulated economies. Therefore, despite being 80 years older than the theory of neural networks, the theory of simulated economies of this specific kind is comparatively much further behind, because there is no industrial practice.
 
-If you like economic planning, then, and doing it in a non-awful way, that developed existing theory should be of interest to you. Especially of note is Lange, who suggested in 1936 that a planned economy should have inputs and outputs according to a linearly optimized Walrusian economic model. Kantorovich also suggested a similar plan for organization of the Soviet economy with linear programming methods. Note that both were quite stymied: Lange, by Friedman, who criticized it for having a state-backed economy, and Kantorovich, by the Soviet economic consensus of the time, for having a supposedly-bourgeoise price system.
+If you like economic planning, then, and doing it in a non-awful way, that developed existing theory should be of interest to you. Especially of note is Lange, who suggested in 1936 that a planned economy should have inputs and outputs according to a linearly optimized Walrasian economic model. Kantorovich also suggested a similar plan for organization of the Soviet economy with linear programming methods. Note that both were quite stymied: Lange, by Friedman, who criticized it for having a state-backed economy, and Kantorovich, by the Soviet economic consensus of the time, for having a supposedly-bourgeoise price system.
 
 Looking at the economic model thus, and seeing comparisons between the economic models and the perceptron, should give us some ripe low-hanging fruit. For example, XOR is the function where the inputs are two binary-valued variables and the output (also binary-valued, a single variable) is whether the sum of those two variables is 1 or not. It is not a linear function, and Marvin Minsky (the connectionist, not the economist) noted that it was a good proving ground for supposed neural models, because it had the property that the result requires cooperation between agents in the function that is learned. That is, the result cannot be divined by just looking at one input: both inputs need to be learned. But if the equilibration of the perceptron (or the exchange economy) requires linear separability, then the function cannot be learned. And so it cannot be, in practice as well as theory: a linear perceptron will oscillate in trying to learn it, or equilibriate on a wrong answer, depending on the dynamics of the gradient descent. The solution of the problem is decades old (add more layers) and should be able to imported wholesale into the planned economy domain. I could list off 15 more claims that would be of interest to the economic planner, all of them with remarkably durable, if sometimes ad hoc, solutions in neural network land.
 
 A planned economic system existing with that system in mind would have some large advantages over other proposed economic systems. Despite being feasibly calculable, it is centralized and compatible with other basically centralized or basically decentralized, planned or unplanned economic systems. No permission would really be needed from other economic actors, as you could set one up with the agreement of 25-100 economic actors or so and grow it from there. It would be surprisingly hard to kill, in the same way that perceptrons, especially multilayered ones, are surprisingly hard to disrupt. The weak points, as in many other machine learning pursuits, lie in data collection and adversarial dynamics.
 
 If there's demand for it, I will add a technical addendum with actual proofs and things.
+
+Objections
+====
+
+The Arrow-Debreu model is a simulation only and has never been used for planning real economies.
+----
+
+This has already been materially tried before with Beer et al's Cybersyn project.
+----
+
+If neural networks replace the capitalist class, won't we have a small ruling class anyhow?
+----
+
+Arriving at everyone's distributions assuming a utility function in closed form is easy. Getting the utility functions in the first place is difficult.
+---
+
+There's no such thing as a resting Walrasian equilibrium.
+---
+
+How could this predict irrational human action? What about behavioral economics?
+---
+
+Existing shipped neural network products are imperfect.
+---
+
+Why don't people already use neural nets in markets?
+---
+
+Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms already?
+---
+
+Citations
+===
