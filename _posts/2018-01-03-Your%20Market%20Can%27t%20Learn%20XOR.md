@@ -39,7 +39,7 @@ This has already been materially tried before with Beer et al's Cybersyn project
 ----
 There are many easy ways that one could argue against the claim that the Cybersyn project exercised their idea properly: they didn't have computers or a general suffusion of computation into society at nearly a requisite level of refinement, the CIA sabotaged them, et cetera, et cetera. But two less trivial points also come to mind. The Cybersyn project depended heavily on Bayesian filtering of summary statistics, a fundamentally-statistical approach of the kind which have had remarkable success in tasks closer to the linear regime but remarkable comparative failure in natural language processing, computer vision and other AI-adjacent tasks. The AI component of the Cybersyn project (the algedonic feedback system) had the essential problem common to many of the other good-old-fashioned AI in consisting of an ensemble of variables with various colorings which were claimed to have various properties and were interrelated in various ways, the numerics of which were almost entirely ignored. It is hard-won modern neural network knowledge that numerics are everything, the coloring of variables almost nothing.
 
-If neural networks replace the capitalist class, won't we have a small ruling class anyhow?
+If neural networks replace the capitalist class, won't we have a small important class anyhow?
 ----
 
 Arriving at everyone's distributions assuming a utility function in closed form is easy. Getting the utility functions in the first place is difficult.
@@ -61,6 +61,15 @@ Why don't people already use neural nets in markets?
 
 Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms already?
 ---
+
+Don't corporations already do AI things?
+---
+
+Aren't there adversarial perturbations?
+---
+There's adversarial perturbations in existing markets, plain as you can see. Do you really think 40 tulip bulbs in 1635 were really worth the labor of 500 skilled men for a year? Or at least, there are fundamentally awful numerical problems in existing markets.
+
+More importantly, there is a viable theory of adversarial perturbations, and active research on attacking and eliminating them, whereas the many numerically unsophisticated attempts to prevent numerical derangements in markets have not borne great fruit.
 
 Citations
 ===
