@@ -27,20 +27,26 @@ Looking at the economic model thus, and seeing comparisons between the economic 
 
 A planned economic system existing with that system in mind would have some large advantages over other proposed economic systems. Despite being feasibly calculable, it is centralized and compatible with other basically centralized or basically decentralized, planned or unplanned economic systems. No permission would really be needed from other economic actors, as you could set one up with the agreement of 25-100 economic actors or so and grow it from there. It would be surprisingly hard to kill, in the same way that perceptrons, especially multilayered ones, are surprisingly hard to disrupt. The weak points, as in many other machine learning pursuits, lie in data collection and adversarial dynamics.
 
-If there's demand for it, I will add a technical addendum with actual proofs and things. If not, either way, I will try to have a small prototype in a few months.
+If there's demand for it, I will add a technical addendum with actual proofs and things. If not, either way, I will try to have a small prototype in half a year or two-thirds of a year or so.
 
 Objections
 ====
 
 The Arrow-Debreu model is a simulation only and has never been used for planning real economies.
 ----
+Of course, the linear perceptron doesn't get used for many real machine learning tasks anymore, but people ship perceptrons anyhow, more complicated ones, convolution ones, recurrent ones. This refinement of modelling hasn't happened in the economic models and it seems to me this lack of refinement, rather than a general un-simulatability, which leads to the lack of viable practical real-world application of the models. So the argument is really if the models are of the same class and if the advances in neural models can be forwarded to the economic models, not if the current existing Arrow-Debreu models are fit for current usage.
 
 This has already been materially tried before with Beer et al's Cybersyn project.
 ----
-There are many easy ways that one could argue against the claim that the Cybersyn project exercised their idea properly: they didn't have computers or a general suffusion of computation into society at nearly a requisite level of refinement, the CIA sabotaged them, et cetera, et cetera. But two less trivial points also come to mind. The Cybersyn project depended heavily on Bayesian filtering of summary statistics, a fundamentally-statistical approach of the kind which have had remarkable success in tasks closer to the linear regime but remarkable comparative failure in natural language processing, computer vision and other AI-adjacent tasks. The AI component of the Cybersyn project (the algedonic feedback system) had the essential problem common to many of the other good-old-fashioned AI in consisting of an ensemble of variables with various colorings which were claimed to have various properties and were interrelated in various ways, the numerics of which were almost entirely ignored. It is hard-won modern neural network knowledge that numerics are everything, the coloring of variables almost nothing.
+There are many easy ways that one could argue against the claim that the Cybersyn project exercised their idea properly: they didn't have computers or a general suffusion of computation into society at nearly a requisite level of refinement, the CIA replaced the leader backing it with a ultra-nationalist, et cetera, et cetera. But two less trivial points also come to mind. The Cybersyn project depended heavily on Bayesian filtering of summary statistics, a fundamentally-statistical approach of the kind which have had remarkable success in tasks closer to the linear regime but remarkable comparative failure in natural language processing, computer vision and other AI-adjacent tasks.
+
+The AI component of the Cybersyn project (the algedonic feedback system) had the essential problem common to many of the other good-old-fashioned AI in consisting of an ensemble of variables with various colorings which were claimed to have various properties and were interrelated in various ways, the numerics of which were almost entirely ignored. It is hard-won modern neural network knowledge that numerics are everything, the coloring of variables almost nothing.
 
 If neural networks replace the capitalist class, won't we have a small important class anyhow?
 ----
+Yes. Some people will still have to determine hyperparameters, take care of the implementation, and so on.
+
+The important fact, however, is that having an implementation which can be forked allows for the implosion of profit in the whole endeavor. The hope (it is a small hope, but nevertheless a hope), is some structure more akin to the open source movement, where people do it either as a very small and volunteer part of the course of normal employment or for the hell of it. Strong concentrations of power can be had in open source at the same time as completely negligible amounts of profit, because forks are possible. If there is a formal computational representation of the market, the market is also then forkable. So even if a class of people exist who take care of the market, the rents they can extract could become miniscule.
 
 Arriving at everyone's distributions assuming a utility function in closed form is easy. Getting the utility functions in the first place is difficult.
 ---
@@ -56,13 +62,10 @@ Existing shipped neural network products are imperfect.
 ---
 This is true. However, the point is that they are better than everything else for the highly nonlinear AI-adjacent tasks that people use them for and, moreover, are improving at a much, much faster rate than the theory and practice of planned economies (at the same time where the practice runs far ahead of the theory).
 
-Why don't people already use neural nets in markets?
+Why isn't this the existing usage of neural networks in markets for trading?
 ---
 
-Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms already?
----
-
-Don't corporations already do AI things?
+Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms already? Don't corporations already do AI things?
 ---
 
 Aren't there adversarial perturbations?
