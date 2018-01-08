@@ -25,7 +25,7 @@ If you like economic planning, then, and doing it in a non-awful way, that devel
 
 Looking at the economic model thus, and seeing comparisons between the economic models and the perceptron, should give us some ripe low-hanging fruit. For example, XOR is the function where the inputs are two binary-valued variables and the output (also binary-valued, a single variable) is whether the sum of those two variables is 1 or not. It is not a linear function, and Marvin Minsky (the connectionist, not the economist) noted that it was a good proving ground for supposed neural models, because it had the property that the result requires cooperation between agents in the function that is learned. That is, the result cannot be divined by just looking at one input: both inputs need to be learned. But if the equilibration of the perceptron (or the exchange economy) requires linear separability, then the function cannot be learned. And so it cannot be, in practice as well as theory: a linear perceptron will oscillate in trying to learn it, or equilibrate on a wrong answer, depending on the dynamics of the gradient descent. The solution of the problem is decades old (add more layers) and should be able to imported wholesale into the planned economy domain. I could list off 15 more claims that would be of interest to the economic planner, all of them with remarkably durable, if sometimes ad hoc, solutions in neural network land.
 
-A planned economic system existing with that system in mind would have some large advantages over other proposed economic systems. Despite being feasibly calculable, it is centralized and compatible with other basically centralized or basically decentralized, planned or unplanned economic systems. No permission would really be needed from other economic actors, as you could set one up with the agreement of 25-100 economic actors or so and grow it from there. It would be surprisingly hard to kill, in the same way that perceptrons, especially multilayered ones, are surprisingly hard to disrupt. The weak points, as in many other machine learning pursuits, lie in data collection and adversarial dynamics.
+A planned economic system existing with that system in mind would have some large advantages over other proposed economic systems. Despite being feasibly calculable, it is centralized and compatible with other basically centralized or basically decentralized, planned or unplanned economic systems. No permission would really be needed from other economic actors, as you could set one up with the agreement of 25-100 economic actors or so and grow it from there. It would be surprisingly hard to kill by attacking the members, in the same way that perceptrons, especially multilayered ones, are surprisingly hard to disrupt, but it would be vulnerable to attack in the actual apparatus hosting the network. The weak points, as in many other machine learning pursuits, lie in data collection and adversarial dynamics.
 
 If there's demand for it, I will add a technical addendum with actual proofs and things. If not, either way, I will try to have a small prototype in half a year or two-thirds of a year or so.
 
@@ -42,7 +42,7 @@ No. These systems will have to be relatively centralized implemented inside of a
 
 This has already been materially tried before with Beer et al's Cybersyn project.
 ----
-There are many easy ways that one could argue against the claim that the Cybersyn project exercised their idea properly: they didn't have computers or a general suffusion of computation into society at nearly a requisite level of refinement, the CIA replaced the leader backing it with a ultra-nationalist, et cetera, et cetera. But two less trivial points also come to mind. The Cybersyn project depended heavily on Bayesian filtering of summary statistics, a fundamentally-statistical approach of the kind which have had remarkable success in tasks closer to the linear regime but remarkable comparative failure in natural language processing, computer vision and other AI-adjacent tasks.
+There are many easy ways that one could argue against the claim that the Cybersyn project exercised their idea properly: they didn't have computers or a general suffusion of computation into society at nearly a requisite level of refinement, the CIA replaced the leader backing it with a crazy person, et cetera, et cetera. But two less trivial points also come to mind. The Cybersyn project depended heavily on Bayesian filtering of summary statistics, a fundamentally-statistical approach of the kind which have had remarkable success in tasks closer to the linear regime but remarkable comparative failure in natural language processing, computer vision and other AI-adjacent tasks.
 
 The AI component of the Cybersyn project (the algedonic feedback system) had the essential problem common to many of the other good-old-fashioned AI in consisting of an ensemble of variables with various colorings which were claimed to have various properties and were interrelated in various ways, the numerics of which were almost entirely ignored. It is hard-won modern neural network knowledge that numerics are everything, the coloring of variables almost nothing.
 
@@ -52,25 +52,33 @@ Yes. Some people will still have to determine hyperparameters, take care of the 
 
 The important fact, however, is that having an implementation which can be forked allows for the implosion of profit in the whole endeavor. The hope (it is a small hope, but nevertheless a hope), is some structure more akin to the open source movement, where people do it either as a very small and volunteer part of the course of normal employment or for the hell of it. Strong concentrations of power can be had in open source at the same time as completely negligible amounts of profit, because forks are possible. If there is a formal computational representation of the market, the market is also then forkable. So even if a class of people exist who take care of the market, the rents they can extract could become miniscule.
 
+If one such network is used to represent a capital market, many more exotic things can be done with the capital distribution and other distributions given in the market. Of note is the fact that there is a comparatively-developed theory and practice of clamping certain weights of the network towards a value and not adjusting them, such as in the echo state network.
+
 Arriving at everyone's distributions assuming a utility function in closed form is easy. Getting the utility functions in the first place is difficult.
 ---
+If you walked up to an optimization professor today and said "linear optimization is a solved problem", they would agree with you. If you said, "nonlinear optimization is a solved problem", they would laugh you out of the building. Neural nets after 1980, because of the XOR example, are all nonlinear in less principled but much, much, much better working ways than the "weak" nonlinearities people use for economic models. That was the actual empirical goad that Marvin Minsky gave to the connectionist folks.
+
+Now, the problem of lack of access and lack of data is much much more relevant to the essential neural network approach than one might imagine at first glance, because we have no real introspection into brains but we can get neural nets (and only neural nets, if you want them done comparatively well, although not to human level yet) to display the behavior that brains display. This is why I said that perceptrons (and multilayer perceptrons, and convolutional perceptrons, recurrent ones, recursive ones, etc etc) are not a good model for being realistic, they're a good model for displaying that behavior. One of the behaviors, the most important of the behaviors, is a starkly reduced data requirement. One example is the MNIST digits (classification of a bunch of pictures of numerals collected by the post office: trivial to a human, but involves solution of 2^784 space nonlinear optimization for the computer to get to human parity, which people did in 2002 or 2006 depending on how you look at it). Linear and gaussian mixture and that kind of model can actually get to human parity on them, if you allow like 2 to 3 orders of magnitude more data: but that, in turns, means that neural nets (nonlinear ones only) and only neural nets can save all that data complexity. We don't really understand why.
 
 There is no such thing as a resting Walrasian equilibrium.
 ---
 In nonlinear perceptrons, which without exception are the neural network models used in practical industrial efforts, there is no resting equilibrium either: the optimization settles at a "good-enough" equilibrium that nevertheless generalizes remarkably well and outperforms other families of models. The goal would be to accept metastable equilibria and get to an excellent if non-perfect point in price space.
 
-How could this predict irrational human action? What about behavioral economics?
----
-
 Existing shipped neural network products are imperfect.
 ---
 This is true. However, the point is that they are better than everything else for the highly nonlinear AI-adjacent tasks that people use them for and, moreover, are improving at a much, much faster rate than the theory and practice of planned economies (at the same time where the practice runs far ahead of the theory).
 
-Why isn't this the existing usage of neural networks in markets for trading?
+Why isn't this just the existing usage of neural networks in markets for trading?
 ---
+A neural network algorithm in trading attempts to forecast the future in order to help a trade in a market which has all the appurtenances of a general market and, importantly, where the attempted clearing equilibrium is not calculated at all, but derived from the order book. If the neural network comprises the market, the market itself is cleared by the gradient descent algorithm.
 
-Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms already? Don't corporations already do AI things?
+Doesn't neoliberal capitalism already do this in being similar to the optimization models that it uses in operations research? Why wouldn't people coopt this in existing firms? Don't corporations already do AI things?
 ---
+Of course, this is an instance of automation. However, the specific skill that this automation would de-skill and the specific people this would impact would be of the financial and management workers of the world. Notwithstanding alleged fiduciary duty, much of the activity of this group consists in enriching themselves by legal and usually ethical means. In nearly all firms, those two groups of people are the main decision makers. Why would they impovrish themselves as a class or as individuals for the alleged fiduciary duty they have towards others? So this is I suspect it wouldn't be used for operation of the firm.
+
+Corporations who declare that they use sophisticated statistics for decisionmaking, as a rule, either have products which have in them sophisticated statistics or use statistics to rationalize decisionmaking, not to actually make the decisions. This is seen in the general statistical unsophistication of the actual decision makers at a firm. It's surprisingly rare to even find a CEO who can explain to you what, say, kurtosis is.
+
+The same arguments hold forth for the apparatchiki of the allegedly socialist enterprises existing. If he really wants to, Brezhnev can indeed shut down a factory to get his own custom-made denim jacket buttons. They certainly wouldn't opt to destroy their own positions in society by adopting such a system.
 
 Aren't there adversarial perturbations?
 ---
@@ -78,5 +86,8 @@ There's adversarial perturbations in existing markets, plain as you can see. Do 
 
 More importantly, there is a viable theory of adversarial perturbations, and active research on attacking and eliminating them, whereas the many numerically unsophisticated attempts to prevent numerical derangements in markets have not borne great fruit.
 
-Citations
-===
+Of course, fraud will be a factor. I do not think the job of accountants and auditors will necessarily go away as quickly, although they may mostly implement fraud detection algorithms instead of make spreadsheets on Excel.
+
+What matter of political orientation are you?
+---
+I am a pessimist.
