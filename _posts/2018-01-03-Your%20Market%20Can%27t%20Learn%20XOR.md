@@ -5,6 +5,8 @@ title: Your Market Can't Learn XOR
 
 Summary: The mathematics we use for neural nets and the mathematics we use for simulation of markets is very often the same maths, but due to the feedback loop being hours in neural nets and years in markets and the many orders of magnitude more money in neural networks, the neural network mathematics and algorithms are much more advanced. The advancements in neural networks should be, therefore, be subject to wholesale adoption in simulated economies. The progression of the field in neural networks has gotten to the point where wide acceptance of shipping products is possible: perhaps the same could be true of simulated planned economies. An example of a possible low-hanging fruit is given.
 
+NB: I can be reached at hleehowon at the Google email service, if you want to harangue me
+
 I noticed one day that there was a surprisingly close mapping possible between Walrasian auctions and perceptrons.
 
 A perceptron is a purported model of neural networks. Extremely complicated versions of them are among the forums for the best models of neurons which we have, not because they are particularly realistic, but because they have the remarkable ability to simulate a wide range of tasks previously purported to be solely the domain of humans. However, perceptrons are subject to a comparatively easy and comparatively straightforward reduction. We will mostly talk about linear perceptrons, a remarkably simple form.
