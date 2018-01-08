@@ -29,7 +29,7 @@ Looking at the economic model thus, and seeing comparisons between the economic 
 
 A planned economic system existing with that system in mind would have some large advantages over other proposed economic systems. Despite being feasibly calculable, it is centralized and compatible with other basically centralized or basically decentralized, planned or unplanned economic systems. No permission would really be needed from other economic actors, as you could set one up with the agreement of 25-100 economic actors or so and grow it from there. It would be surprisingly hard to kill by attacking the members, in the same way that perceptrons, especially multilayered ones, are surprisingly hard to disrupt, but it would be vulnerable to attack in the actual apparatus hosting the network. The weak points, as in many other machine learning pursuits, lie in data collection and adversarial dynamics.
 
-If there's demand for it, I will add a technical addendum with actual proofs and things. If not, either way, I will try to have a small prototype in half a year or two-thirds of a year or so.
+If there's demand for it, I will add a technical addendum with actual proofs and things. The like is true with citations. If not, either way, I will try to have a small prototype in half a year or two-thirds of a year or so.
 
 Objections
 ====
