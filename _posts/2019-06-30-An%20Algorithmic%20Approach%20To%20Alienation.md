@@ -5,7 +5,8 @@ title: An Algorithmic Approach to Alienation
 
 > On conviendra aisément qu'il importe au plus haut point de savoir si l'on n'est pas dupe de la morale.
 > Everyone will readily agree that it is of the highest importance to know whether we are duped by morality.
-- _Totality and Infinity_, E. Levinas
+
+_Totality and Infinity_, E. Levinas
 
 You and I imagine different things when we imagine a neural network, a multilayer perceptron like those that grace the newest wave of machine learning systems. Like nearly all neural network people (you don't have to be one of them to read this essay, but it will help), I do not imagine neurons at all. When I imagine a neural network I see a mathematical machine, an optimization machine. But unlike nearly all neural network people, I do also see something different when I imagine a neural network. In addition to matrix multiplications, nonlinearities and layers of transduction of gradients, I see a society. I see a society of agents interconnected to each other by relations between them, each node an agent, each edge a relation.
 
@@ -25,15 +26,15 @@ But I was surprised when I looked at the problem of alienation in such a society
 > Me: And the hotspots/team directions?
 > Boss: Leave it.
 
--Anonymous [verbatim]
+Anonymous [verbatim]
 
 > But actually, he thought as he re-adjusted the Ministry of Plenty's figures, it was not even forgery. It was merely the substitution of one piece of nonsense for another. Most of the material that you were dealing with had no connexion with anything in the real world, not even the kind of connexion that is contained in a direct lie. Statistics were just as much a fantasy in their original version as in their rectified version. A great deal of the time you were expected to make them up out of your head. For example, the Ministry of Plenty's forecast had estimated the output of boots for the quarter at one-hundred-and-forty-five million pairs. The actual output was given as sixty-two millions. Winston, however, in rewriting the forecast, marked the figure down to fifty-seven millions, so as to allow for the usual claim that the quota had been overfulfilled. In any case, sixty-two millions was no nearer the truth than fifty-seven millions, or than one-hundred-and-forty-five millions. Very likely no boots had been produced at all. Likelier still, nobody knew how many had been produced, much less cared. All one knew was that every quarter astronomical numbers of boots were produced on paper, while perhaps half the population of Oceania went barefoot. And so it was with every class of recorded fact, great or small. Everything faded away into a shadow-world in which, finally, even the date of the year had become uncertain. 
 
-- _Nineteen Eighty-Four_, G Orwell (EA Blair)
+_Nineteen Eighty-Four_, G Orwell (EA Blair)
 
 > ... As the end of the 1968 fiscal year approached, Trans World Airlines (TWA) was headed for a major financial loss after recording sizable profits in 1967. In response to the crisis, TWA's managers took action: They "extended the depreciable life of most of [the airline] fleet by several years and took down more of [the] available investment tax credit in computing deferred income taxes" (Mason and Swanson, 1981, p.137). When the ink was dry, TWA had gone from a near certain substantial loss to a profit equal to more than half of that of the previous year. Managers whose pay was based on the company's annual profit appreciated the change more than financial analysts trying to evaluate the health of the firm.
 
-- _Measuring and Managing Performance in Organizations_, RD Austin
+_Measuring and Managing Performance in Organizations_, RD Austin
 
 No aspect of the problem of alienation is unknown or unstudied. However, I do not believe that the fact that there is an algorithmic approach is widely known or construed to be known. But it is still worth making a recapitulation of the problem in light of the purported solution, even if that recapitulation is unoriginal.
 
@@ -64,7 +65,7 @@ An aside. Note that one cannot have technological matters be moral matters but m
 # System
 
 A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
-- _General Systemantics_, J. Gall
+_General Systemantics_, J. Gall
 
 The problem of alienation is thus posed. If you believe me, then we can go ransacking the tools of neural networks to attack the problem of alienation. The AI folks have these tools, and the economists and politicians do not, because you can set up an AI experiment with a few computers at 2 AM in your pajamas without permission from anybody else and mostly without ethical concerns. The experiment finishes in less than a few days or weeks, and replication is, comparatively, a cinch. Validation is less good.
 
