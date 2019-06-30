@@ -19,11 +19,15 @@ But I was surprised when I looked at the problem of alienation in such a society
 > Doctors without borders said that people needed 7 days practical training on PPE before sending them into an ebola treatment unit. We would give illiterate west africans 200 page powerpoint presentations and then let them try on the equipment once before sending them in. Most of them died. But it was ok, because look at how much work we (WHO) are doing here! We are training and sending in HUNDREDS of workers! And they are all dying!!! This means the outbreak is unstoppable! Even if we had done a good job at the start (which we didn't) it wouldn't have made any difference. So don’t blame us now.
 >
 > If you have ever seen "generation kill" that is exactly how it went down. Every day we would be all about "impressing geneva".
-
+>
 > Boss: are you doing anything important?
+>
 > Me: Yes, i'm figuring out the ebola village hotspots for the last 3 days to prioritize the teams
+>
 > Boss: No, (district) just came out with a powerpoint that is really impressing Geneva. You need to recreate it for our district. 
+>
 > Me: And the hotspots/team directions?
+>
 > Boss: Leave it.
 
 Anonymous [verbatim]
