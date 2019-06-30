@@ -69,6 +69,7 @@ An aside. Note that one cannot have technological matters be moral matters but m
 # System
 
 > A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
+
 _General Systemantics_, J. Gall
 
 The problem of alienation is thus posed. If you believe me, then we can go ransacking the tools of neural networks to attack the problem of alienation. The AI folks have these tools, and the economists and politicians do not, because you can set up an AI experiment with a few computers at 2 AM in your pajamas without permission from anybody else and mostly without ethical concerns. The experiment finishes in less than a few days or weeks, and replication is, comparatively, a cinch. Validation is less good.
