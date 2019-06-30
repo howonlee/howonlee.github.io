@@ -4,7 +4,7 @@ title: An Algorithmic Approach to Alienation
 ---
 
 > On conviendra aisément qu'il importe au plus haut point de savoir si l'on n'est pas dupe de la morale.
-> Everyone will readily agree that it is of the highest importance to know whether we are duped by morality.
+> [Everyone will readily agree that it is of the highest importance to know whether we are duped by morality.]
 
 _Totality and Infinity_, E. Levinas
 
