@@ -9,4 +9,6 @@ You definitely notice the levels. We had to close the window the other day durin
 
 This is a surprisingly high ROI thing we did. The monitors are pretty expensive for an individual but not at all for a corporation, because there will be multiple people getting paid to be in a meeting, all of them possibly impaired, possibly making important decisions, possibly talking to clients, possibly handling emotional situations.
 
+One of the law firms we work with actually ended up getting it for their own meeting rooms, when they asked about it (we sell a GDPR and CCPA thing that handles third-party integrations and other stuff for you, so we talk to lawyers all the time).
+
 If you don't read the above linked paper, it's worth it to note that their measure of personal initiative was one of the ones highest impacted by high CO2 levels.
