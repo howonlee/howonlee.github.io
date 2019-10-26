@@ -1,4 +1,6 @@
 ---
+layout: page
 title: Listen To An NP-Complete Problem 
-redirect_to: https://github.com/howonlee/audible-cos
 ---
+
+[Here it is.](https://github.com/howonlee/audible-cos)
