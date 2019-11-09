@@ -3,9 +3,11 @@ layout: page
 title: Heap Search is NP-Complete
 ---
 
-I found the other day that the problem of searching for a value in the leaf nodes of binary heaps is NP-complete. I looked for a fair amount of time for any previous publication of this in the literature and couldn't find one, so I thought maybe it was worth sharing (I may be mistaken, of course). Here is the reduction, from subset sum.
+I found the other day that the problem of searching for a value in the leaf nodes of binary heaps is NP-complete. I looked for a fair amount of time for any previous publication of this in the literature and couldn't find one, so I thought maybe it was worth sharing (I may be mistaken, of course).
 
-Construe subset sum as the decision problem of whether a multiset of positive integers may sum to a query `Q`.
+Here is the reduction, from subset sum.
+
+Construe subset sum as the decision problem of whether a multiset of positive integers may have a subset which sums to a query `Q`.
 
 We will construct a min-heap from this problem. The construction goes like so.
 
@@ -19,9 +21,9 @@ Note that the value of the left child is always lesser than that of the right ch
 
 The bottom layer of the heap contains `O(2^N)` nodes, where `N` is the number of layers in the heap, or alternately the number of members of the multiset.
 
-The problem of subset sum reduces to searching for `Q` in the leaf nodes of the heap, because each member of the bottom layer corresponds to a possible partition, with the value of the sum of that partition, and they enumerate the possible partitions.
+The problem of subset sum reduces to searching for `Q` in the leaf nodes of the heap, because each member of the bottom layer corresponds to a possible subset, with the value of the sum of that subset, and they enumerate the possible subsets.
 
-This is because every left child corresponds to a decision not to include a member in the possible partition, every right child corresponds to a decision to include that member.
+This is because every left child corresponds to a decision not to include a member in the possible subset, every right child corresponds to a decision to include that member.
 
 Therefore, an algorithm that solves searching in a heap also solves subset sum. To prove for max-heaps, repeat the construction but subtract from the whole sum of the multiset instead of adding.
 
