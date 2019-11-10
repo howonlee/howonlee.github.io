@@ -21,7 +21,7 @@ Note that the value of the left child is always lesser than that of the right ch
 
 The bottom layer of the heap contains `O(2^N)` nodes, where `N` is the number of layers in the heap, or alternately the number of members of the multiset.
 
-Edit Nov 9 2019: Folks have been thinking that this means that it's not a polytime reduction. We are reducing the results of the subset sum to the results of the search only, so you don't necessarily have to instantiate this whole bottom layer.
+Edit Nov 9 2019: Folks have been thinking that this means that it's not a polytime reduction. You don't necessarily need to instantiate a tree to search on it.
 
 The problem of subset sum reduces to searching for `Q` in the leaf nodes of the heap, because each member of the bottom layer corresponds to a possible subset, with the value of the sum of that subset, and they enumerate the possible subsets.
 
