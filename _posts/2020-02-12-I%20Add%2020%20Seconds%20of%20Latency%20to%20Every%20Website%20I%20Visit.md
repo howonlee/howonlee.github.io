@@ -9,16 +9,25 @@ Revenue, and the underlying source of revenue, in the consumer web, whether impr
 
 Here are some articles saying this breathlessly:
 
-[Amazon Found Every 100ms of Latency Cost them 1% in Sales](https://www.gigaspaces.com/blog/amazon-found-every-100ms-of-latency-cost-them-1-in-sales/)[Find out how you stack up to new industry benchmarks for mobile page speed](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/)
+[Amazon Found Every 100ms of Latency Cost them 1% in Sales](https://www.gigaspaces.com/blog/amazon-found-every-100ms-of-latency-cost-them-1-in-sales/)
+
+[Find out how you stack up to new industry benchmarks for mobile page speed](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/)
+
 [How Loading Time Affects Your Bottom Line](https://neilpatel.com/blog/loading-time/)
 
 Of course, nearly everyone who writes software uses the consumer web, often to excess.
 
-I am no exception. In fact, I use the web to ridiculous excess. There are 24-hour periods of my life where I was using that consumer web for 24 hours (my coworker asked, "weren't you worried about blood clots?" - you walk around).
+I am no exception. In fact, I use the web to ridiculous excess.
 
-But addiction is really the converse of bouncing from a site. So if you can inject latency into sites artificially, you can reduce the actual impact of the addiction in a controllable way while not denying it to yourself.
+There are 24-hour periods of my life where I was using that consumer web for 24 hours (my coworker asked, "weren't you worried about blood clots?" - you walk around).
 
-Hacker News with 100ms latency feels like liquor: with 9000ms latency feels like small beer. Reddit with 150ms latency feels like cocaine: Reddit with 8000ms latency feels like coffee.
+But addiction is really the converse of bouncing from a site.
+
+So if you can inject latency into sites artificially, you can reduce the actual impact of the addiction in a controllable way while not denying it to yourself.
+
+Hacker News with 100ms latency feels like liquor: with 9000ms latency feels like small beer.
+
+Reddit with 150ms latency feels like cocaine: Reddit with 8000ms latency feels like coffee.
 
 Blocking is unfortunately less effective because of a sort of withdrawal that goes on.
 
@@ -35,7 +44,7 @@ On iOS, turn on the developer mode and then turn on the [network link conditione
 
 Android is the hardest to do this in. Either turn on Charles Proxy on a proxy that the Android connection goes through (only possible over wifi), or tether to an entire different iphone which has the network link conditioner on.
 
-Other possible cripplings
+Other possible dilutions
 ---
 
 If it seems like an inducement to get you to do things on the Web, it is probably amenable to blocking, latency reduction, or some other sort of mutilation that will allow you to resume being a normal human being in some way.
@@ -45,7 +54,7 @@ I am very far along this sort of attitude towards iconoclasm, but you don't real
 I have:
 
 - Deleted all variable pictures from YouTube with my adblock
-- Not even considered the possibility of browsing the web without adblock anymore (the good stuff, too)
+- Not even considered the possibility of browsing the web without adblock anymore (the [good stuff](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en), too)
 - Used an [extension](https://chrome.google.com/webstore/detail/hide-youtube-comments/kehdmnjmaakacofbgmjgjapbbibhafoh) to remove all the comments from there
 - Coerced old-style on Reddit without an infinite scroll
 - Withdrawn mostly from Reddit in favor of early 2000's style forums that I pay money for and HN
