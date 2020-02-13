@@ -64,6 +64,6 @@ I have:
 - Used an [extension](https://chrome.google.com/webstore/detail/hide-youtube-comments/kehdmnjmaakacofbgmjgjapbbibhafoh) to remove all the comments from Youtube
 - Coerced old-style on Reddit without an infinite scroll
 - Withdrawn mostly from Reddit in favor of early 2000's style forums that I pay money for and HN
-- Deleted Facebook with especial, complicated and sophisticated prejudice
+- Deleted Facebook with especial, complicated and sophisticated prejudice which I will not detail here
 
 It is true I have watered down my perception of the Internet. I have watered down the Internet because nowadays it only seems to come in 151 proof.
