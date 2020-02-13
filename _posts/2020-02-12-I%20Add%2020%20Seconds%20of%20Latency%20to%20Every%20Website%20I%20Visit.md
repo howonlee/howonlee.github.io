@@ -59,7 +59,7 @@ I am very far along this sort of cult of mutilation. You don't have to follow me
 
 I have:
 
-- Deleted all variable pictures from YouTube with my adblock. The avatar of the people, the teaser images with people making obnoxious faces on them, etc.
+- Deleted all variable pictures from YouTube with my adblock. The avatars of the people, the teaser images with people making obnoxious faces on them, the logo, etc.
 - Not even considered the possibility of browsing the web without adblock anymore (the [good stuff](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en), too)
 - Used an [extension](https://chrome.google.com/webstore/detail/hide-youtube-comments/kehdmnjmaakacofbgmjgjapbbibhafoh) to remove all the comments from Youtube
 - Coerced old-style on Reddit without an infinite scroll
