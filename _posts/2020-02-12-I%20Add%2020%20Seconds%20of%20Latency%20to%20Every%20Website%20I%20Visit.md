@@ -53,16 +53,17 @@ Android is the hardest to do this in. Either turn on Charles Proxy on a proxy th
 Other possible dilutions
 ---
 
-If it seems like an inducement to get you to do things on the Web, it is probably amenable to blocking, latency reduction, or some other sort of mutilation that will allow you to resume being a normal human being in some way.
+If it has been put on websites by some folks like me, and seems like an inducement to get you to do things on the Web, it is probably amenable to blocking, latency reduction, or some other sort of mutilation that will allow you to resume being a normal human being in some way.
 
-I am very far along this sort of attitude towards iconoclasm, but you don't really have to follow me.
+I am very far along this sort of cult of mutilation. You don't have to follow me, but here is what I do.
 
 I have:
 
-- Deleted all variable pictures from YouTube with my adblock
+- Deleted all variable pictures from YouTube with my adblock. The avatar of the people, the teaser images with people making obnoxious faces on them, etc.
 - Not even considered the possibility of browsing the web without adblock anymore (the [good stuff](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en), too)
-- Used an [extension](https://chrome.google.com/webstore/detail/hide-youtube-comments/kehdmnjmaakacofbgmjgjapbbibhafoh) to remove all the comments from there
+- Used an [extension](https://chrome.google.com/webstore/detail/hide-youtube-comments/kehdmnjmaakacofbgmjgjapbbibhafoh) to remove all the comments from Youtube
 - Coerced old-style on Reddit without an infinite scroll
 - Withdrawn mostly from Reddit in favor of early 2000's style forums that I pay money for and HN
+- Deleted Facebook with especial, complicated and sophisticated prejudice
 
 It is true I have watered down my perception of the Internet. I have watered down the Internet because nowadays it only seems to come in 151 proof.
