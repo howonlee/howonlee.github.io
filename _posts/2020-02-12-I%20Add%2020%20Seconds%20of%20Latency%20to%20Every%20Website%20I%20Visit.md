@@ -17,9 +17,9 @@ Here are some articles saying this breathlessly:
 
 But if folks make more money off of customers when they reduce latency, there has to be some power in increasing latency.
 
-I actually found one some months ago. It stems from my own usage of the consumer web.
+I actually found something some months ago. It stems from my own usage of the consumer web.
 
-Of course, nearly everyone who writes software uses the consumer web, often to excess.
+Nearly everyone who writes software uses the consumer web, often to excess.
 
 I, as a bonafide computer toucher, am no exception.
 
