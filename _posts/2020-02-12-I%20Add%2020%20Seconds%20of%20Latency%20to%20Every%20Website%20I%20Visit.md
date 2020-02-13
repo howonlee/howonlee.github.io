@@ -15,21 +15,25 @@ Here are some articles saying this breathlessly:
 
 [How Loading Time Affects Your Bottom Line](https://neilpatel.com/blog/loading-time/)
 
+But if folks make more money off of customers when they reduce latency, there has to be some power in increasing latency.
+
 Of course, nearly everyone who writes software uses the consumer web, often to excess.
 
-I am no exception. In fact, I use the web to ridiculous excess.
+I am no exception.
 
-There are 24-hour periods of my life where I was using that consumer web for 24 hours (my coworker asked, "weren't you worried about blood clots?" - you walk around).
+In fact, I use the web to ridiculous excess. There are 24-hour periods of my life where I was using that consumer web for 24 hours (my coworker asked, "weren't you worried about blood clots?" - you walk around).
 
 But addiction is really the converse of bouncing from a site.
 
-So if you can inject latency into sites artificially, you can reduce the actual impact of the addiction in a controllable way while not denying it to yourself.
+So if you can inject latency into sites artificially, you can reduce the actual impact of the addiction in a controllable way while not denying the enjoyment of the Internet to yourself.
 
-Hacker News with 100ms latency feels like liquor: with 9000ms latency feels like small beer.
+Hacker News with 100ms latency feels like liquor: Hacker News with 9000ms latency feels like small beer.
 
 Reddit with 150ms latency feels like cocaine: Reddit with 8000ms latency feels like coffee.
 
-Blocking is unfortunately less effective because of a sort of withdrawal that goes on.
+Blocking tends towards the inducement of [psychological reactance](https://en.wikipedia.org/wiki/Reactance_(psychology)).
+
+This just feels like a beneficial dilution of the Internet. It feels like wine to the ancient Greeks, who drank wine but attacked the practice of drinking undiluted wine as tantamount to barbarism.
 
 Doing It
 ---
