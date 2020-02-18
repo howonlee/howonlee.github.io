@@ -44,6 +44,8 @@ You get the web from 2 basic kinds of nightmare rectangle: laptops and desktops,
 
 Your best bet for a web browser in a laptop or desktop is [Crackbook Revival](https://chrome.google.com/webstore/detail/crackbook-revival/fakedinbmdjifniaepnfbplcheaecebc?hl=en). It has a fully configurable site list and has an option for linearly increasing the amount of latency upon more viewing.
 
+Simon HE emailed me saying that you can use [this Firefox extension](https://github.com/OskarDamkjaer/FirefoxDelayWebpage) if you're on Firefox.
+
 For the other applications in the laptop or desktop, turn on [Charles Proxy](https://www.charlesproxy.com/), and use its [throttling functionality](https://www.charlesproxy.com/documentation/proxying/throttling/). Instead of its intended purpose as developer tools, you can just turn it on permanently.
 
 On iOS, turn on the developer mode and then turn on the [network link conditioner](https://nshipster.com/network-link-conditioner/) permanently.
