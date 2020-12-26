@@ -3,10 +3,7 @@ layout: page
 title: Program Abstraction as Gambling
 ---
 
-Program Abstraction as Gambling
----
-
-Note: I hope I don't insult any gambling folks by the comparison or offend anyone with real gambling problems.
+<sub><sup>Note: I hope I don't insult any gambling folks by the comparison or offend anyone with real gambling problems. Those are of course much more serious.</sup></sub>
 
 Abstraction exists, even if folks don't always agree about what it is. It is a stable term, if not a stable thing, which can be talked about.
 
