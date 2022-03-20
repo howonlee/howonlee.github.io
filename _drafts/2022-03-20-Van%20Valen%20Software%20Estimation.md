@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Proportionate-Growth Software Estimation
+title: Van Valen Software Estimation
 ---
 
 When I estimate software projects at work, I conform to the way we do it at work. But I can do software estimates the way I want to for my own projects, so I do them in this strange way. It is blisteringly simple.
+
+Van Valen here refers to Leigh Van Valen, [who posited that the chance of species dying out in an ecological setting does not vary with time, despite the 
 
 Skip to the header about "Estimation" if you just want to hear about what I do instead of the thinking behind it.
 
@@ -22,7 +24,7 @@ Of course the Fibonacci points system tries to get at this. It mostly fails beca
 
 Even the existing estimation models which partially do this, like the ancient COCOMO model, often dismiss the ultimate uniformity of the 2-hour task and the 5-year task. I believe that they're as different as the fractal image with 2 iterations versus the fractal image with 10 iterations. Gigantic differences in scale and seeming complexity they may have, but it should be the same model for both.
 
-So what do you do in that sort of picture? One possible picture is proportionate growth, like Gibrat's law. The claim thus goes, "Tasks grow in multiplicative proportion in time taken without respect to their scale." The chance a 2-day task has to double in time is the same as the chance a 4-day task has to double in time. This makes a lognormal distribution of possible times. If you're one of those physics weirdoes, like Bak was, who's obsessed with power laws then there's [shenanigans you can do to turn the resulting lognormal distribution into a power law](https://arxiv.org/pdf/cond-mat/0310061.pdf).
+So what do you do in that sort of situation? One possible picture of this situation is proportionate growth, like Gibrat's law. The picture thus can be described, "Tasks grow in multiplicative proportion in time taken without respect to their scale." The chance a 2-day task has to double in time is the same as the chance a 4-day task has to double in time. This makes a lognormal distribution of possible times. A more technical discussion is [given here](https://www.eecs.harvard.edu/~michaelm/postscripts/im2004a.pdf).
 
 There is a pretty decent putative argument for why an underlying process for software task times might ultimately be a power law instead of just being a classic instance of physicists writing with large markers on log-log plots and seeing a power law where there isn't. Software is basically creating valid statements in a language with respect to a specification, sometimes fiddly or indistinct or only well-defined in retrospect: but this is merely dual to setting a great number of variables which satisfy a big gnarly satisfiability formula. But satisfiability [is a condensed matter lattice](https://web.stanford.edu/~montanar/RESEARCH/book.html) in addition to being a computer-science NP-complete problem, and they proved a second-order phase transition with criticality and fiddly little phase transitions in many ways to express certain kinds of _random_ satisfiability a long time ago. You see a second-order phase transition, you expect the power laws to pop up like fungus in rotting wood.
 
