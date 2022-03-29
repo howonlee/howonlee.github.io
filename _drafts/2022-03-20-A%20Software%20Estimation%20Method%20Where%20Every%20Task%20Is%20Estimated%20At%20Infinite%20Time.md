@@ -5,9 +5,34 @@ title: My Software Estimation Method, Where Every Task Is Estimated At Infinite 
 
 When I estimate software projects at work, I conform to the way we do it at work. But I can do software estimates the way I want to for my own projects, so I do them in this strange way. Despite the confounding premise, it is blisteringly simple.
 
-Skip to the header about "Estimation" if you just want to hear about what I do instead of the arcane thinking behind it.
+Estimation
+===
 
-Arcane Thinking
+Set a minimum time for an issue. I usually use 1 day. Call that _t0_.
+
+At the end of that time is a decision. I decide whether to do the task or to not do the task, given the time already taken.
+
+If I don't do it, I don't do it.
+
+If I will take more time and do it, I have _t\_(i + 1) = t\_i / (alpha - 1)_ more time until I make the decision again of whether to do the task or to not do the task. The expectation of how much more time I am going to take takes into account the amount of time I've already taken.
+
+Usually that parameter _alpha_ is 2, in which case every decision time is a doubling: that is, I decide after 1 day, and then 2 more days after that, then 4 more days after that, and so on. Between 1 and 3 is a reasonable value for _alpha_.
+
+So at every stage I am guessing, "is this going to take the increased time or not?". Really, I am answering the question, "is this worth the effort if it takes that increased time or not?", which gets to the heart of the actual question of software project estimation anyways. The question is now the same each time, and the answer must be crisply binary.
+
+This is getting the expectation of the formal Pareto distribution: there are lots of other fat-tailled distributions which behave reasonably differently and can be gotten with other mechanisms, like the lognormal distribution or the gamma distributions. Those are much less funny distributions, tho.
+
+With certain values of alpha and certain probabilities of taking the increased amount of time, the probabilistic expectation - and in fact, any distributional moment you'd like - of time taken is infinite. Hence the title.
+
+In effect you're taking the other side of [Bernoulli's Paradox of St. Petersburg](https://en.wikipedia.org/wiki/St._Petersburg_paradox): all these decision points, all these coin flips are double or nothing and the expectation is infinite, but the resources expended increase exponentially while the whole universe of resources is quite finite, so it doesn't feel quite as awful as all that.
+
+See also [Samuelson's discussion of Bernoulli's paradox](https://www.jstor.org/stable/2722712).
+
+I often think to myself that power laws are an expression of Nature sitting in a probability distribution giving us humans an obscene gesture. Perhaps you might think it less abominable, but at least any serious software practitioner will agree with the mere statement that it is often a miracle that software gets made at all. Be glad of it. Enjoy the booping and beeping.
+
+See also [this one](https://www.johndcook.com/blog/2015/12/21/power-law-projects/).
+
+Arcane Justification
 ===
 
 So the amount of time that tasks take in a software project has a radical inequality to it. You see the 4-hour tasks, you see the 2-month tasks. I am currently working on whacking a 7-year-old task that they were thinking about getting done 6 years ago, then 5 years ago, then someone asked about it 2 years ago and my coworker got folks to use a workaround 2 years ago. And coworkers repeatedly thought about it and wrote multiple design documents years ago and now I'm doing it. A basically funny but utterly mundane happening, in software.
@@ -27,18 +52,3 @@ There is even a pretty decent putative argument for why an underlying process fo
 But satisfiability [is a condensed matter lattice](https://web.stanford.edu/~montanar/RESEARCH/book.html) in addition to being a computer-science NP-complete problem, despite not being matter, and they proved a second-order phase transition with criticality and abominably annoying phase structure to express certain kinds of _random_ satisfiability a long time ago. That's a second order phase transition, like ferromagnetism, not like water into ice. The phase transition is according to a measure of difficulty: very easy, it finishes quickly. Very hard, you recognize you can't solve it quickly. In the transition, everything gets doubtful.
 
 You see a second-order phase transition, you expect the fractals and fat-tailled distribution to pop up in the transition like fungus in rotting wood. And there's a selection argument of software where it tends to get at that difficulty frontier because easier software-writing just gets folded into parts of other software projects as parts of them. You used to be able to sell HTTP servers for money to people who weren't utterly clueless, but now you can get one in one line in python or golang and there's apache or nginx if you need something for production: now you have to sell the SaaS contracts for money.
-
-Estimation
-===
-
-So if you buy that satisfiability story, which I do for now, the underlying distributional ansatz is a power law. That is, you're saying that the tasks are distributed according to a power law. So one method of estimation for tasking would go something like this.
-
-Set a minimum time for an issue, I usually use 1 day. Call that _t0_.
-
-At the end of that time is a decision point as to whether to entirely not do the task or to do the task. If you don't do it, you don't do it. If you will take more time, you have _t\_(i + 1) = t\_i / (alpha - 1)_ more time until you make the decision again, because the expectation of how much you're going to take takes into account the amount of time you've already taken. Usually that parameter _alpha_ is 2, in which case every decision time is a doubling: that is, you decide after 1 day, and then 2 more days after that, then 4 more days after that, and so on. Between 1 and 3 is a reasonable way to get alpha. So at every stage you are guessing, "is this going to take the increased time or not?". Really, you are answering the question, "is this worth the effort if it takes that increased time or not?", which gets to the heart of the actual question of software project estimation anyways. The question is now the same each time, and the answer at crisply binary.
-
-This is getting the expectation of the formal Pareto distribution: there are lots of other fat-tailled distributions which behave reasonably differently and can be gotten with other mechanisms, like the lognormal distribution or the gamma distributions. Those are much less funny distribution, tho.
-
-Why's this the funny one? With certain values of alpha, the expectation of time taken is infinite. Hence the title. I often note to myself that power laws are often an expression of Nature sitting in a probability distribution giving us humans an obscene gesture. Surely any serious software practitioner will agree at least with the statement that it's often a miracle that software gets made at all. Be glad of it. Enjoy the booping and beeping.
-
-See also [this one](https://www.johndcook.com/blog/2015/12/21/power-law-projects/).
