@@ -24,7 +24,7 @@ This is getting the expectation of the formal Pareto distribution, if you model 
 
 Those are much less funny distributions, tho. Why? With certain values of alpha and certain probabilities of taking the increased amount of time, the probabilistic expectation - and in fact, any distributional moment you'd like - of time taken is infinite. Hence the title.
 
-In effect you're taking the other side of [Bernoulli's Paradox of St. Petersburg](https://en.wikipedia.org/wiki/St._Petersburg_paradox): all these decision points, all these coin flips are double or nothing and the expectation is infinite, but the resources expended increase exponentially while the whole universe of resources is quite finite, so it doesn't feel quite as awful as all that.
+In effect you're taking the other side of [Bernoulli's Paradox of the St. Petersburg Game](https://en.wikipedia.org/wiki/St._Petersburg_paradox): all these decision points, all these coin flips are double or nothing and the expectation is infinite, but the resources expended increase exponentially while the whole universe of resources is quite finite, so it doesn't feel quite as awful as all that.
 
 See also [Samuelson's discussion of Bernoulli's paradox](https://www.jstor.org/stable/2722712).
 
