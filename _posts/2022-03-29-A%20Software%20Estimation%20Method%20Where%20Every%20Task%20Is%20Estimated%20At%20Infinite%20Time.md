@@ -28,7 +28,7 @@ In effect you're taking the other side of [Bernoulli's Paradox of the St. Peters
 
 See also [Samuelson's discussion of Bernoulli's paradox](https://www.jstor.org/stable/2722712).
 
-I often think to myself that power laws are an expression of Nature sitting in a probability distribution giving us humans an obscene gesture. Perhaps you might think it less abominable, but at least any serious software practitioner will agree with the mere statement that it is often a miracle that software gets made at all. Be glad of it. Enjoy the booping and beeping.
+I often think to myself that power laws are an expression of Nature sitting in a probability distribution giving us humans an obscene gesture. Like, one of the really obscene ones. Perhaps you might think it less abominable, but at least any serious software practitioner will agree with the mere statement that it is often a miracle that software gets made at all. Be glad of it. Enjoy the booping and beeping.
 
 See also [this one](https://www.johndcook.com/blog/2015/12/21/power-law-projects/).
 
