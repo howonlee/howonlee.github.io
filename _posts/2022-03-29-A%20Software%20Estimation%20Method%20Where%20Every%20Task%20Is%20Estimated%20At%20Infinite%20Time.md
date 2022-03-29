@@ -20,9 +20,9 @@ Usually that parameter _alpha_ is 2, in which case every decision time is a doub
 
 So at every stage I am guessing, "is this going to take the increased time or not?". Really, I am answering the question, "is this worth the effort if it takes that increased time or not?", which gets to the heart of the actual question of software project estimation anyways. The question is now the same each time, and the answer must be crisply binary.
 
-This is getting the expectation of the formal Pareto distribution: there are lots of other fat-tailled distributions which behave reasonably differently and can be gotten with other mechanisms, like the lognormal distribution or the gamma distributions. Those are much less funny distributions, tho.
+This is getting the expectation of the formal Pareto distribution, if you model my decision as to whether to do the thing or not as a Bernoulli variable with stable distribution, which it ends up being in practice: there are lots of other fat-tailled distributions which behave reasonably differently and can be gotten with other mechanisms, like the lognormal distribution or the gamma distributions.
 
-With certain values of alpha and certain probabilities of taking the increased amount of time, the probabilistic expectation - and in fact, any distributional moment you'd like - of time taken is infinite. Hence the title.
+Those are much less funny distributions, tho. Why? With certain values of alpha and certain probabilities of taking the increased amount of time, the probabilistic expectation - and in fact, any distributional moment you'd like - of time taken is infinite. Hence the title.
 
 In effect you're taking the other side of [Bernoulli's Paradox of St. Petersburg](https://en.wikipedia.org/wiki/St._Petersburg_paradox): all these decision points, all these coin flips are double or nothing and the expectation is infinite, but the resources expended increase exponentially while the whole universe of resources is quite finite, so it doesn't feel quite as awful as all that.
 
