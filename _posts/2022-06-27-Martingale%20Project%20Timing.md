@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Martingale Project Timing by Example
+title: Martingale Project Timing
 ---
 
 [The previous introduction](https://howonlee.github.io/2022/03/29/A-20Software-20Estimation-20Method-20Where-20Every-20Task-20Is-20Estimated-20At-20Infinite-20Time.html) was pretty arcane, so this one should be a little less.
