@@ -19,13 +19,17 @@ These progress reports are going to have to be pretty trivial if we're starting 
 
 When we need more time, we always have a rigid new amount of time where we'll look at Zoobleybops again. It's double the previous time. So 2 days from now, because we waited 1 day the previous time.
 
-What prevents us from just doing tasks forever?
+That's why it's called martingale timing, because it's like the martingale system of betting.
 
-At each of these double-or-nothing decision points we always have the possible choice of deciding, consciously and soberly, that we're not going to do Zoobleybops, picking nothing. Then, we quit: we erase it from the task list.
+The martingale system assumes you're playing a game where you win the stake if a coin comes up heads and lose if the coin comes up tails. In order to win, you just double the bet after each loss.
 
-We don't have to estimate the complexity or 'how long it's going to take' of Zoobleybops again, ever. We just keep on playing double-or-nothing, the martingale coin-flips.
+We don't have to estimate the complexity or 'how long it's going to take' of Zoobleybops again, ever. We just keep on playing double-the-bet, the martingale coin-flips.
 
-Why is that a good thing?
+Martingales can't go on forever because resources are fininte. What prevents us from just doing tasks forever?
+
+At each of these doubling decision points we always have the possible choice of deciding, consciously and soberly, that we're not going to do Zoobleybops, picking nothing. Then, we quit: we erase it from the task list.
+
+Why do this?
 
 The only time when you can estimate the complexity of a seriously complex task is when you've materially derisked it, so _estimates_ qua estimates, done at the beginning of the project, veer alarmingly between Panglossianism and bad-faith sandbagging.
 
