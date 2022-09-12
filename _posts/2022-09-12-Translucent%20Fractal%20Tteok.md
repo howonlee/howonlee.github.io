@@ -48,7 +48,7 @@ Wash away the flocculated (re-powderized) potato starch. The gelation is permane
 
 ![washed](https://i.imgur.com/yQVs5I2.png)
 
-It's hard to see (because of the translucency and because of the blurriness of the picture because I was hungry) but there's some translucent potato-starch-oobleck-fractal-tteok in the spoon below.
+It's hard to see (because of the translucency and because of the blurriness of the picture because I was hungry) but there's some translucent potato-starch-oobleck-fractal-tteok from another batch in the spoon below.
 
 ![soup](https://i.imgur.com/5bvFPlm.png)
 
