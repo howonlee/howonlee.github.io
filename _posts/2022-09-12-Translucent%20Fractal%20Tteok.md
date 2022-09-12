@@ -48,6 +48,10 @@ Wash away the flocculated (re-powderized) potato starch. The gelation is permane
 
 ![washed](https://i.imgur.com/yQVs5I2.png)
 
+It's hard to see (because of the translucency and because of the blurriness of the picture because I was hungry) but there's some translucent potato-starch-oobleck-fractal-tteok in the spoon below.
+
+![soup](https://i.imgur.com/5bvFPlm.png)
+
 If you try to pour a lot on a plate and microwave for a longer time, then it'll bubble over and be less translucent. In that case, indirect stovetop heat will probably work better - use a bain-marie. It will still take less than 5 minutes on a bain-marie. This stuff just naturally gelates at 57° C, if you're using plain water.
 
 The flocculation always makes me think that you could get it done without actually getting to the oobleck transition but I couldn't find any way of getting that tteok-like texture without the oobleck transition and it flocculating on me. At lower starch concentrations it has more of a incoherent doughy-gelatin texture.
