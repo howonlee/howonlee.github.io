@@ -36,6 +36,8 @@ Mix ingredients in bowl until mixed together and you can perceive the non-Newton
 
 If you have a metal bowl like I do, you'll perceive [diffusion-limited aggregation](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation) fractals on the edges at that concentration, as in the video, which is why it's named fractal tteok.
 
+![clearer fractal](https://i.imgur.com/9CcirLN.png)
+
 If the stains are close to diffusion-limited aggregation fractals but a little blockier, add more starch. If there's undissolved starch (and not the illusion of undissolved starch from the oobleck non-Newtonian effects) add more water.
 
 Pour aliquots that look how you want them to look on an oiled plate with a spoon and microwave for 5-10 second periods until gelated, usually takes about 10-15 seconds for the amount pictured, which is 10g liquid and 12g potato starch.
