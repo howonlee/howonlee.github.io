@@ -7,7 +7,7 @@ This is really a cooked potato starch oobleck, but it's translucent and the text
 
 [Liangfen noodles](https://en.wikipedia.org/wiki/Liangfen) are a not-totally-different recipe but the water concentration is very different and the very different mung bean starch is used. There is also a not-totally-different preparation of [translucent potato chips](https://www.instructables.com/Glass-Potato-Chips/) which are crunchy instead of tteok-like and dried for a day and baked for hours instead of gently heated for seconds.
 
-Potato starch has really different gelation properties to nearly any other kind of starch so I don't know if substitutions will work.
+Potato starch has really different gelation properties to nearly any other kind of starch so I don't know if substitutions will work. Most oobleck is made with cornstarch, not potato starch, but cornstarch _specifically_ doesn't work very well.
 
 Here's the recipe.
 
@@ -19,7 +19,7 @@ Cook time: sub-30 seconds if microwaved, sub-5 minutes if on stovetop bain-marie
 
 - 1 part water-based liquid.
   - You can use any mostly-water based liquid, flavorful or not.
-  - Ideally the PH is between 5-ish and 9-ish (aka, this will work less well with lemon juice)
+  - Ideally the pH is between 5-ish and 9-ish (aka, this will work less well with lemon juice)
   - Osmolarity matterns more than pH, try for low osmolarity (aka, this will work less well with culinary blood or demiglace than with light broth or water)
   - In either case, it'll still work, though, although possibly marginally
   - Example is with water
