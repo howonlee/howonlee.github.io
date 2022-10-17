@@ -14,7 +14,7 @@ At the end of that time is a decision. I decide whether to do the task or to not
 
 If I don't do it, I don't do it.
 
-If I will take more time and do it, I have _t\_(i + 1) = t\_i / (alpha - 1)_ more time until I make the decision again of whether to do the task or to not do the task. The expectation of how much more time I am going to take takes into account the amount of time I've already taken.
+If I will take more time and do it, I have _t\_(i + 1) = t\_i * (alpha)_ more time until I make the decision again of whether to do the task or to not do the task. The expectation of how much more time I am going to take takes into account the amount of time I've already taken.
 
 Usually that parameter _alpha_ is 2, in which case every decision time is a doubling: that is, I decide after 1 day, and then 2 more days after that, then 4 more days after that, and so on. Between 1 and 3 is a reasonable value for _alpha_.
 
