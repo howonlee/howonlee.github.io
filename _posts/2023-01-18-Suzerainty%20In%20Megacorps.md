@@ -23,4 +23,4 @@ Suppose you're a peasant in rural France in 1180 AD. You couldn't say anything c
 
 And, of course, do not forget that they've never heard of and probably never care about the king who the history books remember about the period, except in some coins or something.
 
-This is the grand level of lack of abstraction of a feudal situation. Expect it of any mention of a megacorp with such a lack of the monopoly on violence. And when you hear "Oh, FooCorp does this or that", of something that deals with people, dismiss it entirely and just know that some merry band of people at FooCorp do it. And the CEO of FooCorp certainly doesn't have anything to do with your life.
+This is the grand level of lack of abstraction of a feudal situation. Expect it of any mention of a megacorp with such a lack of the monopoly on violence. And when you hear "Oh, FooCorp does this or that", of something that deals with people, dismiss it entirely and just know that some merry band of people at FooCorp do it. And the CEO of FooCorp certainly doesn't have anything to do with your life, except on some meaningless trinkets or waves which wreck you after many layers of indirection.
