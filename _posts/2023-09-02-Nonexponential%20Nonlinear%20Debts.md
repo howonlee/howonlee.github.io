@@ -26,3 +26,5 @@ It must, however, be noted that memory and computation for the 21st century mode
 I don't have a banking license and I don't plan to get one so this is a recommendation that someone else go and do this. Obviously loan-making is incredibly regulated for great reasons, so get those no-action letters before you try this yourself.
 
 The history of compound interest is filled with instances of exponents doing their thing and getting unmanageably big and causing chaos while doing so. But simple interest is a nonentity outside of pawnshops and consignment stores and other niche domains because it has a structurally terrible yield. So something $O(t^2)$ might be actually useful.
+
+Obviously a pretty similar argument could be made for amortizing loans and the functional form of amortization.
