@@ -3,11 +3,11 @@ layout: page
 title: Why are there no nonexponential nonlinear debts?
 ---
 
-The amount paid in simple interest is $$P(1 + rt)$$, where $P$ is principal, r is the interest rate and t is the time.
+The amount paid in simple interest is $P(1 + rt)$, where $P$ is principal, r is the interest rate and t is the time.
 
 The main influence on the behavior of such functions is the functional form of them - the parameters can be futzed but don't fundamentally change the behavior in the typical interest domain (interest positive). This is an omnipresent situation in computer science and therefore Landau notation, invented for number theory, is omnipresent in that domain. Simple interest is therefore better seen as $O(t)$ debt ($\theta(t)$ debt).
 
-Compound interest is $$P(1 + \frac{r}{n})^{nt}$$. This is therefore $\theta((1 + r)^t)$ debt.
+Compound interest is $P(1 + \frac{r}{n})^{nt}$ with $n$ being the number of compounding periods. This is (in the limit) therefore $\theta((1 + r)^t)$ debt.
 
 These two regimes of interest are the simplest ones to calculate because you don't need state to calculate them: simple interest is linear and compound interest is exponential, and exponentials are the eigenfunctions of the derivative so no computational state is needed to calculate them.
 
