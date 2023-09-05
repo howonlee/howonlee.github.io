@@ -11,6 +11,6 @@ Compound interest is $P(1 + \frac{r}{n})^{nt}$ with $n$ being the number of comp
 
 These two regimes of interest are the simplest ones to calculate because you don't need state to calculate them: simple interest is linear and compound interest is exponential, and exponentials are the eigenfunctions of the derivative so no computational state is needed to calculate them.
 
-This was a material factor in ancient Sumeria when interest was invented but it must be noted that computation for the 21st century modern is, conservatively speaking, cheaper by a factor of $10^10$ compared to the ancient Sumerians.
+This was a material factor in ancient Sumeria when interest was invented but it must be noted that computation for the 21st century modern is, conservatively speaking, cheaper by a factor of $10^{10}$ compared to the ancient Sumerians.
 
 Therefore I don't really think there are material computational obstacles to someone offering something $\theta(t ^ 2)$ or something. I don't have a banking license and I don't plan to get one so I recommend someone else go and do that.
