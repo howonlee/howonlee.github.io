@@ -51,7 +51,7 @@ The underlying proof for why martingales don't work is based upon the non-correl
 
 ### Wins can be as treacherous as losses
 
-It seems to me that someone whose first night at a casino entailed a \$1000 loss is a fair shot less likely to start ignoring their losses than someone whose first night at a casino is suffused with some aura of magic because they won \$1000.
+It seems to me that someone whose first night at a casino entailed a 1000-dollar loss is a fair shot less likely to start ignoring their losses than someone whose first night at a casino is suffused with some aura of magic because they won 1000 dollars.
 
 A surprisingly common case of abstraction works that way - the early win which is not consolidated and the benefits taken out and abused until the magic falls apart from overapplication.
 
