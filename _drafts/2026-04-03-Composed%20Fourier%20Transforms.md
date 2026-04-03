@@ -7,4 +7,8 @@ Two linear operators are of grand importance to any mathematically-driven scienc
 
 https://arxiv.org/pdf/2412.00075 describes what can be done (with conditions) for composed fourier transforms. We reiterate that paper's argument and translate it into the discrete mode.
 
+- Reiterate paper
 
+- Describe how to translate it into the discrete
+
+- Have the translation into the discrete here in a big Python code block
