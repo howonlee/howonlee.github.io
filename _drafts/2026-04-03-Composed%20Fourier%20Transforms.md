@@ -135,103 +135,105 @@ https://arxiv.org/pdf/2412.00075 describes what can be done (with conditions) fo
       - Ambiguity from modulo-\(N\) indexing
       - Sampling mismatch when \(g[n]\) is not integer-valued
   - 15. Discrete composed Fourier transform formula
-    - Derive the formula step by step
-    - Identify the discrete kernel corresponding to \(g\)
+    - Derive the LHS/RHS identity step by step
+      - LHS: \(\sum_{n=0}^{N-1} e^{+i2\pi m n/N} f(\phi[n])\) where \(\phi[n]\) is the fractional trajectory
+      - RHS: \(\frac{1}{N} \sum_r F[r] H[m,r]\)
+      - \(H[m,r] = \sum_{n=0}^{N-1} e^{+i2\pi mn/N} e^{-i2\pi r\phi[n]/N}\) is the transfer matrix
     - Show the decomposition into
-      - Spectral coefficients of the outer function
-      - Kernel induced by the inner map
+      - Spectral coefficients of the outer function \(F[r] = \mathrm{DFT}(f)\)
+      - Transfer matrix \(H\) induced by the fractional trajectory \(\phi\)
     - Explain how this becomes an algorithm
-  - 16. How the discrete kernel should be interpreted
-    - As a nonlinear mixing matrix
-    - As a generalized modulation table
-    - As a precomputable object when \(g\) is fixed
-    - As an operator that transports outer-function frequencies into output frequencies
+  - 16. How the transfer matrix \(H\) should be interpreted
+    - As a nonlinear mixing matrix of shape \(N \times N\)
+    - As a generalized modulation table indexed by (mode, frequency)
+    - As a precomputable object when \(\phi\) is fixed
+    - As an operator that transports outer-function frequencies into output modes
   - 17. Translation of assumptions and limitations
     - Continuous absolute convergence becomes finite-sum exactness
     - But interpolation assumptions may now matter
-    - Integer-valued vs real-valued discrete inner maps
-    - Bandlimiting assumptions
+    - The fractional trajectory \(\phi[n] = u_n / \Delta x\) need not be integer-valued
+    - Bandlimiting assumptions on the outer function govern interpolation accuracy
     - Aliasing constraints
     - Boundary conditions and periodicity assumptions
-    - Stability and conditioning
-  - 18. Discrete implementation choices
-    - Choice A: assume \(g[n]\) is integer-valued modulo \(N\)
-      - Simplest exact discrete model
-      - Easy indexing
-    - Choice B: allow non-integer \(g[n]\) with interpolation
-      - Closer to continuous reality
-      - Requires interpolation kernel
-    - Choice C: start from continuous \(f\) and \(g\), then sample late
-      - Better conceptual fidelity
-      - More costly numerically
-  - 19. Worked discrete examples
-    - Example 1: affine index map
-      - Recover discrete shift/scale/permutation behavior where possible
-    - Example 2: quadratic index warp
-      - Show the induced mixing matrix
-    - Example 3: sinusoidal warp
-      - Show sideband-like structure in the spectrum
-    - Example 4: random smooth warp
-      - Illustrate numerical behavior
-    - For each example
-      - Define the discrete \(f\) and \(g\)
-      - Derive or compute the kernel
-      - Compare direct composition+DFT with the formula
-      - Discuss accuracy and cost
+    - Stability and conditioning of \(H\)
+  - 18. Discrete implementation choice: trigonometric interpolation
+    - Allow non-integer fractional trajectory \(\phi[n]\) with trigonometric interpolation
+      - \(f(\phi) = \frac{1}{N} \sum_r F[r] e^{-i2\pi r\phi/N}\)
+      - Exact when \(f\) is bandlimited to the \(N\)-point grid
+      - Closer to the continuous Fourier-inversion picture than integer-index lookup
+    - This choice unifies the LHS/RHS derivation cleanly
+      - The transfer matrix formula drops out directly
+      - No separate integer-index special case is needed
+  - 19. Worked discrete example: quadratic inner map
+    - Outer function: \(f[n] = \cos(n)\), \(N = 32\)
+    - Fractional trajectory: \(\phi[n] = n^2\) (quadratic warp)
+    - Compute \(F = \mathrm{DFT}(f)\) and build \(H\) via \(\mathtt{compute\_H}(\phi)\)
+    - Verify LHS \(\approx\) RHS for all modes
+    - Visualize
+      - The trigonometric interpolant and grid samples
+      - The DFT coefficient magnitudes
+      - LHS vs RHS real and imaginary parts across modes
+      - The magnitude of the transfer matrix \(|H[m,r]|\)
   - 20. Continuous-to-discrete correspondence table
     - Integral ↔ finite sum
-    - Fourier inversion ↔ inverse DFT
+    - Fourier inversion ↔ inverse DFT (positive-exponent convention: \(F[r] = \sum_n f[n] e^{+i2\pi rn/N}\))
     - Fubini ↔ sum interchange
-    - Oscillatory integral kernel ↔ discrete mixing kernel
+    - Oscillatory integral kernel ↔ transfer matrix \(H[m,r]\)
     - Decay assumptions ↔ bandlimiting / resolution assumptions
     - Continuous approximation error ↔ aliasing / interpolation error
+    - Continuous \(u/\Delta x\) ↔ fractional trajectory \(\phi[n]\)
 
 - Part III. Practical computation
   - 21. Algorithmic summary
     - Inputs
-      - outer signal/function samples
-      - inner map samples
-      - transform size
-    - Precompute spectral coefficients of outer function
-    - Build the kernel induced by the inner map
-    - Combine them to obtain the composed spectrum
-    - Invert if needed
+      - outer function samples \(f[0],\ldots,f[N-1]\)
+      - fractional trajectory \(\phi[0],\ldots,\phi[N-1]\) (need not be integer-valued)
+      - transform size \(N\)
+    - Compute spectral coefficients: \(F = \mathtt{dft}(f)\)
+    - Build the transfer matrix: \(H = \mathtt{compute\_H}(\phi)\) of shape \(N \times N\)
+    - For each output mode \(m\): \(\mathrm{result}[m] = \frac{1}{N} \sum_r F[r] H[m,r]\)
+    - Verify: compare LHS (\(\mathtt{lhs\_transform}\)) against RHS (\(\mathtt{rhs\_transform}\))
   - 22. Complexity considerations
-    - Cost of direct composition plus FFT
-    - Cost of kernel construction
-    - Cost when the kernel can be reused
-    - When the method is advantageous
-    - Memory tradeoffs
+    - Cost of direct composition plus FFT: \(O(N^2)\) for eval + \(O(N \log N)\) for FFT
+    - Cost of building \(H\): \(O(N^2)\) — dominates; can be cached when \(\phi\) is fixed
+    - Cost of applying \(H\) to \(F\): \(O(N^2)\) matrix-vector product
+    - When the method is advantageous: \(\phi\) fixed, multiple outer functions
+    - Memory tradeoffs: storing \(H\) requires \(O(N^2)\) complex entries
   - 23. Numerical issues
-    - Interpolation error
-    - Oscillatory cancellation
-    - Roundoff
-    - Spectral leakage
-    - Finite truncation
-    - Large-\(N\) behavior
+    - Interpolation error when \(f\) is not bandlimited to the \(N\)-point grid
+    - Oscillatory cancellation in \(H[m,r]\) for large or rapidly-varying \(\phi\)
+    - Roundoff in the phase matrix construction
+    - Spectral leakage from the DFT convention
+    - Periodicity of \(\phi\) modulo \(N\) — large \(\phi[n]\) wraps around
+    - Large-\(N\) behavior of \(H\) condition number
   - 24. Validation strategy
-    - Compare against brute-force composition then FFT
-    - Check symmetry cases
-    - Check affine special case exactly
-    - Measure error as a function of resolution
+    - Verify \(\mathtt{lhs\_transform}[m] \approx \mathtt{rhs\_transform}[m]\) for all \(m\) via \(\mathtt{verify\_identity}\)
+    - Check the affine special case (\(\phi[n] = an + b\)) against known DFT identities
+    - Measure \(\max_m |{\rm LHS}[m] - {\rm RHS}[m]|\) as a function of \(N\)
+    - Inspect \(|H[m,r]|\) visually to sanity-check the mixing structure
 
 - Part IV. Big Python code block
   - 25. Structure of the code listing
-    - Imports
-    - DFT / FFT convention helpers
-    - Continuous-inspired helper routines
-    - Discrete kernel builder
-    - Composition transform routine
-    - Example generators
-    - Plotting / diagnostics
-  - 26. Suggested contents of the code block
-    - A reference implementation for integer-valued discrete maps
-    - An interpolation-based implementation for non-integer maps
-    - A brute-force baseline for comparison
-    - A few canned examples
-    - Error-reporting utilities
-  - 27. Suggested commentary around the code
-    - What assumptions the code makes
-    - Which version is exact and which is approximate
-    - How to extend it
-    - What parts correspond directly to the derivation above
+    - Imports: `numpy`, `matplotlib`
+    - DFT convention comment block: positive-exponent forward, translation from continuous notation
+    - `dft(samples)`: forward DFT via `np.fft.ifft * N`
+    - `idft(coeffs)`: inverse DFT via `np.fft.fft / N`
+    - `eval_interp(coeffs, frac_indices)`: trigonometric interpolant at fractional indices
+    - `compute_H(frac_traj)`: build the \(N \times N\) transfer matrix \(H\)
+    - `lhs_transform(coeffs, frac_traj, mode)`: LHS of the identity for one mode
+    - `rhs_transform(coeffs, transfer_matrix, mode)`: RHS of the identity for one mode
+    - `verify_identity(samples, frac_traj)`: check LHS == RHS across all modes, return diagnostics
+    - Plotting utilities: `plot_interpolant`, `plot_dft_coeffs`, `plot_lhs_rhs`, `plot_H_matrix`
+    - `__main__` block: quadratic warp example, \(N=32\), \(f[n]=\cos(n)\), \(\phi[n]=n^2\)
+  - 26. What the code block demonstrates
+    - The DFT convention is non-standard (positive-exponent forward) — the comment block explains the translation from the continuous-case notation
+    - Trigonometric interpolation is the only inner-map model: \(\phi[n]\) can be any real-valued array
+    - The identity \(\mathrm{LHS} = \mathrm{RHS}\) is verified numerically, not just stated
+    - All intermediate objects (\(F\), \(H\), LHS, RHS) are returned by `verify_identity` for inspection
+    - Four diagnostic plots cover every layer of the computation
+  - 27. Commentary the code warrants
+    - Why `dft` wraps `ifft` (sign convention flip)
+    - What "fractional trajectory" \(\phi[n]\) means and why it need not be integer-valued
+    - Why \(H\) is \(O(N^2)\) to build and when that cost is acceptable
+    - Which parts of the code correspond line-by-line to the derivation in Parts I–II
+    - What breaks when \(\phi[n]\) grows large (periodicity, aliasing)
