@@ -1,6 +1,3 @@
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,26 +5,17 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
-/**
- * Basic styling
- */
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: 400;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -35,34 +23,20 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
-/**
- * Images
- */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
 figure > img {
     display: block;
 }
 
 figcaption {
     font-size: $small-font-size;
+    color: $grey-color;
 }
 
-
-
-/**
- * Lists
- */
 ul, ol {
     margin-left: $spacing-unit;
 }
@@ -74,88 +48,80 @@ li {
     }
 }
 
-
-
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 600;
+    color: #efefef;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid $grey-color-light;
+    margin: $spacing-unit 0;
+}
 
-
-/**
- * Links
- */
 a {
     color: $brand-color;
     text-decoration: none;
+    transition: color 0.15s ease;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $accent-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: #e8e8e8;
         text-decoration: underline;
+        text-underline-offset: 3px;
     }
 }
 
-
-
-/**
- * Blockquotes
- */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $grey-color-dark;
+    border-left: 3px solid $accent-color;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 17px;
     font-style: italic;
+    background-color: $surface-color;
+    border-radius: 0 4px 4px 0;
 
     > :last-child {
         margin-bottom: 0;
     }
 }
 
-
-
-/**
- * Code formatting
- */
 pre,
 code {
-    font-size: 15px;
+    font-size: 14px;
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border-radius: 5px;
+    background-color: $code-bg;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 2px 6px;
+    color: #c8c8c8;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+    padding: 12px 16px;
+    overflow-x: auto;
 
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+        color: #d4d4d4;
+        background: none;
     }
 }
 
-
-
-/**
- * Wrapper
- */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -163,20 +129,13 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -184,13 +143,7 @@ pre {
     }
 }
 
-
-
-/**
- * Icons
- */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
