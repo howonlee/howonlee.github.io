@@ -16,19 +16,43 @@ BG = np.array([17, 17, 17], dtype=np.float64)
 FG = np.array([192, 192, 192], dtype=np.float64)
 
 
-def make_ifs(rng, n):
+def make_bismuth_ifs(rng, n):
+    """IFS mimicking bismuth hopper crystal patterns.
+
+    Bismuth forms stepped rectangular hopper crystals with 4-fold symmetry.
+    We restrict to 90°-increment rotations and quantize translations to a grid
+    so the attractor inherits that angular, staircase-stepped character.
+    """
     tfms, wts = [], []
+    base_scale = rng.uniform(0.40, 0.62)
+    step = rng.uniform(0.20, 0.55)  # grid step for staircase quantization
+
     for _ in range(n):
-        # Fully random affine matrix, scaled so largest singular value < 0.9
-        mat = rng.uniform(-1, 1, (2, 2))
-        sv_max = np.linalg.svd(mat, compute_uv=False)[0]
-        if sv_max > 0.05:
-            mat *= rng.uniform(0.25, 0.88) / sv_max
-        a, b, c, d = mat[0, 0], mat[0, 1], mat[1, 0], mat[1, 1]
-        e, f = rng.uniform(-2.0, 2.0, 2)
+        # Only rotations by multiples of 90° — no diagonal shear
+        rot = rng.integers(0, 4) * (np.pi / 2)
+        cos_r = round(np.cos(rot))
+        sin_r = round(np.sin(rot))
+
+        # Slight anisotropic scaling (orthorhombic crystal structure)
+        sx = base_scale * rng.uniform(0.75, 1.25)
+        sy = base_scale * rng.uniform(0.75, 1.25)
+        sv_max = max(abs(sx), abs(sy))
+        if sv_max > 0.88:
+            sx *= 0.88 / sv_max
+            sy *= 0.88 / sv_max
+
+        a =  cos_r * sx
+        b = -sin_r * sy
+        c =  sin_r * sx
+        d =  cos_r * sy
+
+        # Snap translations to grid — produces visible staircase steps
+        e = round(rng.uniform(-2.5, 2.5) / step) * step
+        f = round(rng.uniform(-2.5, 2.5) / step) * step
+
         tfms.append((a, b, c, d, e, f))
-        # Partially random weights — not just |det|
-        wts.append(abs(a * d - b * c) + rng.uniform(0.05, 0.3))
+        wts.append(abs(a * d - b * c) + rng.uniform(0.02, 0.15))
+
     wts = np.array(wts)
     wts /= wts.sum()
     return tfms, np.cumsum(wts)
@@ -36,8 +60,8 @@ def make_ifs(rng, n):
 
 seed = int(time.time())
 rng = np.random.default_rng(seed)
-n_tfms = int(rng.integers(2, 9))
-tfms, cumwts = make_ifs(rng, n_tfms)
+n_tfms = int(rng.integers(4, 9))
+tfms, cumwts = make_bismuth_ifs(rng, n_tfms)
 
 rs = rng.random(N)
 choices = np.searchsorted(cumwts, rs)
