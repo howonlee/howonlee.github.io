@@ -45,7 +45,13 @@ title: Use Prime Numbers to Schedule Repeating Tasks
   }
 </style>
 
-_Butlerian Notice:_ The charts are done by LLM, I wrote the actual essay myself.
+_Butlerian Notice:_ The charts are done by LLM, I wrote the actual words myself.
+
+The periodic cicadas of North America live and reproduce in 13- or 17-year cycles synchronized to each other, spending their juveniles years underground but emerging at that 13- or 17-year cycles to call to each other loudly and to mate. The fact that 13 and 17 are prime are almost certainly of great importance to their lifecycle, whether by [avoiding coevolution with predators](https://www.annualreviews.org/content/journals/10.1146/annurev-ento-072121-061108) or by the prime numbers evading [hybridization with other life cycles](https://academic.oup.com/evolut/article-abstract/63/1/288/6853133).
+
+In either case, the avoidance of overlap is the key, since composite period lengths would present opportunities for overlap in periods. A 12-year cadence would present opportunities for a 2-year-lifecycle predator to feast on cicadas, or a 3-year one, or a 4-year one.
+
+Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is in 
 
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and highly composite task intervals over 120 cycles"></div>
 
