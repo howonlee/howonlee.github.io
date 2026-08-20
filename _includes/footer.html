@@ -8,7 +8,9 @@
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
           <li>{{ site.title }}</li>
+          {% if site.email %}
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% endif %}
         </ul>
       </div>
 
@@ -46,7 +48,9 @@
       </div>
 
       <div class="footer-col  footer-col-3">
+        {% if site.description %}
         <p class="text">{{ site.description }}</p>
+        {% endif %}
       </div>
     </div>
 

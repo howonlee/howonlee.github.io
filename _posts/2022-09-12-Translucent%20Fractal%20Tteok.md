@@ -32,11 +32,11 @@ Cook time: sub-30 seconds if microwaved, sub-5 minutes if on stovetop bain-marie
 
 Mix ingredients in bowl until mixed together and you can perceive the non-Newtonian effects of the resulting oobleck. That is, you'll know it's ready when if you rapidly stir it it gives you resistance like a solid (when the non-Newtonian effects kick in).
 
-![oobleck effect](https://i.imgur.com/CGQWtZv.gif)
+![oobleck effect]({{ '/img/posts/2022-09-12/oobleck-effect.gif' | relative_url }})
 
 If you have a metal bowl like I do, you'll perceive [diffusion-limited aggregation](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation) fractals on the edges at that concentration, as in the video, which is why it's named fractal tteok.
 
-![clearer fractal](https://i.imgur.com/9CcirLN.png)
+![clearer fractal]({{ '/img/posts/2022-09-12/clearer-fractal.jpg' | relative_url }})
 
 If the stains are close to diffusion-limited aggregation fractals but a little blockier, add more starch. If there's undissolved starch (and not the illusion of undissolved starch from the oobleck non-Newtonian effects) add more water.
 
@@ -46,11 +46,11 @@ I didn't really pour these example ones very well, but if you're more fussy (and
 
 Wash away the flocculated (re-powderized) potato starch. The gelation is permanent. Enjoy in some soup or something.
 
-![washed](https://i.imgur.com/yQVs5I2.png)
+![washed]({{ '/img/posts/2022-09-12/washed.jpg' | relative_url }})
 
 It's hard to see (because of the translucency and because of the blurriness of the picture because I was hungry) but there's some translucent potato-starch-oobleck-fractal-tteok from another batch in the spoon below.
 
-![soup](https://i.imgur.com/5bvFPlm.png)
+![soup]({{ '/img/posts/2022-09-12/soup.jpg' | relative_url }})
 
 If you try to pour a lot on a plate and microwave for a longer time, then it'll bubble over and be less translucent. In that case, indirect stovetop heat will probably work better - use a bain-marie. It will still take less than 5 minutes on a bain-marie. This stuff just naturally gelates at 57° C, if you're using plain water.
 

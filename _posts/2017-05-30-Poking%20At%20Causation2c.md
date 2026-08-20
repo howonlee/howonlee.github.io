@@ -28,7 +28,7 @@ The input to the function should not be the cash flow in to the firm. This is be
 
 Doing it in this manner also will also have a benefit later on. You could follow the gradient all the way to the input units or the money spent. That is, you could adjust how much folks are paid. You could also of course add nonmonetary input and output targets and constraints, although we will not deal with those in this example.
 
-![fig a](http://i.imgur.com/ji9N5ir.png)
+![fig a]({{ '/img/posts/2017-05-30/figure-a.png' | relative_url }})
 
 One of the more important tasks for the firm is to decide on where the credit for changes in income is due. Does the credit lie in the executives' actions? If so, which executives? Lower ranked management, the rank and file? Who knows?
 
@@ -40,7 +40,7 @@ From the machine learning person's point of view, this already describes a syste
 
 It is a bit foolish to have talked so long without an example. The example firm has five people. You can see that two directly are in the front-office closing deals from four sources, and three are in support. Each person takes compensation, and there are also some other cash outflows. Suppose also that $600,000 is spent in order to earn $900,000 in this time period, split into the various accounts. For the representation in the net, divide figures by 100,000 for convenience.
 
-![fig b](http://i.imgur.com/5olyPrv.png)
+![fig b]({{ '/img/posts/2017-05-30/figure-b.png' | relative_url }})
 
 As we mentioned, _inputs_ of the model correspond closely to cash flow _out_. _Outputs_ of the model correspond in turn to cash flow _in_.
 
@@ -54,11 +54,11 @@ Then, forward propagation. I use leaky ReLU nonlinearities with alpha as 0.3, bu
 
 An easy loss function is squared error.
 
-![fig c](http://i.imgur.com/MXq19PT.png)
+![fig c]({{ '/img/posts/2017-05-30/figure-c.png' | relative_url }})
 
 You could then backpropagate, adjusting the initial credit assignment couplings. In fact, as I mentioned before, you could even backpropagate all the way into the input units, adjusting folks' pay and the spending on other inputs.
 
-![fig d](http://i.imgur.com/rsK7oQY.png)
+![fig d]({{ '/img/posts/2017-05-30/figure-d.png' | relative_url }})
 
 Such a process of backpropagating into the inputs would be somewhat like in the Inceptionism DeepDream networks, which usually hold the weights steady. You could also adjust the weights.
 

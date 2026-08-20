@@ -23,7 +23,7 @@ I have only seldom heard anyone question why the world was _interesting_ and tha
 
 Given the question, "Why is the world (sometimes, in different places) interesting?", I think the answer to this question lies in the way in which causation can be described. That is, I talk of the networks of causation that a causal networks person studies, or the Platonic ideal thereof. I say causal networks and not [Bayesian networks](https://en.wikipedia.org/wiki/Bayesian_network) because the Bayesian interpretation of them I do not deal with for the duration of this blog post, and because I am ascribing causal semantics to these networks wheras this is not necessary for a Bayesian network.
 
-![example causal network](http://i.imgur.com/OWUXS4V.png)
+![example causal network]({{ '/img/posts/2016-01-21/example-causal-network.png' | relative_url }})
 
 (an example causal network, mercilessly stolen from [Berkeley CS194 notes](http://www.eecs.berkeley.edu/~russell/classes/cs194/f11/lectures/CS194%20Fall%202011%20Lecture%2021.pdf))
 
@@ -32,7 +32,7 @@ I am agnostic about whether causation actually exists or determines the world or
 
 Of course, there are many possible _pictures_ of a network (often called a [graph](https://en.wikipedia.org/wiki/Graph_(mathematics))), and many possible data structures for representing networks. One particular one I'll be poking about with is the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix), because it can give a nice pictoral representation of a graph's connectivity.
 
-![equality of adj mat](http://i.imgur.com/v2pkDs3.png)
+![equality of adj mat]({{ '/img/posts/2016-01-21/adjacency-matrix.png' | relative_url }})
 
 (an adjacency matrix. Topology should be very familiar if you've read [J. Pearl's book](http://www.amazon.com/Probabilistic-Reasoning-Intelligent-Systems-Representation/dp/1558604790))
 
@@ -62,7 +62,7 @@ This pattern of radical inequality is common in other classes of phenomena. Spec
 
 __I will claim without too much evidence that causal networks are another kind of complex network, because they follow the same few network patterns.__ I will introduce those few network patterns in the following part, although you may find them old friends already.
 
-![hoffman-singleton graph is not complex network](http://i.imgur.com/ItuZU9i.png)
+![hoffman-singleton graph is not complex network]({{ '/img/posts/2016-01-21/hoffman-singleton.png' | relative_url }})
 
 (picture of complex network taken from [L. Costa's group's site](http://cyvision.ifsc.usp.br/Cyvision/))
 
@@ -85,7 +85,7 @@ Same example, another way. Human height is impinged upon by the amount of food h
 
 Another example. Can you relate causally, the number of legs of the octopus to the doctrine of salvation by faith, not works? Absolutely. The many legs of the octopus inspired the metaphor of the Octopus used to muckrake against the Standard Oil conglomerate. The monopoly practices of the Standard Oil conglomerate were obviously a cause of the muckraking against the Standard Oil conglomerate. Those monopoly practices were caused, in turn, by the enterprising and/or incredibly greedy behavior of the people who constituted the company. M. Weber argued that there exists a chain of causation where the enterprising attitude of capitalists was caused by the Protestant work ethic, which in turn was caused by features of the Protestant denominations, which are obviously causally related to the doctrine of salvation by faith, not works.
 
-![octopus](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Standard_oil_octopus_loc_color.jpg/640px-Standard_oil_octopus_loc_color.jpg)
+![octopus]({{ '/img/posts/2016-01-21/standard-oil-octopus.jpg' | relative_url }})
 
 Don't you love sophistry?
 
@@ -102,7 +102,7 @@ I will claims systems of _causation_ are also durable to random insult but not t
 
 If I were given this to state this in the terminology of the causal network person, I would say that this is really saying that the network of causal explanations which we call Biology fails to percolate if we take the statement that the origin of species is evolution by means of natural selection out of the network: the coherent network of explanations Balkanizes into a thousand different networks.
 
-![darwin taken out](http://i.imgur.com/BmwwZ9f.png)
+![darwin taken out]({{ '/img/posts/2016-01-21/darwin-taken-out.png' | relative_url }})
 
 Durability, thus construed, is highly related to [navigability](http://arxiv.org/abs/0709.0303), because those nodes with high degree give us navigable paths: you navigate from the hinterlands of the network to the nodes with high degree, then back out. That is why taking those nodes with high degree away makes the whole network less navigable.
 
@@ -140,7 +140,7 @@ Fractality
 
 You can simulate many of these network patterns in [various](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) [graph](https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model) [models](https://en.wikipedia.org/wiki/Watts_and_Strogatz_model). However, if you believe that many of these network patterns occur _simultaneously_ in a network, there exists also a simple and succinct explanation for _that_ phenomenon. That explanation goes like this: simply note that the adjacency matrix of complex networks are fractals.
 
-![plaid](http://i.imgur.com/mDZR2w2.png)
+![plaid]({{ '/img/posts/2016-01-21/plaid.png' | relative_url }})
 
 (adjacency matrix of a complex network, see [here](https://github.com/howonlee/plaid_fractal) for how it was made; made from [Wikipedia votes](http://snap.stanford.edu/data/wiki-Vote.html))
 
@@ -164,19 +164,19 @@ Or something much shorter in APL or a code golfing language. And that code will 
 
 Of course, this is not a new observation. There are good and productive attempts to model all of the network patterns of complex networks _at once_ by simply taking a blank matrix and drawing a weighted stochastic fractal with with something like a linear [iterated function system](https://en.wikipedia.org/wiki/Iterated_function_system) on it, like the [stochastic Kronecker graph](https://cs.stanford.edu/people/jure/pubs/kronecker-jmlr10.pdf), the [multiplicative attribute graph](https://cs.stanford.edu/people/jure/pubs/mag-im12.pdf) and the [recursive matrix model](http://snap.stanford.edu/class/cs224w-readings/chakrabarti04rmat.pdf). Then, in order to get an actual matrix, you sample from the matrix, construing it as a probability distribution. That describes the stochastic Kronecker graph pretty well, and there are many differences in a lot of different matrix-based complex network models. I think it is simplest to think about the stochastic Kronecker graph.
 
-![skg](http://i.imgur.com/yTnxwRU.png)
+![skg]({{ '/img/posts/2016-01-21/stochastic-kronecker-graph.png' | relative_url }})
 
 There may be a deeper relationship between the low Kolmogorov-Chaitlin-Solmonoff complexity property of many fractals and power laws in general, because scaling laws can be held to arise out of a constraint concerning the average content of [information in a system](http://arxiv.org/pdf/cond-mat/9804257v1.pdf). But read [this](http://arxiv.org/pdf/1212.5567v4.pdf), too.
 
 The Kronecker network doesn't look too much like the plaid net. But you can get it there by scrambling the node labels, by row and column. Just by the row and column, otherwise the other network properties degrade. __I recommend you see [the code](https://github.com/howonlee/permuting_plaid_fractals) I wrote to show this in action.__
 
-![scrambling](http://i.imgur.com/UBSuNHe.png)
+![scrambling]({{ '/img/posts/2016-01-21/scrambling.png' | relative_url }})
 
 I believe the first thing to do, therefore, would actually be looking into a principled or unprincipled way to see if those node labels can be "unscrambled", imagining that these adjacency matrices are merely a scrambled version of something very much like the Kronecker network.
 
 There is also a literature on the [inverse fractal problem](http://liris.cnrs.fr/Documents/Liris-1908.pdf), which is defined as follows: you have a fractal, now get the iterated function system which generates it. It seems possible. You can see a Sierpinski triangle and attempt to derive the way in which it was created.
 
-Even if the inverse problem per se is not possible or practical for the adjacency matrices of these complex networks, [subgraph isomorphism](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) (close to the node correspondence problem, or [de-anonymization using solely network data in social networks](http://randomwalker.info/social-networks/)) is possible to do much, much more quickly than you would expect in complex networks, because of their degree distribution and their percolation and small-world property. So subgraph isomorphism of a real network and a model network might be tried, and the matching thus generated examined to see if it's useful for anything.
+Even if the inverse problem per se is not possible or practical for the adjacency matrices of these complex networks, [subgraph isomorphism](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) (close to the node correspondence problem, or [de-anonymization using solely network data in social networks](https://arxiv.org/abs/0903.3276)) is possible to do much, much more quickly than you would expect in complex networks, because of their degree distribution and their percolation and small-world property. So subgraph isomorphism of a real network and a model network might be tried, and the matching thus generated examined to see if it's useful for anything.
 
 Discussion
 ---
@@ -227,7 +227,7 @@ Crazier Opinions
 
 (G. Flaubert)
 
-Thinking about networks of causation as complex networks also has bearing on the homunculus and linguistic theories of cognition. By those, I mean a sort of caricature of those views advanced by [D. Dennett](http://www.amazon.com/Brainstorms-Philosophical-Essays-Mind-Psychology/dp/0262540371) and [J. Fodor](https://en.wikipedia.org/wiki/Language_of_thought_hypothesis), respectively. Thinking in complex networks has a bearing on those theories because social networks and linguistic networks (by linguistic networks, I mean something like one of [these](https://www.cs.upc.edu/~rferrericancho/Ferrer_i_Cancho_Problems_Quantitative_Linguistics_2005.pdf)) are in many cases special cases of complex networks, as would be causal networks. It seems that the mere fractal nature of a complex network may give rise to the possibility of [productivity, systemicity, and inferential coherence](http://plato.stanford.edu/entries/language-thought/#ArgForLOT), without recourse to a language of thought or to homunculi.
+Thinking about networks of causation as complex networks also has bearing on the homunculus and linguistic theories of cognition. By those, I mean a sort of caricature of those views advanced by [D. Dennett](http://www.amazon.com/Brainstorms-Philosophical-Essays-Mind-Psychology/dp/0262540371) and [J. Fodor](https://en.wikipedia.org/wiki/Language_of_thought_hypothesis), respectively. Thinking in complex networks has a bearing on those theories because social networks and linguistic networks (by linguistic networks, I mean something like one of [these](https://cqllab.upc.edu/people/rferrericancho/scientific-publications/)) are in many cases special cases of complex networks, as would be causal networks. It seems that the mere fractal nature of a complex network may give rise to the possibility of [productivity, systemicity, and inferential coherence](http://plato.stanford.edu/entries/language-thought/#ArgForLOT), without recourse to a language of thought or to homunculi.
 
 Connectionist networks are often called [sub-symbolic](http://plato.stanford.edu/entries/connectionism/#ConRep), and in industry that is mostly how they are used. But they are [compatible with symbolic representation](http://verbs.colorado.edu/~llbecker/papers/Smolensky-TensorProductVariableBinding.pdf). And they are compatible with representations at multiple levels: think of the [Sutskever et al 2011 work](http://www.cs.utoronto.ca/~ilya/pubs/2011/LANG-RNN.pdf) with text generation by characters: it would and does work just as well with words. If these architectures are representing something without characteristic scale, that is, with recursive substructure, that would explain why people can get away with this attitude towards representation.
 
