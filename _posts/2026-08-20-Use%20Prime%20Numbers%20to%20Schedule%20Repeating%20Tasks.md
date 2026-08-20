@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Repeat Your Repeating Tasks A Prime Number Of Days
+title: Use Prime Numbers to Schedule Repeating Tasks
 ---
 
 <style>
