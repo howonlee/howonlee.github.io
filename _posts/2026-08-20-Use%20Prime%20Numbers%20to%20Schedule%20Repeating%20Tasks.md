@@ -47,19 +47,21 @@ title: Use Prime Numbers to Schedule Repeating Tasks
 
 _Butlerian Notice:_ The charts are done by LLM, I wrote the actual words myself.
 
-The periodic cicadas of North America live and reproduce in 13- or 17-year cycles synchronized to each other, spending their juveniles years underground but emerging at that 13- or 17-year cycles to call to each other loudly and to mate. The fact that 13 and 17 are prime numbers, numbers not divisible by any integers except one and themselves, are almost certainly of great importance to their lifecycle, whether by [avoiding coevolution with predators](https://www.annualreviews.org/content/journals/10.1146/annurev-ento-072121-061108) or by the prime numbers evading [hybridization with other life cycles](https://academic.oup.com/evolut/article-abstract/63/1/288/6853133).
+The periodic cicadas of North America live and reproduce in 13- or 17-year cycles synchronized to each other, spending their juvenile years underground but emerging on those 13- or 17-year cycles to call to each other loudly and to mate. The fact that 13 and 17 are prime numbers, numbers not divisible by any integers except 1 and themselves, are almost certainly of great importance to their lifecycle, whether by [avoiding coevolution with predators](https://www.annualreviews.org/content/journals/10.1146/annurev-ento-072121-061108) or by the prime numbers evading [hybridization with other life cycles](https://academic.oup.com/evolut/article-abstract/63/1/288/6853133).
 
-In either case, the avoidance of overlap is the key, since composite period lengths would present opportunities for overlap in periods. A 12-year cadence would present opportunities for a 2-year-lifecycle predator to feast on cicadas, or a 3-year one, or a 4-year one.
+In either case, the avoidance of overlap is the key, since composite period lengths would present opportunities for overlap in periods. A 12-year cadence would present opportunities for a predator with a 2-year-lifecycle to feast on cicadas, or a 3-year one, or a 4-year one. Or a 12-year cicada would be hybridizing with a 2-year or 3-year or 4-year cicada, making infertile offspring - all the same to evolution.
 
-Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is having things come up periodically in waves, and having the sheer quantity of them pile up because of the modular concurrence of them. That is, you do some work in a cadence of every 2 weeks, and once every 3 weeks, and once every 4 weeks, and once every 6, and all those cadences add together once every 12 weeks to make your life absolutely miserable. You are the foolish cicada who emerges in 12 years in that case, getting eaten (or generally otherwise not getting to reproduce). See the charts for a demonstration.
+Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is having things come up periodically in waves, and having the sheer quantity of them pile up because of their periodic concurrence. That is, you do some work at a cadence of every 2 weeks, and once every 3 weeks, and once every 4 weeks, and once every 6, and all those cadences synchronize once every 12 weeks to make an almighty pile of tasks and your life miserable. You are the foolish cicada who emerges in 12 years in that case, getting eaten (or otherwise not getting to reproduce). See the charts for a demonstration.
 
-The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence. If you are mathematically more sophisticated, you will recognize that this argument really goes for _pairwise coprimality_, like the Chinese remainder theorem.
+The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence.
 
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and composite task intervals over 120 cycles"></div>
 
 <div id="collision-bars" class="recurrence-chart" role="img" aria-label="Pair collisions for tasks repeating after prime or composite numbers of days, weeks, months, and quarters"></div>
 
 <div id="lcm-matrices" class="recurrence-chart" role="img" aria-label="Pairwise least common multiple matrices for prime and composite recurrence intervals"></div>
+
+If you are mathematically more sophisticated, you will recognize that this argument really concerns _pairwise coprimality_, like the Chinese remainder theorem. So if you do not have 3-day tasks, then 9-day tasks are basically fine.
 
 <script>
 (() => {
