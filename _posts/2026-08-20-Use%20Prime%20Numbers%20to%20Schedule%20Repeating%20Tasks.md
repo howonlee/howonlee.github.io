@@ -36,6 +36,7 @@ title: Use Prime Numbers to Schedule Repeating Tasks
   .recurrence-chart .axis-label { font-size: 11px; }
   .recurrence-chart .tick-label { font-size: 10px; }
   .recurrence-chart .value-label { fill: #f2f2f2; font-size: 12px; font-weight: 650; }
+  .recurrence-chart .collision-count { fill: #16181c; font-size: 9px; font-weight: 750; }
   .recurrence-chart .grid-line { stroke: #2a2e35; stroke-width: 1; }
   .recurrence-chart .prime { fill: #62d6c5; }
   .recurrence-chart .composite { fill: #ff9d66; }
@@ -53,7 +54,7 @@ In either case, the avoidance of overlap is the key, since composite period leng
 
 Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is having things come up periodically in waves, and having the sheer quantity of them pile up because of their periodic concurrence. That is, you do some work at a cadence of every 2 weeks, and once every 3 weeks, and once every 4 weeks, and once every 6, and all those cadences synchronize once every 12 weeks to make an almighty pile of tasks and your life miserable. You are the foolish cicada who emerges in 12 years in that case, getting eaten (or otherwise not getting to reproduce). You need a large least common multiple.
 
-The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence. See the charts for a demonstration.
+The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 3, 5, 7, 11, 13 (day, week, month) cadence, and learn to hate it at a 4, 6, 8, 10, 12 (day, week, month) cadence. See the charts for a demonstration.
 
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and composite task intervals over 120 cycles"></div>
 
@@ -68,8 +69,8 @@ If you are mathematically more sophisticated, you will recognize that this argum
   "use strict";
 
   const NS = "http://www.w3.org/2000/svg";
-  const prime = [2, 3, 5, 7, 11];
-  const composite = [4, 6, 10, 12];
+  const prime = [3, 5, 7, 11, 13];
+  const composite = [4, 6, 8, 10, 12];
   const colors = { prime: "#62d6c5", composite: "#ff9d66" };
 
   function node(name, attrs = {}, content) {
@@ -110,7 +111,7 @@ If you are mathematically more sophisticated, you will recognize that this argum
 
   function drawRaster() {
     const width = 760;
-    const height = 430;
+    const height = 490;
     const svg = svgFor("recurrence-raster", width, height, "First 120 recurrence cycles");
     const left = 76;
     const right = 26;
@@ -118,16 +119,16 @@ If you are mathematically more sophisticated, you will recognize that this argum
     const x = cycle => left + cycle / 120 * plotWidth;
 
     text(svg, 28, 36, "First 120 recurrence cycles", "chart-title");
-    text(svg, 28, 57, "All tasks begin together · a collision marker grows with simultaneous tasks", "chart-subtitle");
+    text(svg, 28, 57, "Badge number = colliding task pairs · stem height grows linearly with the count", "chart-subtitle");
 
     [0, 20, 40, 60, 80, 100, 120].forEach(tick => {
-      svg.appendChild(node("line", { x1: x(tick), y1: 78, x2: x(tick), y2: 397, class: "grid-line" }));
-      text(svg, x(tick), 414, tick, "tick-label", "middle");
+      svg.appendChild(node("line", { x1: x(tick), y1: 78, x2: x(tick), y2: 450, class: "grid-line" }));
+      text(svg, x(tick), 474, tick, "tick-label", "middle");
     });
 
     const panels = [
       { name: "PRIME", intervals: prime, top: 89, color: colors.prime },
-      { name: "COMPOSITE", intervals: composite, top: 247, color: colors.composite }
+      { name: "COMPOSITE", intervals: composite, top: 280, color: colors.composite }
     ];
 
     panels.forEach(panel => {
@@ -140,16 +141,27 @@ If you are mathematically more sophisticated, you will recognize that this argum
         }
       });
 
+      let totalPairCollisions = 0;
       for (let cycle = 1; cycle <= 120; cycle += 1) {
         const simultaneous = panel.intervals.filter(period => cycle % period === 0).length;
         if (simultaneous > 1) {
-          svg.appendChild(node("circle", {
-            cx: x(cycle), cy: panel.top + 140, r: 1.7 + simultaneous * 1.25,
-            fill: panel.color, opacity: 0.9, stroke: "#16181c", "stroke-width": 1
+          const pairCount = simultaneous * (simultaneous - 1) / 2;
+          totalPairCollisions += pairCount;
+          const baseline = panel.top + 164;
+          const markerY = baseline - (8 + pairCount * 3);
+          svg.appendChild(node("line", {
+            x1: x(cycle), y1: baseline, x2: x(cycle), y2: markerY,
+            stroke: panel.color, "stroke-width": 3, "stroke-linecap": "round"
           }));
+          svg.appendChild(node("circle", {
+            cx: x(cycle), cy: markerY, r: 7,
+            fill: panel.color, opacity: 0.96, stroke: "#16181c", "stroke-width": 1
+          }));
+          text(svg, x(cycle), markerY + 3, pairCount, "collision-count", "middle");
         }
       }
-      text(svg, left - 12, panel.top + 143, "×", "value-label", "end");
+      text(svg, left - 12, panel.top + 158, "PAIRS", "tick-label", "end");
+      text(svg, left - 12, panel.top + 168, `${totalPairCollisions} TOTAL`, "tick-label", "end");
     });
   }
 
@@ -175,10 +187,12 @@ If you are mathematically more sophisticated, you will recognize that this argum
     const top = 92;
     const bottom = 370;
     const plotHeight = bottom - top;
-    const maxValue = Math.ceil(Math.max(...cases.map(item => item.composite)) / 50) * 50;
+    const rawMax = Math.max(...cases.flatMap(item => [item.prime, item.composite]));
+    const tickStep = rawMax <= 100 ? 20 : rawMax <= 250 ? 50 : 100;
+    const maxValue = Math.ceil(rawMax / tickStep) * tickStep;
     const y = value => bottom - value / maxValue * plotHeight;
 
-    for (let tick = 0; tick <= maxValue; tick += 50) {
+    for (let tick = 0; tick <= maxValue; tick += tickStep) {
       svg.appendChild(node("line", { x1: left, y1: y(tick), x2: 735, y2: y(tick), class: "grid-line" }));
       text(svg, left - 10, y(tick) + 4, tick, "tick-label", "end");
     }
@@ -210,7 +224,7 @@ If you are mathematically more sophisticated, you will recognize that this argum
 
   function drawMatrices() {
     const width = 760;
-    const height = 430;
+    const height = 450;
     const svg = svgFor("lcm-matrices", width, height, "Pairwise least common multiple matrices");
     text(svg, 28, 36, "Cycles until each pair meets again", "chart-title");
     text(svg, 28, 57, "Pairwise least common multiple · brighter cells meet sooner", "chart-subtitle");
@@ -256,10 +270,25 @@ If you are mathematically more sophisticated, you will recognize that this argum
       for (let i = 0; i < panel.intervals.length; i += 1) {
         for (let j = i + 1; j < panel.intervals.length; j += 1) pairValues.push(lcm(panel.intervals[i], panel.intervals[j]));
       }
-      const average = Math.round(pairValues.reduce((sum, value) => sum + value, 0) / pairValues.length);
-      text(svg, matrixCenter, 360, average, "chart-title", "middle");
-      text(svg, matrixCenter, 381, "mean cycles between pair meetings", "axis-label", "middle");
+      panel.average = pairValues.reduce((sum, value) => sum + value, 0) / pairValues.length;
     });
+
+    const maxAverage = Math.max(...panels.map(panel => panel.average));
+    const meanBarWidth = 220;
+    panels.forEach(panel => {
+      text(svg, panel.x + 32, 339, `MEAN  ${panel.average.toFixed(1)} CYCLES`, "value-label");
+      svg.appendChild(node("rect", {
+        x: panel.x + 32, y: 350, width: meanBarWidth, height: 16, rx: 8, fill: "#242830"
+      }));
+      svg.appendChild(node("rect", {
+        x: panel.x + 32, y: 350, width: meanBarWidth * panel.average / maxAverage,
+        height: 16, rx: 8, fill: panel.color
+      }));
+      text(svg, panel.x + 32, 384, "mean cycles between pair meetings", "axis-label");
+    });
+
+    const ratio = panels[0].average / panels[1].average;
+    text(svg, width / 2, 424, `Prime pairs take ${ratio.toFixed(1)}× longer to meet again on average`, "chart-title", "middle");
   }
 
   drawRaster();
