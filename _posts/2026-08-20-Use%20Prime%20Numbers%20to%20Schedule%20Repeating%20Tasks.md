@@ -55,19 +55,19 @@ Another periodic domain where overlaps make things miserable is in task scheduli
 
 The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence. If you are mathematically more sophisticated, you will recognize that this argument really goes for _pairwise coprimality_, like the Chinese remainder theorem.
 
-<div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and highly composite task intervals over 120 cycles"></div>
+<div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and composite task intervals over 120 cycles"></div>
 
-<div id="collision-bars" class="recurrence-chart" role="img" aria-label="Pair collisions for tasks repeating after prime or highly composite numbers of days, weeks, months, and quarters"></div>
+<div id="collision-bars" class="recurrence-chart" role="img" aria-label="Pair collisions for tasks repeating after prime or composite numbers of days, weeks, months, and quarters"></div>
 
-<div id="lcm-matrices" class="recurrence-chart" role="img" aria-label="Pairwise least common multiple matrices for prime and highly composite recurrence intervals"></div>
+<div id="lcm-matrices" class="recurrence-chart" role="img" aria-label="Pairwise least common multiple matrices for prime and composite recurrence intervals"></div>
 
 <script>
 (() => {
   "use strict";
 
   const NS = "http://www.w3.org/2000/svg";
-  const prime = [5, 7, 11, 13, 23, 47];
-  const composite = [4, 6, 12, 24, 36, 48];
+  const prime = [2, 3, 5, 7, 11];
+  const composite = [4, 6, 10, 12];
   const colors = { prime: "#62d6c5", composite: "#ff9d66" };
 
   function node(name, attrs = {}, content) {
@@ -116,7 +116,7 @@ The solution for you, then, is clear, if you have the ability to set the cadence
     const x = cycle => left + cycle / 120 * plotWidth;
 
     text(svg, 28, 36, "First 120 recurrence cycles", "chart-title");
-    text(svg, 28, 57, "Six tasks · all begin together · a collision marker grows with simultaneous tasks", "chart-subtitle");
+    text(svg, 28, 57, "All tasks begin together · a collision marker grows with simultaneous tasks", "chart-subtitle");
 
     [0, 20, 40, 60, 80, 100, 120].forEach(tick => {
       svg.appendChild(node("line", { x1: x(tick), y1: 78, x2: x(tick), y2: 397, class: "grid-line" }));
@@ -125,7 +125,7 @@ The solution for you, then, is clear, if you have the ability to set the cadence
 
     const panels = [
       { name: "PRIME", intervals: prime, top: 89, color: colors.prime },
-      { name: "HIGHLY COMPOSITE", intervals: composite, top: 247, color: colors.composite }
+      { name: "COMPOSITE", intervals: composite, top: 247, color: colors.composite }
     ];
 
     panels.forEach(panel => {
@@ -203,7 +203,7 @@ The solution for you, then, is clear, if you have the ability to set the cadence
     svg.appendChild(node("circle", { cx: 273, cy: 439, r: 5, fill: colors.prime }));
     text(svg, 284, 443, `prime  ${prime.join(" · ")}`, "axis-label");
     svg.appendChild(node("circle", { cx: 460, cy: 439, r: 5, fill: colors.composite }));
-    text(svg, 471, 443, `highly composite  ${composite.join(" · ")}`, "axis-label");
+    text(svg, 471, 443, `composite  ${composite.join(" · ")}`, "axis-label");
   }
 
   function drawMatrices() {
@@ -213,16 +213,16 @@ The solution for you, then, is clear, if you have the ability to set the cadence
     text(svg, 28, 36, "Cycles until each pair meets again", "chart-title");
     text(svg, 28, 57, "Pairwise least common multiple · brighter cells meet sooner", "chart-subtitle");
 
-    const matrixSize = 258;
     const cell = 36;
     const panels = [
       { x: 64, name: "PRIME", intervals: prime, color: colors.prime },
-      { x: 440, name: "HIGHLY COMPOSITE", intervals: composite, color: colors.composite }
+      { x: 440, name: "COMPOSITE", intervals: composite, color: colors.composite }
     ];
 
     panels.forEach(panel => {
       const y0 = 116;
-      text(svg, panel.x + matrixSize / 2, 88, panel.name, "axis-label", "middle");
+      const matrixCenter = panel.x + 32 + panel.intervals.length * cell / 2;
+      text(svg, matrixCenter, 88, panel.name, "axis-label", "middle");
       panel.intervals.forEach((period, index) => {
         text(svg, panel.x + 32 + index * cell + cell / 2, 108, period, "tick-label", "middle");
         text(svg, panel.x + 22, y0 + index * cell + 23, period, "tick-label", "end");
@@ -255,8 +255,8 @@ The solution for you, then, is clear, if you have the ability to set the cadence
         for (let j = i + 1; j < panel.intervals.length; j += 1) pairValues.push(lcm(panel.intervals[i], panel.intervals[j]));
       }
       const average = Math.round(pairValues.reduce((sum, value) => sum + value, 0) / pairValues.length);
-      text(svg, panel.x + 140, 360, average, "chart-title", "middle");
-      text(svg, panel.x + 140, 381, "mean cycles between pair meetings", "axis-label", "middle");
+      text(svg, matrixCenter, 360, average, "chart-title", "middle");
+      text(svg, matrixCenter, 381, "mean cycles between pair meetings", "axis-label", "middle");
     });
   }
 
