@@ -53,7 +53,7 @@ In either case, the avoidance of overlap is the key, since composite period leng
 
 Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is having things come up periodically in waves, and having the sheer quantity of them pile up because of the modular concurrence of them. That is, you do some work in a cadence of every 2 weeks, and once every 3 weeks, and once every 4 weeks, and once every 6, and all those cadences add together once every 12 weeks to make your life absolutely miserable. You are the foolish cicada who emerges in 12 years in that case, getting eaten (or generally otherwise not getting to reproduce). See the charts for a demonstration.
 
-The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence.
+The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 2, 3, 5, 7, 11 (day, week, month) cadence, and learn to hate it at a 4, 6, 10, 12 (day, week, month) cadence. If you are mathematically more sophisticated, you will recognize that this argument really goes for _pairwise coprimality_, like the Chinese remainder theorem.
 
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and highly composite task intervals over 120 cycles"></div>
 
