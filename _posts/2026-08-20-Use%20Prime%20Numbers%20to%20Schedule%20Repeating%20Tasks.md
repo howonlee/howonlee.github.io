@@ -45,6 +45,8 @@ title: Use Prime Numbers to Schedule Repeating Tasks
   }
 </style>
 
+_Butlerian Notice:_ The charts are done by LLM, I wrote the actual essay myself.
+
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and highly composite task intervals over 120 cycles"></div>
 
 <div id="collision-bars" class="recurrence-chart" role="img" aria-label="Pair collisions for tasks repeating after prime or highly composite numbers of days, weeks, months, and quarters"></div>
