@@ -58,7 +58,7 @@ The solution for you, then, is clear, if you have the ability to set the cadence
 
 <div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and composite task intervals over 120 cycles"></div>
 
-<div id="collision-bars" class="recurrence-chart" role="img" aria-label="Pair collisions for tasks repeating after prime or composite numbers of days, weeks, months, and quarters"></div>
+<div id="collision-bars" class="recurrence-chart" role="img" aria-label="Coinciding tasks for schedules repeating after prime or composite numbers of days, weeks, months, and quarters"></div>
 
 <div id="lcm-matrices" class="recurrence-chart" role="img" aria-label="Pairwise least common multiple matrices for prime and composite recurrence intervals"></div>
 
@@ -100,13 +100,13 @@ If you are mathematically more sophisticated, you will recognize that this argum
     return (a * b) / gcd(a, b);
   }
 
-  function pairCollisions(intervals, horizon) {
-    let collisions = 0;
+  function coincidingTasks(intervals, horizon) {
+    let total = 0;
     for (let cycle = 1; cycle <= horizon; cycle += 1) {
       const simultaneous = intervals.filter(period => cycle % period === 0).length;
-      collisions += simultaneous * (simultaneous - 1) / 2;
+      if (simultaneous > 1) total += simultaneous;
     }
-    return collisions;
+    return total;
   }
 
   function drawRaster() {
@@ -119,7 +119,7 @@ If you are mathematically more sophisticated, you will recognize that this argum
     const x = cycle => left + cycle / 120 * plotWidth;
 
     text(svg, 28, 36, "First 120 recurrence cycles", "chart-title");
-    text(svg, 28, 57, "Badge number = colliding task pairs · stem height grows linearly with the count", "chart-subtitle");
+    text(svg, 28, 57, "Badge number = tasks coinciding on that cycle · stem height grows with the count", "chart-subtitle");
 
     [0, 20, 40, 60, 80, 100, 120].forEach(tick => {
       svg.appendChild(node("line", { x1: x(tick), y1: 78, x2: x(tick), y2: 450, class: "grid-line" }));
@@ -141,14 +141,13 @@ If you are mathematically more sophisticated, you will recognize that this argum
         }
       });
 
-      let totalPairCollisions = 0;
+      let totalCoincidingTasks = 0;
       for (let cycle = 1; cycle <= 120; cycle += 1) {
         const simultaneous = panel.intervals.filter(period => cycle % period === 0).length;
         if (simultaneous > 1) {
-          const pairCount = simultaneous * (simultaneous - 1) / 2;
-          totalPairCollisions += pairCount;
+          totalCoincidingTasks += simultaneous;
           const baseline = panel.top + 164;
-          const markerY = baseline - (8 + pairCount * 3);
+          const markerY = baseline - (8 + simultaneous * 3);
           svg.appendChild(node("line", {
             x1: x(cycle), y1: baseline, x2: x(cycle), y2: markerY,
             stroke: panel.color, "stroke-width": 3, "stroke-linecap": "round"
@@ -157,18 +156,18 @@ If you are mathematically more sophisticated, you will recognize that this argum
             cx: x(cycle), cy: markerY, r: 7,
             fill: panel.color, opacity: 0.96, stroke: "#16181c", "stroke-width": 1
           }));
-          text(svg, x(cycle), markerY + 3, pairCount, "collision-count", "middle");
+          text(svg, x(cycle), markerY + 3, simultaneous, "collision-count", "middle");
         }
       }
-      text(svg, left - 12, panel.top + 158, "PAIRS", "tick-label", "end");
-      text(svg, left - 12, panel.top + 168, `${totalPairCollisions} TOTAL`, "tick-label", "end");
+      text(svg, left - 12, panel.top + 158, "TASKS", "tick-label", "end");
+      text(svg, left - 12, panel.top + 168, `${totalCoincidingTasks} TOTAL`, "tick-label", "end");
     });
   }
 
   function drawBars() {
     const width = 760;
     const height = 450;
-    const svg = svgFor("collision-bars", width, height, "Simultaneous task-pair collisions across recurrence units");
+    const svg = svgFor("collision-bars", width, height, "Coinciding tasks across recurrence units");
     const cases = [
       { label: "days", horizon: 365, span: "1 year" },
       { label: "weeks", horizon: 520, span: "10 years" },
@@ -176,12 +175,12 @@ If you are mathematically more sophisticated, you will recognize that this argum
       { label: "quarters", horizon: 400, span: "100 years" }
     ].map(item => ({
       ...item,
-      prime: pairCollisions(prime, item.horizon),
-      composite: pairCollisions(composite, item.horizon)
+      prime: coincidingTasks(prime, item.horizon),
+      composite: coincidingTasks(composite, item.horizon)
     }));
 
-    text(svg, 28, 36, "Simultaneous task-pair collisions", "chart-title");
-    text(svg, 28, 57, "One collision = one pair of tasks landing on the same cycle", "chart-subtitle");
+    text(svg, 28, 36, "Tasks landing on an already-busy cycle", "chart-title");
+    text(svg, 28, 57, "Each task is counted whenever two or more tasks coincide", "chart-subtitle");
 
     const left = 68;
     const top = 92;
