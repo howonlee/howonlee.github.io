@@ -1,7 +1,10 @@
 # Site settings
 title: Ferns
+description: Essays by Howon Lee.
+author: Howon Lee
+lang: en
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://howonlee.github.io" # the base hostname & protocol for your site
+url: "https://howonlee.github.io" # the base hostname & protocol for your site
 github_username:  howonlee
 
 # Build settings

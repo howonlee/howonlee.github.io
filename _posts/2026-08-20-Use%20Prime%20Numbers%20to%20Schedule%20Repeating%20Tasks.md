@@ -1,0 +1,297 @@
+---
+layout: page
+title: Use Prime Numbers to Schedule Repeating Tasks
+---
+
+<style>
+  .recurrence-chart {
+    margin: 0 0 3rem;
+    border: 1px solid #30343b;
+    border-radius: 14px;
+    background: #16181c;
+    overflow-x: auto;
+  }
+
+  .recurrence-chart svg {
+    display: block;
+    width: 100%;
+    min-width: 680px;
+    height: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .recurrence-chart .chart-title {
+    fill: #f2f2f2;
+    font-size: 19px;
+    font-weight: 650;
+  }
+
+  .recurrence-chart .chart-subtitle,
+  .recurrence-chart .axis-label,
+  .recurrence-chart .tick-label {
+    fill: #999fa8;
+  }
+
+  .recurrence-chart .chart-subtitle { font-size: 12px; }
+  .recurrence-chart .axis-label { font-size: 11px; }
+  .recurrence-chart .tick-label { font-size: 10px; }
+  .recurrence-chart .value-label { fill: #f2f2f2; font-size: 12px; font-weight: 650; }
+  .recurrence-chart .collision-count { fill: #16181c; font-size: 9px; font-weight: 750; }
+  .recurrence-chart .grid-line { stroke: #2a2e35; stroke-width: 1; }
+  .recurrence-chart .prime { fill: #62d6c5; }
+  .recurrence-chart .composite { fill: #ff9d66; }
+
+  @media (max-width: 600px) {
+    .recurrence-chart { margin-bottom: 1.5rem; border-radius: 10px; }
+  }
+</style>
+
+_Butlerian Notice:_ The charts are done by LLM, I wrote the actual words myself.
+
+The periodic cicadas of North America live and reproduce in 13- or 17-year cycles synchronized to each other. They spend their long juvenile years underground but emerge on those 13- or 17-year cycles in a grand eruption of activity to become adults for a tiny span, to call to each other, to have their tiny insect dramas, to mate and then to die. The fact that 13 and 17 are prime numbers, numbers not divisible by any integers except 1 and themselves, is almost certainly of great importance to their lifecycle, whether by [avoiding coevolution with predators](https://www.annualreviews.org/content/journals/10.1146/annurev-ento-072121-061108) or by the prime numbers evading [hybridization with other life cycles](https://academic.oup.com/evolut/article-abstract/63/1/288/6853133).
+
+In either case, the avoidance of overlap is the key, since composite period lengths would present opportunities for overlap in periods. A 12-year cadence would present opportunities for a predator with a 2-year-lifecycle to feast on cicadas, or a 3-year one, or a 4-year one. Or a 12-year cicada would be hybridizing with a 2-year or 3-year or 4-year cicada, making infertile offspring - all the same to evolution. Something about their lives needs a large least common multiple.
+
+Another periodic domain where overlaps make things miserable is in task scheduling. A lot of the miserable nature of modern task-oriented work is having things come up periodically in waves, and having the sheer quantity of them pile up because of their periodic concurrence. That is, you do some work at a cadence of every 2 weeks, and once every 3 weeks, and once every 4 weeks, and once every 6, and all those cadences synchronize once every 12 weeks to make an almighty pile of tasks and your life miserable. You are the foolish cicada who emerges in 12 years in that case, getting eaten (or otherwise not getting to reproduce). You need a large least common multiple.
+
+The solution for you, then, is clear, if you have the ability to set the cadences of your work. You have to learn to love work at a 3, 5, 7, 11, 13 (day, week, month) cadence, and learn to hate it at a 4, 6, 8, 10, 12 (day, week, month) cadence. See the charts for a demonstration. Even if you don't have the ability to set the cadences of your work, you can link to this blog post to make the argument - cadences of this kind often are substantively arbitrary.
+
+<div id="recurrence-raster" class="recurrence-chart" role="img" aria-label="Recurrence timelines for prime and composite task intervals over 120 cycles"></div>
+
+<div id="collision-bars" class="recurrence-chart" role="img" aria-label="Coinciding tasks for schedules repeating after prime or composite numbers of days, weeks, months, and quarters"></div>
+
+<div id="lcm-matrices" class="recurrence-chart" role="img" aria-label="Pairwise least common multiple matrices for prime and composite recurrence intervals"></div>
+
+If you are mathematically more sophisticated, you will recognize that this argument really concerns _pairwise coprimality_, like the Chinese remainder theorem. So if you do not have 3-day tasks, then 9-day tasks are basically fine.
+
+<script>
+(() => {
+  "use strict";
+
+  const NS = "http://www.w3.org/2000/svg";
+  const prime = [3, 5, 7, 11, 13];
+  const composite = [4, 6, 8, 10, 12];
+  const colors = { prime: "#62d6c5", composite: "#ff9d66" };
+
+  function node(name, attrs = {}, content) {
+    const el = document.createElementNS(NS, name);
+    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
+    if (content !== undefined) el.textContent = content;
+    return el;
+  }
+
+  function svgFor(target, width, height, title) {
+    const svg = node("svg", { viewBox: `0 0 ${width} ${height}`, "aria-hidden": "true" });
+    svg.appendChild(node("title", {}, title));
+    document.getElementById(target).appendChild(svg);
+    return svg;
+  }
+
+  function text(svg, x, y, content, className, anchor = "start") {
+    svg.appendChild(node("text", { x, y, class: className, "text-anchor": anchor }, content));
+  }
+
+  function gcd(a, b) {
+    while (b) [a, b] = [b, a % b];
+    return a;
+  }
+
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+  }
+
+  function coincidingTasks(intervals, horizon) {
+    let total = 0;
+    for (let cycle = 1; cycle <= horizon; cycle += 1) {
+      const simultaneous = intervals.filter(period => cycle % period === 0).length;
+      if (simultaneous > 1) total += simultaneous;
+    }
+    return total;
+  }
+
+  function drawRaster() {
+    const width = 760;
+    const height = 490;
+    const svg = svgFor("recurrence-raster", width, height, "First 120 recurrence cycles");
+    const left = 76;
+    const right = 26;
+    const plotWidth = width - left - right;
+    const x = cycle => left + cycle / 120 * plotWidth;
+
+    text(svg, 28, 36, "First 120 recurrence cycles", "chart-title");
+    text(svg, 28, 57, "Badge number = tasks coinciding on that cycle · stem height grows with the count", "chart-subtitle");
+
+    [0, 20, 40, 60, 80, 100, 120].forEach(tick => {
+      svg.appendChild(node("line", { x1: x(tick), y1: 78, x2: x(tick), y2: 450, class: "grid-line" }));
+      text(svg, x(tick), 474, tick, "tick-label", "middle");
+    });
+
+    const panels = [
+      { name: "PRIME", intervals: prime, top: 89, color: colors.prime },
+      { name: "COMPOSITE", intervals: composite, top: 280, color: colors.composite }
+    ];
+
+    panels.forEach(panel => {
+      text(svg, 28, panel.top + 9, panel.name, "axis-label");
+      panel.intervals.forEach((period, row) => {
+        const cy = panel.top + 29 + row * 18;
+        text(svg, left - 12, cy + 3, period, "tick-label", "end");
+        for (let cycle = period; cycle <= 120; cycle += period) {
+          svg.appendChild(node("circle", { cx: x(cycle), cy, r: 2.4, fill: panel.color, opacity: 0.82 }));
+        }
+      });
+
+      let totalCoincidingTasks = 0;
+      for (let cycle = 1; cycle <= 120; cycle += 1) {
+        const simultaneous = panel.intervals.filter(period => cycle % period === 0).length;
+        if (simultaneous > 1) {
+          totalCoincidingTasks += simultaneous;
+          const baseline = panel.top + 164;
+          const markerY = baseline - (8 + simultaneous * 3);
+          svg.appendChild(node("line", {
+            x1: x(cycle), y1: baseline, x2: x(cycle), y2: markerY,
+            stroke: panel.color, "stroke-width": 3, "stroke-linecap": "round"
+          }));
+          svg.appendChild(node("circle", {
+            cx: x(cycle), cy: markerY, r: 7,
+            fill: panel.color, opacity: 0.96, stroke: "#16181c", "stroke-width": 1
+          }));
+          text(svg, x(cycle), markerY + 3, simultaneous, "collision-count", "middle");
+        }
+      }
+      text(svg, left - 12, panel.top + 158, "TASKS", "tick-label", "end");
+      text(svg, left - 12, panel.top + 168, `${totalCoincidingTasks} TOTAL`, "tick-label", "end");
+    });
+  }
+
+  function drawBars() {
+    const width = 760;
+    const height = 450;
+    const svg = svgFor("collision-bars", width, height, "Coinciding tasks across recurrence units");
+    const cases = [
+      { label: "days", horizon: 365, span: "1 year" },
+      { label: "weeks", horizon: 520, span: "10 years" },
+      { label: "months", horizon: 480, span: "40 years" },
+      { label: "quarters", horizon: 400, span: "100 years" }
+    ].map(item => ({
+      ...item,
+      prime: coincidingTasks(prime, item.horizon),
+      composite: coincidingTasks(composite, item.horizon)
+    }));
+
+    text(svg, 28, 36, "Tasks landing on an already-busy cycle", "chart-title");
+    text(svg, 28, 57, "Each task is counted whenever two or more tasks coincide", "chart-subtitle");
+
+    const left = 68;
+    const top = 92;
+    const bottom = 370;
+    const plotHeight = bottom - top;
+    const rawMax = Math.max(...cases.flatMap(item => [item.prime, item.composite]));
+    const tickStep = rawMax <= 100 ? 20 : rawMax <= 250 ? 50 : 100;
+    const maxValue = Math.ceil(rawMax / tickStep) * tickStep;
+    const y = value => bottom - value / maxValue * plotHeight;
+
+    for (let tick = 0; tick <= maxValue; tick += tickStep) {
+      svg.appendChild(node("line", { x1: left, y1: y(tick), x2: 735, y2: y(tick), class: "grid-line" }));
+      text(svg, left - 10, y(tick) + 4, tick, "tick-label", "end");
+    }
+
+    const groupWidth = (735 - left) / cases.length;
+    const barWidth = 34;
+    cases.forEach((item, index) => {
+      const center = left + groupWidth * (index + 0.5);
+      [
+        { value: item.prime, offset: -barWidth - 3, color: colors.prime },
+        { value: item.composite, offset: 3, color: colors.composite }
+      ].forEach(bar => {
+        const barY = y(bar.value);
+        svg.appendChild(node("rect", {
+          x: center + bar.offset, y: barY, width: barWidth, height: bottom - barY,
+          rx: 4, fill: bar.color
+        }));
+        text(svg, center + bar.offset + barWidth / 2, barY - 8, bar.value, "value-label", "middle");
+      });
+      text(svg, center, 397, item.label, "value-label", "middle");
+      text(svg, center, 415, item.span, "tick-label", "middle");
+    });
+
+    svg.appendChild(node("circle", { cx: 273, cy: 439, r: 5, fill: colors.prime }));
+    text(svg, 284, 443, `prime  ${prime.join(" · ")}`, "axis-label");
+    svg.appendChild(node("circle", { cx: 460, cy: 439, r: 5, fill: colors.composite }));
+    text(svg, 471, 443, `composite  ${composite.join(" · ")}`, "axis-label");
+  }
+
+  function drawMatrices() {
+    const width = 760;
+    const height = 450;
+    const svg = svgFor("lcm-matrices", width, height, "Pairwise least common multiple matrices");
+    text(svg, 28, 36, "Cycles until each pair meets again", "chart-title");
+    text(svg, 28, 57, "Pairwise least common multiple · brighter cells meet sooner", "chart-subtitle");
+
+    const cell = 36;
+    const panels = [
+      { x: 64, name: "PRIME", intervals: prime, color: colors.prime },
+      { x: 440, name: "COMPOSITE", intervals: composite, color: colors.composite }
+    ];
+
+    panels.forEach(panel => {
+      const y0 = 116;
+      const matrixCenter = panel.x + 32 + panel.intervals.length * cell / 2;
+      text(svg, matrixCenter, 88, panel.name, "axis-label", "middle");
+      panel.intervals.forEach((period, index) => {
+        text(svg, panel.x + 32 + index * cell + cell / 2, 108, period, "tick-label", "middle");
+        text(svg, panel.x + 22, y0 + index * cell + 23, period, "tick-label", "end");
+      });
+
+      const values = [];
+      panel.intervals.forEach((a, row) => panel.intervals.forEach((b, col) => {
+        if (row !== col) values.push(lcm(a, b));
+      }));
+      const minLog = Math.log(Math.min(...values));
+      const maxLog = Math.log(Math.max(...values));
+
+      panel.intervals.forEach((a, row) => {
+        panel.intervals.forEach((b, col) => {
+          const value = row === col ? null : lcm(a, b);
+          const intensity = value === null ? 0 : 0.18 + 0.72 * (1 - (Math.log(value) - minLog) / (maxLog - minLog));
+          svg.appendChild(node("rect", {
+            x: panel.x + 32 + col * cell, y: y0 + row * cell,
+            width: cell - 2, height: cell - 2, rx: 4,
+            fill: value === null ? "#202329" : panel.color,
+            opacity: value === null ? 1 : intensity
+          }));
+          text(svg, panel.x + 32 + col * cell + (cell - 2) / 2, y0 + row * cell + 22,
+            value === null ? "—" : value, value !== null && intensity > 0.52 ? "value-label" : "tick-label", "middle");
+        });
+      });
+
+      const pairValues = [];
+      for (let i = 0; i < panel.intervals.length; i += 1) {
+        for (let j = i + 1; j < panel.intervals.length; j += 1) pairValues.push(lcm(panel.intervals[i], panel.intervals[j]));
+      }
+      panel.average = pairValues.reduce((sum, value) => sum + value, 0) / pairValues.length;
+    });
+
+    const maxAverage = Math.max(...panels.map(panel => panel.average));
+    const meanBarWidth = 220;
+    panels.forEach(panel => {
+      text(svg, panel.x + 32, 339, `MEAN  ${panel.average.toFixed(1)} CYCLES`, "value-label");
+      svg.appendChild(node("rect", {
+        x: panel.x + 32, y: 350, width: meanBarWidth, height: 16, rx: 8, fill: "#242830"
+      }));
+      svg.appendChild(node("rect", {
+        x: panel.x + 32, y: 350, width: meanBarWidth * panel.average / maxAverage,
+        height: 16, rx: 8, fill: panel.color
+      }));
+      text(svg, panel.x + 32, 384, "mean cycles between pair meetings", "axis-label");
+    });
+
+    const ratio = panels[0].average / panels[1].average;
+    text(svg, width / 2, 424, `Prime pairs take ${ratio.toFixed(1)}× longer to meet again on average`, "chart-title", "middle");
+  }
+
+  drawRaster();
+  drawBars();
+  drawMatrices();
+})();
+</script>

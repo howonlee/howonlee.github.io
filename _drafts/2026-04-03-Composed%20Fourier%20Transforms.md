@@ -11,8 +11,227 @@ But that is not to say that no such mechanical tool exists.
 
 https://arxiv.org/pdf/2412.00075 describes what can be done (with conditions) for composed fourier transforms. We reiterate that paper's argument and translate it into the discrete mode.
 
-- Reiterate paper
 
-- Describe how to translate it into the discrete
+- Part I. Reiteration of the paper
+  - 1. Statement of the continuous problem
+    - Write the target object explicitly
+      - \(\mathcal{F}[f \circ g]\)
+    - Explain why direct evaluation is difficult
+    - Contrast with the chain rule for derivatives
+  - 2. Simple motivating examples
+    - Linear inner map \(g(x) = ax+b\)
+      - Recover the familiar scaling/translation identities
+      - Show that this case is easy and classical
+    - Quadratic or polynomial inner map
+      - Show how difficulty appears immediately
+    - Oscillatory inner map
+      - Show why naive formulas become unmanageable
+    - Piecewise or non-smooth inner map
+      - Motivate the role of assumptions
+  - 3. The core trick: represent the outer function in Fourier form
+    - Insert the Fourier inversion formula for \(f\)
+    - Rewrite \(f(g(x))\) as an integral of exponentials involving \(g(x)\)
+    - Emphasize the conceptual move
+      - Move the composition inside an exponential
+      - Trade a hard composed transform for a superposition of simpler objects
+  - 4. Fubini’s trick
+    - State the trick abstractly
+      - Swap the order of integration
+      - Interpret the composition transform as an iterated integral
+    - Why this matters
+      - Isolates a kernel depending on \(g\)
+      - Turns the problem into one of evaluating or approximating that kernel
+    - Conditions required
+      - Absolute integrability
+      - Dominated convergence / Tonelli-type hypotheses
+      - When conditional convergence becomes dangerous
+  - 5. Applying Fubini’s trick to composed Fourier transforms
+    - Start from the rewritten expression for \(f(g(x))\)
+    - Take the Fourier transform in \(x\)
+    - Interchange integrals
+    - Identify the resulting inner integral
+      - A generalized oscillatory kernel associated to \(g\)
+    - Explain what the formula says conceptually
+      - The Fourier transform of \(f \circ g\) is a weighted superposition
+      - The weights come from \(\hat f\)
+      - The geometry/oscillation comes from \(g\)
+  - 6. Interpretation of the resulting formula
+    - Separate the roles of \(f\) and \(g\)
+    - Why this is the closest analogue to a chain rule
+    - In what sense the formula is “mechanical”
+    - In what sense it is not
+      - Still may require hard oscillatory integrals
+      - Simplicity depends heavily on \(g\)
+  - 7. Limitations in the continuous setting
+    - Assumptions on \(f\)
+      - Fourier inversion may require regularity/decay
+    - Assumptions on \(g\)
+      - Measurability
+      - Growth conditions
+      - Smoothness if asymptotics are desired
+    - Problems with non-absolutely convergent integrals
+    - Cases where Fubini fails
+    - Aliasing is not yet an issue here, but approximation and truncation are
+    - Numerical instability in highly oscillatory regimes
+  - 8. Relation to familiar special cases
+    - Affine \(g\)
+      - Recover standard Fourier transform identities
+    - Small perturbations of affine maps
+      - Show how the formula becomes a perturbative tool
+    - Monotone \(g\) vs non-monotone \(g\)
+      - How geometry changes the kernel
+    - Even/odd symmetries
+      - When simplifications appear
+  - 9. Worked continuous examples
+    - Example 1: affine inner function
+    - Example 2: quadratic phase
+    - Example 3: sinusoidal inner function
+    - Example 4: Gaussian outer function with nonlinear inner map
+    - For each example
+      - State \(f\) and \(g\)
+      - Write the kernel induced by \(g\)
+      - Apply the integral formula
+      - Simplify where possible
+      - Compare with direct numerical computation
+  - 10. What the reader should carry forward
+    - The method is: Fourier-expand the outer function, then swap integrals
+    - The hard part becomes understanding the oscillatory kernel of \(g\)
+    - This pattern is what will be discretized next
 
-- Have the translation into the discrete here in a big Python code block
+- Part II. Translation into the discrete
+  - 11. Why a discrete translation is needed
+    - Real computations are discrete
+    - FFT-based workflows require finite-dimensional analogues
+    - Continuous formulas must be adapted carefully
+    - Discretization introduces new issues absent in the continuous case
+      - Periodicity
+      - Aliasing
+      - Sampling error
+      - Finite grid effects
+  - 12. Set up the discrete model
+    - Choose a discrete Fourier transform convention
+      - Length-\(N\) sequences
+      - Forward and inverse DFT formulas
+      - Normalization choices
+    - Define what composition means discretely
+      - Composition on an index set?
+      - Composition after interpolation?
+      - Composition via sampling a continuous map onto a grid?
+    - Clarify the exact model used in the page
+      - Discrete signals with a discrete inner map
+      - Or sampled continuous functions with a discrete approximation
+  - 13. Discrete analogue of the continuous representation
+    - Replace Fourier inversion integral with inverse DFT sum
+    - Rewrite \(f(g[n])\) as a finite superposition
+    - Show the direct correspondence term-by-term with the continuous case
+  - 14. Fubini’s trick in the discrete
+    - Replace interchange of integrals with interchange of finite sums
+    - Explain why the algebra is simpler
+      - No measure-theoretic obstacle for finite sums
+    - Explain what new issues replace the old ones
+      - Periodic wraparound
+      - Ambiguity from modulo-\(N\) indexing
+      - Sampling mismatch when \(g[n]\) is not integer-valued
+  - 15. Discrete composed Fourier transform formula
+    - Derive the LHS/RHS identity step by step
+      - LHS: \(\sum_{n=0}^{N-1} e^{+i2\pi m n/N} f(\phi[n])\) where \(\phi[n]\) is the fractional trajectory
+      - RHS: \(\frac{1}{N} \sum_r F[r] H[m,r]\)
+      - \(H[m,r] = \sum_{n=0}^{N-1} e^{+i2\pi mn/N} e^{-i2\pi r\phi[n]/N}\) is the transfer matrix
+    - Show the decomposition into
+      - Spectral coefficients of the outer function \(F[r] = \mathrm{DFT}(f)\)
+      - Transfer matrix \(H\) induced by the fractional trajectory \(\phi\)
+    - Explain how this becomes an algorithm
+  - 16. How the transfer matrix \(H\) should be interpreted
+    - As a nonlinear mixing matrix of shape \(N \times N\)
+    - As a generalized modulation table indexed by (mode, frequency)
+    - As a precomputable object when \(\phi\) is fixed
+    - As an operator that transports outer-function frequencies into output modes
+  - 17. Translation of assumptions and limitations
+    - Continuous absolute convergence becomes finite-sum exactness
+    - But interpolation assumptions may now matter
+    - The fractional trajectory \(\phi[n] = u_n / \Delta x\) need not be integer-valued
+    - Bandlimiting assumptions on the outer function govern interpolation accuracy
+    - Aliasing constraints
+    - Boundary conditions and periodicity assumptions
+    - Stability and conditioning of \(H\)
+  - 18. Discrete implementation choice: trigonometric interpolation
+    - Allow non-integer fractional trajectory \(\phi[n]\) with trigonometric interpolation
+      - \(f(\phi) = \frac{1}{N} \sum_r F[r] e^{-i2\pi r\phi/N}\)
+      - Exact when \(f\) is bandlimited to the \(N\)-point grid
+      - Closer to the continuous Fourier-inversion picture than integer-index lookup
+    - This choice unifies the LHS/RHS derivation cleanly
+      - The transfer matrix formula drops out directly
+      - No separate integer-index special case is needed
+  - 19. Worked discrete example: quadratic inner map
+    - Outer function: \(f[n] = \cos(n)\), \(N = 32\)
+    - Fractional trajectory: \(\phi[n] = n^2\) (quadratic warp)
+    - Compute \(F = \mathrm{DFT}(f)\) and build \(H\) via \(\mathtt{compute\_H}(\phi)\)
+    - Verify LHS \(\approx\) RHS for all modes
+    - Visualize
+      - The trigonometric interpolant and grid samples
+      - The DFT coefficient magnitudes
+      - LHS vs RHS real and imaginary parts across modes
+      - The magnitude of the transfer matrix \(|H[m,r]|\)
+  - 20. Continuous-to-discrete correspondence table
+    - Integral ↔ finite sum
+    - Fourier inversion ↔ inverse DFT (positive-exponent convention: \(F[r] = \sum_n f[n] e^{+i2\pi rn/N}\))
+    - Fubini ↔ sum interchange
+    - Oscillatory integral kernel ↔ transfer matrix \(H[m,r]\)
+    - Decay assumptions ↔ bandlimiting / resolution assumptions
+    - Continuous approximation error ↔ aliasing / interpolation error
+    - Continuous \(u/\Delta x\) ↔ fractional trajectory \(\phi[n]\)
+
+- Part III. Practical computation
+  - 21. Algorithmic summary
+    - Inputs
+      - outer function samples \(f[0],\ldots,f[N-1]\)
+      - fractional trajectory \(\phi[0],\ldots,\phi[N-1]\) (need not be integer-valued)
+      - transform size \(N\)
+    - Compute spectral coefficients: \(F = \mathtt{dft}(f)\)
+    - Build the transfer matrix: \(H = \mathtt{compute\_H}(\phi)\) of shape \(N \times N\)
+    - For each output mode \(m\): \(\mathrm{result}[m] = \frac{1}{N} \sum_r F[r] H[m,r]\)
+    - Verify: compare LHS (\(\mathtt{lhs\_transform}\)) against RHS (\(\mathtt{rhs\_transform}\))
+  - 22. Complexity considerations
+    - Cost of direct composition plus FFT: \(O(N^2)\) for eval + \(O(N \log N)\) for FFT
+    - Cost of building \(H\): \(O(N^2)\) — dominates; can be cached when \(\phi\) is fixed
+    - Cost of applying \(H\) to \(F\): \(O(N^2)\) matrix-vector product
+    - When the method is advantageous: \(\phi\) fixed, multiple outer functions
+    - Memory tradeoffs: storing \(H\) requires \(O(N^2)\) complex entries
+  - 23. Numerical issues
+    - Interpolation error when \(f\) is not bandlimited to the \(N\)-point grid
+    - Oscillatory cancellation in \(H[m,r]\) for large or rapidly-varying \(\phi\)
+    - Roundoff in the phase matrix construction
+    - Spectral leakage from the DFT convention
+    - Periodicity of \(\phi\) modulo \(N\) — large \(\phi[n]\) wraps around
+    - Large-\(N\) behavior of \(H\) condition number
+  - 24. Validation strategy
+    - Verify \(\mathtt{lhs\_transform}[m] \approx \mathtt{rhs\_transform}[m]\) for all \(m\) via \(\mathtt{verify\_identity}\)
+    - Check the affine special case (\(\phi[n] = an + b\)) against known DFT identities
+    - Measure \(\max_m |{\rm LHS}[m] - {\rm RHS}[m]|\) as a function of \(N\)
+    - Inspect \(|H[m,r]|\) visually to sanity-check the mixing structure
+
+- Part IV. Big Python code block
+  - 25. Structure of the code listing
+    - Imports: `numpy`, `matplotlib`
+    - DFT convention comment block: positive-exponent forward, translation from continuous notation
+    - `dft(samples)`: forward DFT via `np.fft.ifft * N`
+    - `idft(coeffs)`: inverse DFT via `np.fft.fft / N`
+    - `eval_interp(coeffs, frac_indices)`: trigonometric interpolant at fractional indices
+    - `compute_H(frac_traj)`: build the \(N \times N\) transfer matrix \(H\)
+    - `lhs_transform(coeffs, frac_traj, mode)`: LHS of the identity for one mode
+    - `rhs_transform(coeffs, transfer_matrix, mode)`: RHS of the identity for one mode
+    - `verify_identity(samples, frac_traj)`: check LHS == RHS across all modes, return diagnostics
+    - Plotting utilities: `plot_interpolant`, `plot_dft_coeffs`, `plot_lhs_rhs`, `plot_H_matrix`
+    - `__main__` block: quadratic warp example, \(N=32\), \(f[n]=\cos(n)\), \(\phi[n]=n^2\)
+  - 26. What the code block demonstrates
+    - The DFT convention is non-standard (positive-exponent forward) — the comment block explains the translation from the continuous-case notation
+    - Trigonometric interpolation is the only inner-map model: \(\phi[n]\) can be any real-valued array
+    - The identity \(\mathrm{LHS} = \mathrm{RHS}\) is verified numerically, not just stated
+    - All intermediate objects (\(F\), \(H\), LHS, RHS) are returned by `verify_identity` for inspection
+    - Four diagnostic plots cover every layer of the computation
+  - 27. Commentary the code warrants
+    - Why `dft` wraps `ifft` (sign convention flip)
+    - What "fractional trajectory" \(\phi[n]\) means and why it need not be integer-valued
+    - Why \(H\) is \(O(N^2)\) to build and when that cost is acceptable
+    - Which parts of the code correspond line-by-line to the derivation in Parts I–II
+    - What breaks when \(\phi[n]\) grows large (periodicity, aliasing)
