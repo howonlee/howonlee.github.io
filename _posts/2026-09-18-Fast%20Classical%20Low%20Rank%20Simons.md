@@ -3,7 +3,7 @@ layout: page
 title: Fast Classical Low-Rank Simon's
 ---
 
-_Butlerian Notice:_ The code was done by LLM, I had the ideas and wrote the actual words myself.
+_Butlerian Notice:_ The code and its comments was done by LLM, I had the ideas, verified the LLM output and wrote the actual words here myself.
 
 [Simon's problem](https://en.wikipedia.org/wiki/Simon%27s_problem) is a basically-useless problem introduced by D. R. Simon to prove that there is an oracle separation between BQP and BPP. There is a sort of sleight of hand in that there is then the implicature that the problems we care about in BQP, namely factoring, discrete logarithm, HHL and messing with Hamiltonians, are putatively in the given BQP \ BPP.
 
